@@ -40,9 +40,9 @@ class Menu extends Component {
         <Navbar color="light" light expand="lg">
             <NavbarBrand href="/">
                 <div className="brand-container">
-                    <img className="vangst-logo-graphic d-lg-none" src="/static/images/logo-graphic.png" alt="vangst logo"></img>
-                    <img className="vangst-logo-text d-lg-none" src="/static/images/logo-text.png" alt="vangst logo text"></img>
-                    <img className="vangst-logo d-none d-lg-block" src="/static/images/logo.png" alt="vangst logo"></img>
+                    <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo"></img>
+                    <img className="vangst-logo-text d-lg-none" src="/static/images/logos/logo-text.png" alt="vangst logo text"></img>
+                    <img className="vangst-logo d-none d-lg-block" src="/static/images/logos/logo.png" alt="vangst logo"></img>
                 </div>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
