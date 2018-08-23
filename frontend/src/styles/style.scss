@@ -9,6 +9,10 @@ body {
   }
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 // ******************************* Menu.js
 
 .nav-bar {
@@ -80,3 +84,147 @@ body {
 .hero-cta img {
   height: 0.4rem;
 }
+
+// ***************************** VangstIsDope
+
+.vangst-is-dope {
+  background-image: url('static/images/vangst-main-page/greenhouse2.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.white-line {
+  background-color: white;
+  border: 0;
+  padding-top: 4px
+}
+
+.section-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: italic; 
+}
+
+.section-number {
+  border: solid 1px white;
+  padding: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 10px;
+}
+
+
+.section-copy {
+ margin: 0;
+}
+
+.play-button-container {
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button-container img {
+  width: 16px;
+  align-self: center;
+  margin-bottom: -9px;
+  z-index: 2;
+}
+.play-button {
+  border: solid white 2px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 200px;
+}
+
+.play-button p {
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: white;
+  font-style: italic;
+}
+
+// ******************************** Job Report
+
+.job-report {
+  background-image: url('static/images/vangst-main-page/female-biologists.jpg');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.report-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.play-button-img {
+  width: 16px;
+  margin-bottom: 0.5rem;
+  transform: rotate(90deg);
+}
+
+.job-report-number {
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.job-report-numbers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.job-report-number-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.white-line-div {
+  background-color:white;
+  height: 1px;
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.section-number-orange {
+  border: solid 1px #f0561f;
+  padding: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 10px;
+  color: #f0561f;
+}
+
+.section-text-orange {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: italic; 
+  color: #f0561f;
+}
+
+
