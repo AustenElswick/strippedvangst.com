@@ -11,40 +11,26 @@ class Menu extends Component {
       super();
   }
 
-  getSlug(url) {
-      const parts = url.split("/");
-      return parts.length > 2 ? parts[parts.length - 2] : "";
-  }
-
   render() {
-      const menuItems = this.props.menu.items.map((item, index) => {
-        if (item.object === "custom") {
-            return (
-                <Link href={item.url} key={item.ID}>
-                    <a style={linkStyle}>{item.title}</a>
-                </Link>
-            );
-        }
-        const slug = this.getSlug(item.url);
-        const actualPage = item.object === "category" ? "category" : "post";
-        return (
-            <Link
-                as={`/${item.object}/${slug}`}
-                href={`/${actualPage}?slug=${slug}&apiRoute=${item.object}`}
-                key={item.ID}
-            >
-                <a style={linkStyle}>{item.title}</a>
-            </Link>
-        );
-    });
-
-
     return(
       <div>
-          <Link href="/">
-              <a style={linkStyle}>Home</a>
-          </Link>
-          {menuItems}
+        <div className="nav-menu">
+            <Link href="/">
+                <a style={linkStyle}>JOB SEEKERS</a>
+            </Link>
+            <Link href="/">
+                <a style={linkStyle}>EMPLOYERS</a>
+            </Link>
+            <Link href="/">
+                <a style={linkStyle}>HOW IT WORKS</a>
+            </Link>
+            <Link href="/">
+                <a style={linkStyle}>CAREER FAIR</a>
+            </Link>
+            <Link href="/">
+                <a style={linkStyle}>ABOUT</a>
+            </Link>
+        </div>
       </div>
     )
   }
