@@ -24,24 +24,24 @@ class JobReport extends Component {
                                 <div className="col-12 col-md-6 col-lg-4 text-light job-report-number-column">
                                     <p className="job-report-number">419</p>
                                     <div className="white-line-div"></div>
-                                    <p>PLACE HOLDER</p>
+                                    <p className="nav-link">PLACE HOLDER</p>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-4 job-report-number-column text-light">
                                     <p className="job-report-number">291</p>
                                     <div className="white-line-div"></div>
-                                    <p>PLACE HOLDER</p>
+                                    <p className="nav-link">PLACE HOLDER</p>
                                 </div>
                                 <div className=" col-12 col-md-6 col-lg-4 job-report-number-column text-light">
                                     <p className="job-report-number">615</p>
                                     <div className="white-line-div"></div>
-                                    <p>PLACE HOLDER</p>
+                                    <p className="nav-link">PLACE HOLDER</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-4 report-column">
                                 <img src='/static/images/vangst-main-page/report-img.png' alt=""></img>
                                 <img className="play-button-img" src='/static/images/vangst-main-page/play-button.png' alt=""></img>
-                                <div className="text-light">Download full report</div>
+                                <div className="text-light"><p>Download full report</p></div>
                         </div>
                     </div>
                 </div>

@@ -1,16 +1,55 @@
 @import 'theme-colors';
 $theme-font: 100% verdana, sans-serif;
 
+@font-face {
+  font-family: Brandon Grotesque Thin;
+  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Thin.otf')
+}
+@font-face {
+  font-family: Brandon Grotesque Regular;
+  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Regular.otf')
+}
+@font-face {
+  font-family: Brandon Grotesque Bold Italic;
+  src: url('../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf')
+}
+@font-face {
+  font-family: Sabon Italic;
+  src: url('../static/Fonts/Sabon/SabonLTStd-Italic.otf');
+}
+@font-face {
+  font-family: Hennigar;
+  src: url('../static/Fonts/Numbers/hennigar/HennigarD.otf');
+}
+
+
 body {
   font: $theme-font;
   background-color: $themeColor-Light;
   h1, h2 {
-      color: $themeColor-Dark
+      color: $themeColor-Dark;
+      font-family: Brandon Grotesque Bold Italic;
   }
 }
 
+h1 {
+  font-size: 8rem;
+}
+
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+p {
+  font-family: Sabon Italic;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.nav-link {
+  font-family: Brandon Grotesque Regular;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
 // ******************************* Menu.js
@@ -37,7 +76,7 @@ h2 {
 // ******************************* Hero.js 
 
 .hero-title {
-  font-size: 6rem;
+  font-size: 9rem;
 }
 
 .hero-section {
@@ -187,6 +226,8 @@ h2 {
 .job-report-number {
   font-size: 5rem;
   margin-bottom: 0;
+  font-family: Hennigar;
+  opacity: 1;
 }
 
 .job-report-numbers {

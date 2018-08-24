@@ -37,7 +37,7 @@ class Menu extends Component {
   render() {
     return(
       <div>
-        <Navbar color="light" light expand="lg">
+        <Navbar color="transparent" light expand="lg">
             <NavbarBrand href="/">
                 <div className="brand-container">
                     <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo"></img>
@@ -49,19 +49,19 @@ class Menu extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                 <NavItem>
-                    <NavLink href="/">JOB SEEKERS</NavLink>
+                    <NavLink className="nav-link" href="/">JOB SEEKERS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">EMPLOYERS</NavLink>
+                    <NavLink className="nav-link" href="/">EMPLOYERS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">HOW IT WORKS</NavLink>
+                    <NavLink className="nav-link" href="/">HOW IT WORKS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">CAREER FAIR</NavLink>
+                    <NavLink className="nav-link" href="/">CAREER FAIR</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
+                    <DropdownToggle nav caret className="nav-link">
                     ABOUT
                     </DropdownToggle>
                     <DropdownMenu right>
@@ -77,12 +77,12 @@ class Menu extends Component {
                     </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledDropdown>
-                <NavItem className="nav-item dropdown" id="sign-in">
+                {/* <NavItem className="nav-item dropdown" id="sign-in">
                     <a className="nav-link">SIGN IN</a>
                 </NavItem>
                 <NavItem className="nav-item dropdown bg-dark" id="sign-up">
                     <a className="nav-link text-light">SIGN UP</a>
-                </NavItem>
+                </NavItem> */}
                 </Nav>
             </Collapse>
         </Navbar>
