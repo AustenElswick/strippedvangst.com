@@ -40,6 +40,10 @@ h2 {
   font-size: 4rem;
 }
 
+h3 {
+  font-family: Sabon Italic;
+}
+
 p {
   font-family: Sabon Italic;
   letter-spacing: 2px;
@@ -302,4 +306,66 @@ p {
 
 .gigs-arrow {
   margin-left: 15px;
+}
+
+
+
+// ****************************** Events
+
+.events-section {
+  background-color: #dadada;
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.events-row-container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.event-container {
+ position: relative;
+ margin-top: 1.5rem;
+}
+
+.event-date-icon {
+  background-color: #f0561f;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  width: 60px;
+}
+
+.event-date {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: -5px;
+}
+
+.event-month {
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: -5px;
+}
+
+.event-image {
+  margin-top: 28px;
+  width: 100%;
+  height: auto;
+}
+
+.section-title-line {
+  width: 125px;
 }
