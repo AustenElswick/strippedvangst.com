@@ -193,6 +193,7 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .job-report-number-column {
@@ -228,3 +229,36 @@ h2 {
 }
 
 
+// ***********************Gigs
+
+.gigs-section {
+  background-image: url('static/images/vangst-main-page/female-phone-2.jpg');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dark-line {
+  background-color: darkgray;
+  border: 0;
+  padding-top: 4px
+}
+
+.gigs-cta-button {
+  color: #f0561f;
+  border: solid 1px #f0561f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  margin-top: 2rem;
+}
+
+.gigs-arrow {
+  margin-left: 15px;
+}
