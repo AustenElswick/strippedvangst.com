@@ -9,11 +9,74 @@ body {
   }
 }
 
-// Menu.js
+// ******************************* Menu.js
 
-.nav-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+.nav-bar {
+ background: black;
 }
 
+.vangst-logo-graphic {
+  height: 25px;
+}
+
+.vangst-logo-text {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.vangst-logo {
+  height: 45px;
+}
+
+
+// ******************************* vangst-main-page.js 
+// ******************************* Hero.js 
+
+.hero-title {
+  font-size: 6rem;
+}
+
+.hero-section {
+  background-image: url("/static/images/vangst-main-page/biologist.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.hero-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.hero-cta p {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.white-div {
+  background-color: white;
+  width: 250px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-cta .whiteText {
+  color: white;
+}
+
+.hero-cta img {
+  height: 0.4rem;
+}
