@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 6rem;
+  font-size: 6rem !important;
 }
 
 h3 {
@@ -63,6 +63,62 @@ p {
   font-family: Brandon Grotesque Regular;
   letter-spacing: 1px;
   font-size: 0.9rem;
+}
+
+// *********************************** Footer.js
+
+footer {
+  background-color: #242424;
+  button {
+    background-color: #f0561f;
+  }
+}
+
+
+
+.footer-container {
+  background-image: url("/static/images/logos/logo-overlay.png");
+  height: 100%;
+  width: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  .nav-link {
+    padding: 3px;
+  }
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  img {
+    max-height: 120px;
+  }
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.footer-copyright {
+  color: #f0561f;
+}
+
+.footer-social-icons {
+  display: flex;
+  flex-direction: column;
+  img {
+    padding: 5px;
+    max-height: 30px;
+  }
 }
 
 // ******************************* Menu.js
@@ -370,6 +426,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  padding-bottom: 10px;
   position:absolute;
   left:0;
   right:0;

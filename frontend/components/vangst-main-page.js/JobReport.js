@@ -9,8 +9,8 @@ class JobReport extends Component {
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-8">
                             <div className="section-label">
-                                <p className="section-number-orange">.02</p>
-                                <p className="section-text-orange">The Job Report</p>
+                                <p className="section-number text-white">.02</p>
+                                <p className="text-white">The Job Report</p>
                             </div>
                             <h2 className="text-white text-left">
                                 Download the <br/>Vangst Job Report
