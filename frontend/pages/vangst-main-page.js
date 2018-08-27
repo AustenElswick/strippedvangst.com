@@ -8,7 +8,9 @@ import Hero from '../components/vangst-main-page.js/Hero';
 import VangstIsDope from '../components/vangst-main-page.js/VangstIsDope';
 import JobReport from '../components/vangst-main-page.js/JobReport';
 import Gigs from '../components/vangst-main-page.js/Gigs';
+import News from '../components/vangst-main-page.js/News';
 import Events from '../components/vangst-main-page.js/Events';
+import VangstTalent from '../components/vangst-main-page.js/VangstTalent';
 import { Config } from "../config.js";
 
 
@@ -21,7 +23,9 @@ class VangstMainPage extends Component {
                 <VangstIsDope />
                 <JobReport />
                 <Gigs />
+                <News />
                 <Events />
+                <VangstTalent />
             </Layout>
         );
     }

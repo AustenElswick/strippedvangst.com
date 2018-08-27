@@ -13,6 +13,12 @@ $theme-font: 100% verdana, sans-serif;
   font-family: Brandon Grotesque Bold Italic;
   src: url('../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf')
 }
+
+@font-face {
+  font-family: Brandon Grotesque Bold;
+  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Bold.otf')
+}
+
 @font-face {
   font-family: Sabon Italic;
   src: url('../static/Fonts/Sabon/SabonLTStd-Italic.otf');
@@ -37,11 +43,14 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 h3 {
   font-family: Sabon Italic;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  letter-spacing: 3px;
 }
 
 p {
@@ -308,16 +317,37 @@ p {
   margin-left: 15px;
 }
 
+// ****************************** News
+
+.news-section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.news-logos {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.news-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
 
 
 // ****************************** Events
 
 .events-section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   background-color: #dadada;
-  min-height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,13 +369,14 @@ align-items: center;
   background-color: #f0561f;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding-top: 10px;
   position:absolute;
   left:0;
   right:0;
   margin-left:auto;
   margin-right:auto;
-  width: 60px;
+  width: 50px;
+  height: 55px;
 }
 
 .event-date {
@@ -361,11 +392,60 @@ align-items: center;
 }
 
 .event-image {
-  margin-top: 28px;
+  margin-top: 15px;
   width: 100%;
   height: auto;
 }
 
+.event-title {
+  font-weight: bold;
+  padding-top: 15px;
+  font-family: Brandon Grotesque Bold;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.event-description {
+  font-family: Brandon Grotesque Regular;
+  opacity: 0.8;
+  margin-top: -5px;
+}
+
 .section-title-line {
   width: 125px;
+}
+
+
+// ******************************** Vangst Talent
+
+.vangst-talent-section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.vangst-talent-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img {
+    height: 20px;
+    margin-right: 15px;
+  }
+}
+
+.instagram-slider {
+  display: flex;
+  min-width: 100%;
+  min-height: 225px;
+  overflow-x: auto;
+}
+
+.instagram-post {
+  margin: 2px;
+}
+
+.instagram-post img {
+  width: auto;
+  height: 225px;
 }
