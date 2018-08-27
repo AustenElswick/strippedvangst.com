@@ -9,6 +9,13 @@ $theme-font: 100% verdana, sans-serif;
   font-family: Brandon Grotesque Regular;
   src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Regular.otf')
 }
+
+@font-face {
+  font-family: Brandon Grotesque Regular Italic;
+  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-RegularItalic.otf')
+}
+
+
 @font-face {
   font-family: Brandon Grotesque Bold Italic;
   src: url('../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf')
@@ -68,21 +75,30 @@ p {
 // *********************************** Footer.js
 
 footer {
+  background-image: url("/static/images/logos/logo-overlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: auto 100%;
+  background-position: left;
   background-color: #242424;
   button {
     background-color: #f0561f;
   }
 }
 
-
+.footer-input-title {
+  font-family: Brandon Grotesque Regular Italic;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  padding: 0.5rem;
+}
 
 .footer-container {
-  background-image: url("/static/images/logos/logo-overlay.png");
   height: 100%;
   width: auto;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 2rem;
   .nav-link {
     padding: 3px;
@@ -94,30 +110,71 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  height: 100%;
   img {
-    max-height: 120px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 2px;
   }
+}
+
+.footer-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .footer-links-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 2rem;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footer-copyright {
   color: #f0561f;
 }
 
+
+.footer-link-group {
+  padding: 1rem;
+}
+
 .footer-social-icons {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   img {
     padding: 5px;
     max-height: 30px;
+  }
+}
+
+.input-title {
+  font-family: Sabon
+}
+
+.footer-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-signup-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  .email-input {
+    max-width: 500px;
+    min-width: 250px;
+  }
+  .zip-code-input {
+    max-width: 150px;
   }
 }
 
