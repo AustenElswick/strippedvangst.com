@@ -5,8 +5,6 @@ class JobReport extends Component {
         return (
             <div>
                 <section className="section section-top section-full job-report">
-                <div className="bg-cover"></div>
-                <div className="bg-overlay"></div>
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-8">
