@@ -10,7 +10,6 @@ class VangstTalent extends Component {
                         <img src="/static/images/vangst-main-page/instagram/insta-logo.png"></img>
                         <h3>VANGST TALENT</h3>
                     </div>
-                    
                     <hr className="section-title-line"></hr>
                 </div>
                 <section class="instagram-slider">

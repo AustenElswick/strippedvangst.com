@@ -13,26 +13,32 @@ class JobReport extends Component {
                                 <p className="text-white">The Job Report</p>
                             </div>
                             <h2 className="text-white text-left">
-                                Download the <br/>Vangst Job Report
+                                Download the <br/>Vangst Salary Report
                             </h2>
                             <hr className="white-line" noshade />
                             <p className="text-white section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <hr className="white-line" />
                             <div className="job-report-numbers">
                                 <div className="col-12 col-md-6 col-lg-4 text-light job-report-number-column">
-                                    <p className="job-report-number">419</p>
+                                    <p className="job-report-number">30</p>
                                     <div className="white-line-div"></div>
-                                    <p className="nav-link">PLACE HOLDER</p>
+                                    <p className="nav-link">STATES</p>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-4 job-report-number-column text-light">
-                                    <p className="job-report-number">291</p>
+                                    <div className="d-flex flex-row justify-content-center align-items-baseline">
+                                        <p className="job-report-number">690</p>
+                                        <div className="h3">%</div>
+                                    </div>
                                     <div className="white-line-div"></div>
-                                    <p className="nav-link">PLACE HOLDER</p>
+                                    <p className="nav-link text-center">GROWTH IN JOB LISTINGS</p>
                                 </div>
                                 <div className=" col-12 col-md-6 col-lg-4 job-report-number-column text-light">
-                                    <p className="job-report-number">615</p>
+                                    <div className="d-flex flex-row justify-content-center align-items-baseline">
+                                        <p className="job-report-number">5000</p>
+                                        <div className="h3">+</div>
+                                    </div>
                                     <div className="white-line-div"></div>
-                                    <p className="nav-link">PLACE HOLDER</p>
+                                    <p className="nav-link">OPEN POSITIONS</p>
                                 </div>
                             </div>
                         </div>

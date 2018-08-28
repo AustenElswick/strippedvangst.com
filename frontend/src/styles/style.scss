@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-size: 6rem !important;
+  font-size: 5rem !important;
 }
 
 h3 {
@@ -440,10 +440,35 @@ footer {
 .news-logos {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 30px;
   }
+}
+
+.entrepreneur-logo {
+  opacity: 0.35;
+  height: 40px !important;
+}
+
+.fastcompany-logo {
+  opacity: 0.85;
+  height: 28px !important;
+}
+
+.cnbc-logo {
+  opacity: 0.8;
+  height: 32px !important;
+}
+
+.time-logo {
+  opacity: 0.75;
+  height: 28px !important;
+}
+
+.cbs-logo {
+  opacity: 0.3;
 }
 
 .news-logo-container {
@@ -451,7 +476,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
