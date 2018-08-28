@@ -9,6 +9,13 @@ $theme-font: 100% verdana, sans-serif;
   font-family: Brandon Grotesque Regular;
   src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Regular.otf')
 }
+
+@font-face {
+  font-family: Brandon Grotesque Regular Italic;
+  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-RegularItalic.otf')
+}
+
+
 @font-face {
   font-family: Brandon Grotesque Bold Italic;
   src: url('../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf')
@@ -43,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-size: 6rem;
+  font-size: 5rem !important;
 }
 
 h3 {
@@ -63,6 +70,112 @@ p {
   font-family: Brandon Grotesque Regular;
   letter-spacing: 1px;
   font-size: 0.9rem;
+}
+
+// *********************************** Footer.js
+
+footer {
+  background-image: url("/static/images/logos/logo-overlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: auto 100%;
+  background-position: left;
+  background-color: #242424;
+  button {
+    background-color: #f0561f;
+  }
+}
+
+.footer-input-title {
+  font-family: Brandon Grotesque Regular Italic;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  padding: 0.5rem;
+}
+
+.footer-container {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem;
+  .nav-link {
+    padding: 3px;
+  }
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 2px;
+  }
+}
+
+.footer-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-copyright {
+  color: #f0561f;
+}
+
+
+.footer-link-group {
+  padding: 1rem;
+}
+
+.footer-social-icons {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    padding: 5px;
+    max-height: 30px;
+  }
+}
+
+.input-title {
+  font-family: Sabon
+}
+
+.footer-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-signup-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  .email-input {
+    max-width: 500px;
+    min-width: 250px;
+  }
+  .zip-code-input {
+    max-width: 150px;
+  }
 }
 
 // ******************************* Menu.js
@@ -327,10 +440,35 @@ p {
 .news-logos {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 30px;
   }
+}
+
+.entrepreneur-logo {
+  opacity: 0.35;
+  height: 40px !important;
+}
+
+.fastcompany-logo {
+  opacity: 0.85;
+  height: 28px !important;
+}
+
+.cnbc-logo {
+  opacity: 0.8;
+  height: 32px !important;
+}
+
+.time-logo {
+  opacity: 0.75;
+  height: 28px !important;
+}
+
+.cbs-logo {
+  opacity: 0.3;
 }
 
 .news-logo-container {
@@ -338,7 +476,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
@@ -370,6 +508,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  padding-bottom: 10px;
   position:absolute;
   left:0;
   right:0;

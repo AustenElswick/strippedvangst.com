@@ -14,10 +14,12 @@ class VangstIsDope extends Component {
                                 <p className="section-text text-white">Vangst</p>
                             </div>
                             <h2 className="text-white text-left">
-                                Vangst is really dope copy goes right here.
+                                The cannabis industry's #1 recruiting resource.
                             </h2>
                             <hr className="white-line" noshade />
-                            <p className="text-white section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p className="text-white section-copy">
+                                Since launching in 2015, we’ve connected over 5,500 candidates with jobs in the rapidly emerging cannabis industry. Through direct hire, Vangst GIGs, career fairs, and our job board, our team continues to pioneer recruiting solutions tailored specifically to the cannabis industry. 
+                            </p>
                             <hr className="white-line" />
                         </div>
                         <div className="col-lg-4">
