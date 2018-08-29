@@ -31,7 +31,7 @@ const Footer = () => (
                     <ul className="footer-link-group">
                         <li className="nav-link text-white">DENVER, CO</li>
                         <li className="nav-link text-white">SANTA MONICA, CA</li>
-                        <li className="nav-link text-white">INFO@VANGSTTALENT.COM</li>
+                        <li className="nav-link text-white">INFO@VANGST.COM</li>
                         <li className="nav-link footer-copyright">&#169; 2018 VANGST</li>
                     </ul>
                     <div className="footer-social-icons">

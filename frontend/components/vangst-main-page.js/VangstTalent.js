@@ -7,8 +7,8 @@ class VangstTalent extends Component {
             <div className="container">
                 <div className="text-center">
                     <div className="vangst-talent-title">
-                        <img src="/static/images/vangst-main-page/instagram/insta-logo.png"></img>
-                        <h3>VANGST TALENT</h3>
+                        <img src="/static/images/social/instagram-gray.png" className="insta-logo-talent"></img>
+                        <h3 className="text-dark">VANGST TALENT</h3>
                     </div>
                     <hr className="section-title-line"></hr>
                 </div>

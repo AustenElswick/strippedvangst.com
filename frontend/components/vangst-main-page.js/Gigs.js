@@ -15,20 +15,20 @@ class Gigs extends Component {
                             <h2 className="text-dark text-left">
                                 Work today. <br/>Get paid today.
                             </h2>
-                            <hr className="dark-line" noshade />
+                            <div className="dark-line"></div>
                             <p className="text-dark section-copy">
                                 Find temporary work in trimming, budtending, packaging, events, and more. Make your own schedule, get paid quickly, and work with the best companies in the industry.</p>
-                            <hr className="dark-line" />
+                            <div className="dark-line"></div>
                             <div id="gigs-steps-container" className="job-report-numbers col-11">
                                 <div className="col-12 col-lg-4 text-dark job-report-number-column text-center">
                                     <p className="text-dark gigs-number">1.</p>
                                     <p className="gigs-step-description">SIGN UP FOR GIGS AND GET PRE-QUALIFIED.</p>
                                 </div>
-                                <div className="col-12 col-lg-4 job-report-number-column text-center">
+                                <div className="col-12 col-lg-4 job-report-number-column text-dark text-center">
                                     <p className="text-dark gigs-number">2.</p>
                                     <p className="gigs-step-description">PICK THE DAILY GIG YOU WANT</p>
                                 </div>
-                                <div className=" col-12 col-lg-4 job-report-number-column text-center">
+                                <div className=" col-12 col-lg-4 job-report-number-column text-dark text-center">
                                     <p className="text-dark gigs-number">3.</p>
                                     <p className="gigs-step-description">GET CASH MONEY AT THE END OF YOUR GIG</p>
                                 </div>
