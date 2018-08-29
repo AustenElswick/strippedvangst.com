@@ -7,7 +7,7 @@ class Gigs extends Component {
                 <section className="section section-top section-full gigs-section">
                 <div className="container">
                     <div className="row justify-content-left align-items-center">
-                        <div className="col-6 col-lg-8">
+                        <div className="col-10 col-lg-7">
                             <div className="section-label">
                                 <p className="section-number-orange">.03</p>
                                 <p className="section-text-orange">Vangst Gigs</p>
@@ -16,28 +16,29 @@ class Gigs extends Component {
                                 Work today. <br/>Get paid today.
                             </h2>
                             <hr className="dark-line" noshade />
-                            <p className="text-dark section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p className="text-dark section-copy">
+                                Find temporary work in trimming, budtending, packaging, events, and more. Make your own schedule, get paid quickly, and work with the best companies in the industry.</p>
                             <hr className="dark-line" />
-                            <div className="job-report-numbers">
-                                <div className="col-12 col-lg-3 text-dark job-report-number-column text-center">
-                                    <p className="text-dark">1.</p>
-                                    <p>SIGN UP FOR GIGS AND GET PRE-QUALIFIED.</p>
+                            <div className="job-report-numbers col-11">
+                                <div className="col-12 col-lg-4 text-dark job-report-number-column text-center">
+                                    <p className="text-dark gigs-number">1.</p>
+                                    <p className="gigs-step-description">SIGN UP FOR GIGS AND GET PRE-QUALIFIED.</p>
                                 </div>
-                                <div className="col-12 col-lg-3 job-report-number-column text-center">
-                                    <p className="text-dark">2.</p>
-                                    <p>PICK THE DAILY GIG YOU WANT</p>
+                                <div className="col-12 col-lg-4 job-report-number-column text-center">
+                                    <p className="text-dark gigs-number">2.</p>
+                                    <p className="gigs-step-description">PICK THE DAILY GIG YOU WANT</p>
                                 </div>
-                                <div className=" col-12 col-lg-3 job-report-number-column text-center">
-                                    <p className="text-dark">3.</p>
-                                    <p>GET CASH MONEY AT THE END OF YOUR GIG</p>
+                                <div className=" col-12 col-lg-4 job-report-number-column text-center">
+                                    <p className="text-dark gigs-number">3.</p>
+                                    <p className="gigs-step-description">GET CASH MONEY AT THE END OF YOUR GIG</p>
                                 </div>
                             </div>
-                            <div className="row col-9 justify-content-center">
+                            <div className="row col-12 justify-content-center">
                                 <div className="text-center gigs-cta-button">
-                                    <div className="text-nowrap">
-                                        Sign up for Vangst Gigs and get paid
-                                    </div>
-                                    <div>
+                                    <button className="gigs-cta-text-container">
+                                        <p className="gigs-cta-text">Sign up for Vangst Gigs and get paid</p>
+                                    </button>
+                                    <div className="gigs-arrow-container">
                                         <img className="gigs-arrow" src="/static/images/vangst-main-page/orange-arrow-right.png"></img>
                                     </div>
                                 </div>
