@@ -11,11 +11,18 @@ class Hero extends Component {
                                 Cannabis is hiring.
                             </h1>
                             <div className="hero-cta">
-                                <img src='/static/images/vangst-main-page/arrow-left.png'></img>
-                                <p className="text-light">Hire the perfect person</p>
-                                <p className="white-div">We're ready.  Are you?</p>
-                                <p className="text-light">Find your perfect job</p>
-                                <img src='/static/images/vangst-main-page/arrow-right.png'></img>
+                                <button className="hero-button">
+                                    <img src='/static/images/vangst-main-page/arrow-left.png'></img>
+                                    <p className="text-light text-center">Hire the perfect person</p>
+                                </button>
+                                <div className="white-div">
+                                    <p className="text-center">We're ready.  Are you?</p>
+                                </div>
+                                
+                                <button className="hero-button">
+                                    <p className="text-light text-center">Find your perfect job</p>
+                                    <img src='/static/images/vangst-main-page/arrow-right.png'></img>
+                                </button>
                             </div>
                         </div>
                     </div>

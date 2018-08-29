@@ -4,8 +4,6 @@ class VangstIsDope extends Component {
     render() {
         return (
             <section className="section section-top section-full vangst-is-dope">
-                <div className="bg-cover"></div>
-                <div className="bg-overlay"></div>
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-8">
