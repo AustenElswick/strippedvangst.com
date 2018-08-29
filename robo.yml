@@ -2,8 +2,8 @@ command:
   wordpress:
       setup:
         options:
-          wp-user: vangstadmin
-          wp-pw: password
+          wp-user: placeholder
+          wp-pw: placeholder
           wp-theme-dir: postlight-headless-wp
           wp-theme-name: Postlight Headless WP Starter
           wp-email: austen.elswick@vangst.com
