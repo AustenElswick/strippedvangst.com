@@ -36,8 +36,7 @@ class Menu extends Component {
 
   render() {
     return(
-      <div>
-        <Navbar color="transparent" light expand="lg">
+        <Navbar className="nav-menu"color="transparent" light expand="lg">
             <NavbarBrand href="/">
                 <div className="brand-container">
                     <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo"></img>
@@ -77,16 +76,9 @@ class Menu extends Component {
                     </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledDropdown>
-                {/* <NavItem className="nav-item dropdown" id="sign-in">
-                    <a className="nav-link">SIGN IN</a>
-                </NavItem>
-                <NavItem className="nav-item dropdown bg-dark" id="sign-up">
-                    <a className="nav-link text-light">SIGN UP</a>
-                </NavItem> */}
                 </Nav>
             </Collapse>
         </Navbar>
-      </div>
     )
   }
 

@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 class JobReport extends Component {
     render() {
         return (
-            <div>
-                <section className="section section-top section-full job-report">
+            <section className="section section-top section-full job-report">
                 <div className="color-overlay">
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
@@ -17,18 +16,18 @@ class JobReport extends Component {
                                 Download the <br/>Vangst Salary Report
                             </h2>
                             <hr className="white-line job-report-line" noshade />
-                            <p className="section-copy job-report-section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p className="section-copy job-report-section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute.</p>
                             <hr className="white-line job-report-line" />
                             <div className="job-report-numbers">
-                                <div className="col-lg-4 text-light job-report-number-column">
+                                <div id="states-number"className="col-lg-4 text-light job-report-number-column">
                                     <div className="job-report-number">30</div>
                                     <div className="white-line-div"></div>
                                     <p className="nav-link">STATES</p>
                                 </div>
-                                <div className="col-lg-4 job-report-number-column text-light">
+                                <div id="growth-number"className="col-lg-4 job-report-number-column text-light">
                                     <div className="d-flex flex-row justify-content-center align-items-center">
                                         <div className="job-report-number">690</div>
-                                        <div className="h3">%</div>
+                                        <div className="h3 job-report-symbol">%</div>
                                     </div>
                                     <div className="white-line-div"></div>
                                     <p className="nav-link text-center">GROWTH IN JOB LISTINGS</p>
@@ -36,10 +35,10 @@ class JobReport extends Component {
                                 <div className=" col-lg-4 job-report-number-column text-light">
                                     <div className="d-flex flex-row justify-content-center align-items-center">
                                         <div className="job-report-number">5000</div>
-                                        <div className="h3">+</div>
+                                        <div className="h3 job-report-symbol">+</div>
                                     </div>
                                     <div className="white-line-div"></div>
-                                    <p className="nav-link">OPEN POSITIONS</p>
+                                    <p className="nav-link text-center">OPEN POSITIONS</p>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +50,7 @@ class JobReport extends Component {
                     </div>
                 </div>
             </div>
-            </section>
-                
-            </div>
+        </section>
         );
     }
 }

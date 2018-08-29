@@ -181,9 +181,13 @@ footer {
 
 // ******************************* Menu.js
 
-.nav-bar {
- background: black;
+.nav-menu {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
+
 
 .vangst-logo-graphic {
   height: 25px;
@@ -341,12 +345,13 @@ footer {
 
 .job-report {
   background-image: url('static/images/vangst-main-page/female-biologists.jpg');
-  min-height: 100vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
 }
 
@@ -378,7 +383,6 @@ footer {
 .job-report-numbers {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: flex-start;
 }
 
@@ -433,6 +437,11 @@ footer {
   padding-top: 4px
 }
 
+#gigs-steps-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .gigs-step-description {
   font-family: Brandon Grotesque Regular;
   letter-spacing: 1px;
@@ -443,12 +452,12 @@ footer {
 .gigs-cta-button {
   color: #f0561f;
   border: solid 1px #f0561f;
+  background: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0.75rem;
-  margin-top: 2rem;
 }
 
 .gigs-cta-text {
@@ -596,6 +605,7 @@ align-items: center;
 .vangst-talent-section {
   padding-top: 4rem;
   padding-bottom: 2rem;
+  background-color: #dadada;
 }
 
 .vangst-talent-title {
@@ -605,7 +615,7 @@ align-items: center;
   align-items: baseline;
   img {
     height: 20px;
-    margin-right: 15px;
+    margin-right: 10px;
     display: inline;
   }
 }
@@ -630,17 +640,7 @@ align-items: center;
 
 // *********************** MEDIA QUERIES
 
-@media (max-width: 320px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  .play-button-container {
-    padding-top: 4rem;
-  }
-}
+
 
 
 
@@ -653,18 +653,15 @@ align-items: center;
   .gigs-number {
     margin-bottom: 0;
   }
-  
-  //VangstTalent.js
-  .vangst-talent-title {
-    img {display: none}
-  }
 }
 
 @media (min-width: 375px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
+
+
 
 @media (max-width: 627px) {
   .footer-social-icons {
@@ -711,34 +708,45 @@ align-items: center;
     padding: 10px;
     order: 2;
     margin-top: 30px;
+    width: 280px;
   }
   
   // JobReport.js
   .color-overlay {
     background: rgba(0,0,0,0.5);
     height: 100vh;
-    color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .job-report-number {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+  }
+
+  #growth-number {
+    order: -1;
   }
 
   .job-report-numbers {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
   }
 
-  
-  .job-report-number {
-    font-size: 3rem;
-    letter-spacing: 2px;
+  .job-report-symbol {
+    font-size: 15px;
   }
-  .white-line-div {
-    width: 100px;
-  }
+  // .white-line-div {
+  //   width: 100px;
+  // }
+
   .report-graphic {
-      height: 150px;
-      padding-bottom: 1rem;
+    height: 100px;
   }
+
   .play-button-img {
     display: none;
   }
@@ -748,8 +756,8 @@ align-items: center;
 @media (max-width: 768px) {
   //Gigs.js
   .gigs-cta-button {
-    background-color: #f0561f;
-    border: white solid 1px;
+    background-color: rgba(255,255,255,0.95);
+    border: #f0561f solid 1px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -759,14 +767,14 @@ align-items: center;
 
   .gigs-cta-text-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    color: white;
+    justify-content: start;
   }
 
-  .gigs-arrow{
-    display: none;
-  }
+  // .gigs-arrow{
+  //   display: none;
+  // }
 
 }
 
@@ -776,4 +784,160 @@ align-items: center;
 
 @media (min-width: 1440px) {
   h1 {font-size: 9rem;}
+}
+
+@media (max-width: 566px) {
+  //JobReport.js
+  .job-report-number {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+  }
+  .white-line-div {
+    width: 100%;
+  }
+  
+  //Footer.js
+  .footer-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-link-group{
+    padding: 0;
+  }
+  .footer-social-icons {
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #email-input-footer {
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 100%;
+  }
+  #zip-code-input-footer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-signup-input {
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer-signup-button {
+    border-radius: 0px;
+    margin-top: 10px;
+  }
+
+
+}
+
+@media (max-width: 420px){
+  //Gigs.js
+  .job-report-number-column {
+    padding: 0;
+  }
+  .job-report-number {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+  }
+  .white-line-div {
+    width: 60px;
+    margin: 5px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  //JobReport.js
+  .job-report-number {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+ 
+  .report-graphic {
+    margin-top: -30px;
+    padding-bottom: 15px;
+  }
+
+  //VangsIsDope.js
+  .play-button-container {
+    padding-top: 4rem;
+  }
+
+  //Gigs.js
+  #gigs-steps-container {
+    display: none;
+  }
+  .gigs-cta-button {
+    margin-top: 2rem;
+  }
+
+  //News.js
+  #entreprenuer {
+    order:1
+  }
+
+  //Footer.js
+  .footer-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-link-group{
+    padding: 0;
+  }
+  .footer-social-icons {
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #email-input-footer {
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 100%;
+  }
+  #zip-code-input-footer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-signup-input {
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer-signup-button {
+    border-radius: 0px;
+    margin-top: 10px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .play-button-container {
+    padding-top: 4rem;
+  }
+  .vangst-talent-title {
+    img {
+      display: none;
+    }
+  }
 }

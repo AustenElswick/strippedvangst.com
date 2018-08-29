@@ -19,7 +19,7 @@ class Gigs extends Component {
                             <p className="text-dark section-copy">
                                 Find temporary work in trimming, budtending, packaging, events, and more. Make your own schedule, get paid quickly, and work with the best companies in the industry.</p>
                             <hr className="dark-line" />
-                            <div className="job-report-numbers col-11">
+                            <div id="gigs-steps-container" className="job-report-numbers col-11">
                                 <div className="col-12 col-lg-4 text-dark job-report-number-column text-center">
                                     <p className="text-dark gigs-number">1.</p>
                                     <p className="gigs-step-description">SIGN UP FOR GIGS AND GET PRE-QUALIFIED.</p>
@@ -34,14 +34,14 @@ class Gigs extends Component {
                                 </div>
                             </div>
                             <div className="row col-12 justify-content-center">
-                                <div className="text-center gigs-cta-button">
-                                    <button className="gigs-cta-text-container">
+                                <button className="gigs-cta-button">
+                                    <div className="gigs-cta-text-container">
                                         <p className="gigs-cta-text">Sign up for Vangst Gigs and get paid</p>
-                                    </button>
+                                    </div>
                                     <div className="gigs-arrow-container">
                                         <img className="gigs-arrow" src="/static/images/vangst-main-page/orange-arrow-right.png"></img>
                                     </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
