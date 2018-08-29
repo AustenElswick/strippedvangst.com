@@ -10,7 +10,7 @@ class News extends Component {
                     <hr className="section-title-line"></hr>
                 </div>
                 <div className="row news-logos">
-                    <div className="news-logo-container">
+                    <div id="entreprenuer"className="news-logo-container">
                         <a href="https://www.entrepreneur.com/article/313579" target="_blank" >
                             <img className="event-image entrepreneur-logo" src="/static/images/vangst-main-page/entrepreneur-logo.png" target="_blank"></img>                    
                         </a>
@@ -26,7 +26,7 @@ class News extends Component {
                         </a>
                     </div>
                    
-                    <div className="news-logo-container">
+                    <div id="cnbc"className="news-logo-container">
                         <a href="https://www.cnbc.com/2017/10/18/meet-the-24-year-old-founder-behind-the-career-site-for-cannabis-jobs.html" target="_blank">
                             <img className="event-image cnbc-logo" src="/static/images/vangst-main-page/cnbc-logo.png"></img>                    
                         </a>
