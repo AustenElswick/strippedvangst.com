@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import PageWrapper from "../components/PageWrapper.js";
-import Menu from "../components/Menu.js";
+import VangstMainPage from './vangst-main-page'
 import { Config } from "../config.js";
 
 class Index extends Component {
@@ -24,10 +24,10 @@ class Index extends Component {
     }
 
     render() {
-        return (
-            <Layout>
-                <Menu menu={this.props.headerMenu} />
-            </Layout>
+      return (
+        <Layout>
+          <VangstMainPage /> 
+        </Layout>
         );
     }
 }

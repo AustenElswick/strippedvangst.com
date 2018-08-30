@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+const port = 80
 
 const port = 3000;
 const dev = process.env.NODE_ENV !== "production";
