@@ -25,6 +25,7 @@
         "next": "^6.1.1",
         "popper.js": "^1.14.4",
         "react": "^16.4.2",
+        "react-mailchimp-subscribe": "^2.0.2",
         "reactstrap": "^6.4.0"
     },
     "devDependencies": {

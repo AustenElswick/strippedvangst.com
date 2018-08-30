@@ -64,16 +64,19 @@ class Menu extends Component {
                     ABOUT
                     </DropdownToggle>
                     <DropdownMenu right>
-                    <DropdownItem>
-                        Option 1
+                    <DropdownItem className="nav-link">
+                        WORK FOR VANGST
                     </DropdownItem>
-                    <DropdownItem>
-                        Option 2
+                    <DropdownItem className="nav-link">
+                        TEAM
                     </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                        Reset
+                    <DropdownItem className="nav-link">
+                        BLOG
                     </DropdownItem>
+                    <DropdownItem className="nav-link">
+                        CONTRACT
+                    </DropdownItem>
+
                     </DropdownMenu>
                 </UncontrolledDropdown>
                 </Nav>

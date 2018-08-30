@@ -7,7 +7,21 @@ const Footer = () => (
                 <img src="/static/images/logos/logo.png"></img>
             </div>
             <div className="col-12 col-lg-8 footer-content">
-                <div className="footer-signup">
+                {/* <div className="footer-signup">
+                    <div className="text-white footer-input-title">
+                        Sign up for our newsletter and stay in the know
+                    </div>
+                    <div>
+                        <div class="input-group input-group-sm footer-signup-input">
+                            <input type="text" id="email-input-footer" className="email-input" placeholder="Email" aria-label="Recipient's email" aria-describedby="basic-addon2" />
+                            <input type="number" id="zip-code-input-footer" className="zip-code-input" placeholder="Zip" aria-label="Recipient's zip code" aria-describedby="basic-addon2" />
+                            <div class="input-group-append">
+                                <button id="footer-signup-button" class="btn btn-outline text-white" type="button">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+                <div id="mc_embed_signup" className="footer-signup">
                     <div className="text-white footer-input-title">
                         Sign up for our newsletter and stay in the know
                     </div>
@@ -31,7 +45,9 @@ const Footer = () => (
                     <ul className="footer-link-group">
                         <li className="nav-link text-white">DENVER, CO</li>
                         <li className="nav-link text-white">SANTA MONICA, CA</li>
-                        <li className="nav-link text-white">INFO@VANGSTTALENT.COM</li>
+                        <li className="nav-link text-white">
+                            <a id="email-link" href="mailto:info@vangst.com">INFO@VANGST.COM</a>
+                        </li>
                         <li className="nav-link footer-copyright">&#169; 2018 VANGST</li>
                     </ul>
                     <div className="footer-social-icons">

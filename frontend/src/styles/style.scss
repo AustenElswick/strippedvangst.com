@@ -39,6 +39,7 @@ $theme-font: 100% verdana, sans-serif;
 
 
 body {
+  -webkit-font-smoothing: antialiased;
   font: $theme-font;
   background-color: $themeColor-Light;
   h1, h2 {
@@ -55,19 +56,39 @@ h3 {
 
 p {
   font-family: Sabon Italic;
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
+  line-height: 1.4em;
+  font-weight: 700;
 }
 
 .nav-link {
   font-family: Brandon Grotesque Regular;
   letter-spacing: 1px;
   font-size: 0.9rem;
+  line-height: 1.2em;
 }
 
 .section-label {
   padding-top: 2rem;
 }
 
+.dark-line {
+  background-color: #666666;
+  height: 2px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.white-line{
+  background-color:white;
+  height: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-dark {
+  font-weight: 400;
+}
 
 
 
@@ -134,6 +155,11 @@ footer {
   align-content: center;
   align-items: center;
   justify-content: space-around;
+}
+
+#email-link {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-copyright {
@@ -207,7 +233,7 @@ footer {
 // ******************************* Hero.js 
 
 .hero-section {
-  background-image: url("/static/images/vangst-main-page/biologist.jpg");
+  background-image: url("/static/images/vangst-main-page/plant-in-hand.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -279,11 +305,6 @@ footer {
   align-items: center;
 }
 
-.white-line {
-  background-color: white;
-  border: 0;
-  padding-top: 4px
-}
 
 .section-label {
   display: flex;
@@ -344,7 +365,7 @@ footer {
 // ******************************** Job Report
 
 .job-report {
-  background-image: url('static/images/vangst-main-page/female-biologists.jpg');
+  background-image: url('static/images/vangst-main-page/Home-Section-3-Cropped.jpg');
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -431,12 +452,6 @@ footer {
   justify-content: center;
 }
 
-.dark-line {
-  background-color: darkgray;
-  border: 0;
-  padding-top: 4px
-}
-
 #gigs-steps-container {
   display: flex;
   flex-wrap: wrap;
@@ -447,6 +462,12 @@ footer {
   letter-spacing: 1px;
   font-size: 0.9rem;
   padding-bottom: 2rem;
+}
+
+#gigs-cta-button-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
 }
 
 .gigs-cta-button {
@@ -484,7 +505,7 @@ footer {
 .news-logos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   img {
     width: auto;
     height: 30px;
@@ -608,6 +629,17 @@ align-items: center;
   background-color: #dadada;
 }
 
+.vangst-talent-title-container {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#talent-line {
+  padding-top: 0;
+  margin-top: 8px;
+  margin-bottom: 3rem;
+}
+
 .vangst-talent-title {
   display: flex;
   flex-direction: row;
@@ -686,9 +718,18 @@ align-items: center;
   h2 {font-size: 4rem;}
 }
 
+@media (min-width: 993px) {
+  .hero-section {
+    height: calc(100vh - 71px);
+  }
+}
 
 @media (max-width: 992px) {
   // Hero.js
+
+  .hero-section {
+    height: calc(100vh - 56px);
+  }
 
   .hero-cta {
     display: flex;
@@ -739,9 +780,6 @@ align-items: center;
   .job-report-symbol {
     font-size: 15px;
   }
-  // .white-line-div {
-  //   width: 100px;
-  // }
 
   .report-graphic {
     height: 100px;
@@ -849,11 +887,19 @@ align-items: center;
     padding-bottom: 5px;
   }
   .white-line-div {
-    width: 60px;
+    width: 80px;
     margin: 5px;
   }
 }
 
+@media (min-width: 376px) {
+  #gigs-cta-text-1 {
+    display: block;
+  }
+  #gigs-cta-text-2 {
+    display: none;
+  }
+}
 
 @media (max-width: 375px) {
   //JobReport.js
@@ -873,11 +919,21 @@ align-items: center;
   }
 
   //Gigs.js
+  #gigs-cta-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #gigs-steps-container {
     display: none;
   }
   .gigs-cta-button {
     margin-top: 2rem;
+  }
+
+  #gigs-cta-text-1 {
+    display: none;
   }
 
   //News.js

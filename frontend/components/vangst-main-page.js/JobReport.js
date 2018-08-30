@@ -15,9 +15,9 @@ class JobReport extends Component {
                             <h2 className="text-left job-report-title">
                                 Download the <br/>Vangst Salary Report
                             </h2>
-                            <hr className="white-line job-report-line" noshade />
+                            <div className="white-line job-report-line"></div>
                             <p className="section-copy job-report-section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute.</p>
-                            <hr className="white-line job-report-line" />
+                            <div className="white-line job-report-line"></div>
                             <div className="job-report-numbers">
                                 <div id="states-number"className="col-lg-4 text-light job-report-number-column">
                                     <div className="job-report-number">30</div>
