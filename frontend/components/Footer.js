@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MailChimpForm from "./MailChimpForm.js";
 
 const Footer = () => (
     <footer>
@@ -21,19 +22,16 @@ const Footer = () => (
                         </div>
                     </div>
                 </div> */}
-                <div id="mc_embed_signup" className="footer-signup">
-                    <div className="text-white footer-input-title">
+                <div className="footer-signup*">
+                    <div className="text-white footer-input-title text-center">
                         Sign up for our newsletter and stay in the know
                     </div>
-                    <div>
-                        <div class="input-group input-group-sm footer-signup-input">
-                            <input type="text" id="email-input-footer" className="email-input" placeholder="Email" aria-label="Recipient's email" aria-describedby="basic-addon2" />
-                            <input type="number" id="zip-code-input-footer" className="zip-code-input" placeholder="Zip" aria-label="Recipient's zip code" aria-describedby="basic-addon2" />
-                            <div class="input-group-append">
-                                <button id="footer-signup-button" class="btn btn-outline text-white" type="button">Sign Up</button>
-                            </div>
-                        </div>
+                    <div className="mailchimp-form">
+                        <MailChimpForm />
                     </div>
+                            
+                        
+                    
                 </div>
                 <div className="row footer-links-container col-xl-10">
                     <ul id="footer-list-1" className="footer-link-group">

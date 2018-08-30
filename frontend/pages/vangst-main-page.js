@@ -10,9 +10,7 @@ import JobReport from '../components/vangst-main-page.js/JobReport';
 import Gigs from '../components/vangst-main-page.js/Gigs';
 import News from '../components/vangst-main-page.js/News';
 import VangstTalent from '../components/vangst-main-page.js/VangstTalent';
-import MailChimpForm from '../components/vangst-main-page.js/MailChimpForm';
 import { Config } from "../config.js";
-
 
 class VangstMainPage extends Component {
     render() {
@@ -25,7 +23,6 @@ class VangstMainPage extends Component {
                 <Gigs />
                 <News />
                 <VangstTalent />
-                <MailChimpForm />
             </Layout>
         );
     }
