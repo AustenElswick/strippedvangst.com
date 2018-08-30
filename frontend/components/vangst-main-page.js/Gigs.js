@@ -33,10 +33,11 @@ class Gigs extends Component {
                                     <p className="gigs-step-description">GET CASH MONEY AT THE END OF YOUR GIG</p>
                                 </div>
                             </div>
-                            <div className="row col-12 justify-content-center">
+                            <div id="gigs-cta-button-container" className="row col-12">
                                 <button className="gigs-cta-button">
                                     <div className="gigs-cta-text-container">
-                                        <p className="gigs-cta-text">Sign up for Vangst Gigs and get paid</p>
+                                        <p id="gigs-cta-text-1" className="gigs-cta-text">Sign up for Vangst Gigs and get paid</p>
+                                        <p id="gigs-cta-text-2" className="gigs-cta-text">Sign up</p>
                                     </div>
                                     <div className="gigs-arrow-container">
                                         <img className="gigs-arrow" src="/static/images/vangst-main-page/orange-arrow-right.png"></img>
