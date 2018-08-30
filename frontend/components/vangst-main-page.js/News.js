@@ -6,7 +6,7 @@ class News extends Component {
            <section className="section news-section">
             <div className="container">
                 <div className="text-center">
-                    <h3>VANGST IN THE NEWS</h3>
+                    <h3 className="text-dark">VANGST IN THE NEWS</h3>
                     <hr className="section-title-line"></hr>
                 </div>
                 <div className="row news-logos">
