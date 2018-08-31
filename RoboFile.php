@@ -108,8 +108,8 @@ class RoboFile extends \Robo\Tasks {
             'core config --dbname=' . $opts['wp-db-name'] . ' --dbuser=' . $opts['wp-db-name'] . ' --dbpass='
             . $opts['wp-db-name'] . ' --dbhost=' . $db_ip
         );
-        $this->wp( 'db drop --yes' );
-        $this->wp( 'db create' );
+        // $this->wp( 'db drop --yes' );
+        // $this->wp( 'db create' );
 
         $install_command = implode( ' ', [
             'core install',

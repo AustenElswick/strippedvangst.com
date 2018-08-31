@@ -25,7 +25,7 @@ class Offices extends Component {
           <h5>Contact us</h5>
           <div>white line goes here</div>
           <p>info@vangst.com</p>
-          <p>phone number</p>
+          <p>(844)-482-6478</p>
         </div>
       </section>
     );
