@@ -1,28 +1,26 @@
+
 import React, { Component } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 // a basic form
 const CustomForm = ({ status, message, onValidated }) => {
-  let email, name, lname;
+  let email, fname, lname, reason;
+  
   const submit = () =>
     email &&
-    name &&
+    fname &&
     lname &&
+    reason &&
     email.value.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email.value,
-      FNAME: name.value
+      FNAME: fname.value,
+      LNAME: lname.value,
+      MMERGE5: reason.value
     });
 
   return (
-    <div
-      style={{
-        background: "#efefef",
-        borderRadius: 2,
-        padding: 10,
-        display: "inline-block"
-      }}
-    >
+    <div>
       {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
       {status === "error" && (
         <div
@@ -36,31 +34,36 @@ const CustomForm = ({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (name = node)}
-        type="text"
-        placeholder="First name"
-        name="FNAME"
-      />
-  <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (name = node)}
-        type="text"
-        placeholder="last name"
-        name="FNAME"
-      />
-      <br />
-      <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (email = node)}
-        type="email"
-        placeholder="Email"
-      />
-      <br />
-      <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
-        Submit
-      </button>
+      <br/>
+      <div className="mailchimp-form">
+        <input
+          style={{ fontSize: "1em", padding: 5 }}
+          ref={node => (fname = node)}
+          type="text"
+          placeholder="First name"
+        />
+        <input
+          style={{ fontSize: "1em", padding: 5 }}
+          ref={node => (lname = node)}
+          type="text"
+          placeholder="Last name"
+        />
+        <input
+          style={{ fontSize: "1em", padding: 5 }}
+          ref={node => (email = node)}
+          type="email"
+          placeholder="Email"
+        />
+        <select style={{ fontSize: "1em", padding: 5 }} ref={node => (reason = node)}>
+          <option value="" disabled selected hidden>Why are you here?<span><img src="/static/images/vangst-main-page/down-arrow-gray.png"></img></span></option>
+          <option value="Hiring Talent">Hiring Talent</option>
+          <option value="Looking For Work">Looking for work</option>
+          <option value="Other">Other</option>
+        </select>
+        <button id="footer-signup-button" className="btn btn-outline text-white" onClick={submit}>
+          Sign Up
+        </button>
+      </div>
     </div>
   );
 };

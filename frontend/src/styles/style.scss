@@ -112,7 +112,7 @@ footer {
   font-family: Brandon Grotesque Regular Italic;
   font-size: 1.25rem;
   letter-spacing: 1.5px;
-  padding: 0.5rem;
+  line-height: 1em;
 }
 
 .footer-container {
@@ -155,6 +155,41 @@ footer {
   align-content: center;
   align-items: center;
   justify-content: space-around;
+}
+
+.mailchimp-form {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  input {
+    margin-right: 1px;
+    margin-top: 5px;
+    height: 2rem;
+  }
+  select {
+    background-color: white;
+    border-radius: 0;
+    color: gray;
+    height: 2rem;
+    margin-right: 1px;
+    margin-top: 5px;
+    border: 0px;
+    width: 201px;
+    background-image: url("/static/images/vangst-main-page/down-arrow-gray.png");
+  }
+  button {
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 0px;
+  }
 }
 
 #email-link {
@@ -809,11 +844,6 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: start;
   }
-
-  // .gigs-arrow{
-  //   display: none;
-  // }
-
 }
 
 @media (min-width: 1024px) {
@@ -852,28 +882,12 @@ align-items: center;
     width: 100%;
     justify-content: space-between;
   }
+}
 
-  #email-input-footer {
-    margin-bottom: 5px;
-    max-width: 100%;
-    width: 100%;
+@media (max-width: 500px){
+  .mailchimp-form {
+    margin-bottom: 1rem;
   }
-  #zip-code-input-footer {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .footer-signup-input {
-    display: flex;
-    justify-content: center;
-  }
-
-  #footer-signup-button {
-    border-radius: 0px;
-    margin-top: 10px;
-  }
-
-
 }
 
 @media (max-width: 420px){
