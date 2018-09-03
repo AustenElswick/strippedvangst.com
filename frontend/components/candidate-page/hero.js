@@ -94,7 +94,7 @@ class Hero extends Component {
 
           @media (max-width: 768px) {
             .job-report-number {
-              font-size: 3rem;
+              font-size: 5rem;
             }
             .single-column {
               width: 50%;
@@ -102,6 +102,7 @@ class Hero extends Component {
               flex-direction: column;
               justify-content: center;
               align-items: center;
+              padding-bottom: 2rem;
             }
             .large-v-line-white {
               display: none;

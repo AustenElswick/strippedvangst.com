@@ -106,13 +106,15 @@ class CreateAccount extends Component {
           }
 
           @media (max-width: 430px) {
-            img {width: 80px; height: 80px; margin-bottom: 50px}
+            img {width: 80px; height: 80px;}
           }
 
           @media (max-width: 375px) {
-            img { width: 100px; height: 100px; margin-right: 15px;
-
-            }
+            img { width: 90px; height: 90px; margin-right: 10px; margin-bottom: 55px;}
+            #create-account-section {padding: 1rem;}
+            #img-container {width: 30%}
+            #text-container {width: 70%; padding: 10px 0px 10px 0px;}
+            h4 {padding-bottom: 0px;}
           }
 
 
