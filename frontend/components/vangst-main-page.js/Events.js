@@ -48,7 +48,6 @@ class Events extends Component {
                             <div className="event-description">Denver, CO / July 12th, 2018</div>
                         </div>
                     </div>
-                
                 </div>
             </section>
         );
