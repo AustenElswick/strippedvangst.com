@@ -25,6 +25,44 @@ class FeaturedJobs extends Component {
             <Link to='/contact-form'><a>CONTACT US NOW ></a></Link>
           </div>
         </div>
+        <style>
+          {`
+            #featuredjobs-section{
+              min-height: 100vh;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+
+            #featured-job-content {
+              padding: 2rem;
+            }
+            
+            .title-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            .job-posting{ padding-top: 2rem; } 
+            
+            .orange-text{ color: #f0561f }
+
+            p {margin-bottom: 5px;}
+
+            a {font-size: 0.75rem;}
+
+            @media (max-width: 575px){
+              h4 {
+                font-size: 1.25rem;
+              }
+              p {font-size: 0.9rem; line-height: 100%}
+          `}
+        </style>
       </section>
     );
   }

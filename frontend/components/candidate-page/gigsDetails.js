@@ -65,8 +65,14 @@ class GigsDetails extends Component {
             align-items: center;
           }
 
+          @media (max-width: 770px) {
+            p {font-size: 0.9rem; padding-right: 0px; padding-left: 0px;}
+          }
+          .container {padding-left:0px; padding-right: 0px;}
 
-
+          @media (max-width: 495px) {
+            p {font-size: 0.7rem;}
+          }
 
           `}</style>
       </section>

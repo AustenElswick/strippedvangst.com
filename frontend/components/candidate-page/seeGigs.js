@@ -84,6 +84,26 @@ class SeeGigs extends Component {
             }
           }
 
+          @media (max-width: 884px) {
+            h2 {font-size: 3rem;}
+          }
+
+          @media (max-width: 724px) {
+            h2 {font-size: 2.5rem;}
+          }
+
+          @media (max-width: 724px) {
+            h2 {font-size: 1.8rem;}
+          }
+
+          @media (max-width: 535px) {
+            h2 {font-size: 1.3rem;}
+          }
+
+          @media (max-width: 455px) {
+            h2 {font-size: 1rem;}
+          }
+
           `}</style>
       </section>
     );
