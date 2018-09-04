@@ -21,6 +21,7 @@ class EmailForm extends Component {
                         flex-direction: row;
                         justify-content: center;
                         padding: 3rem;
+                        min-height: 30vh;
                     }
 
                     #email-form-section-container {
