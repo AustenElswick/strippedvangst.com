@@ -16,7 +16,7 @@ class JobReport extends Component {
                                 Download the <br/>Vangst Salary Report
                             </h2>
                             <div className="white-line job-report-line"></div>
-                            <p className="section-copy job-report-section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute.</p>
+                            <p className="section-copy job-report-section-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute.</p>
                             <div className="white-line job-report-line"></div>
                             <div className="job-report-numbers">
                                 <div id="states-number"className="col-lg-4 text-light job-report-number-column">
@@ -45,7 +45,7 @@ class JobReport extends Component {
                         <div className="col-lg-4 report-column">
                                 <img className="report-graphic" src='/static/images/vangst-main-page/report-img.png' alt="vangst salary report graphic"></img>
                                 <img className="play-button-img" src='/static/images/vangst-main-page/play-button.png' alt=""></img>
-                                <div className="text-light"><p>Download full report</p></div>
+                                <div className="text-light"><p>See full report</p></div>
                         </div>
                     </div>
                 </div>

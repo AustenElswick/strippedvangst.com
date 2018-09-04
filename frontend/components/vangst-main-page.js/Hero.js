@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Hero extends Component {
     render() {
         return (
-            <section className="hero-section">
+            <section id="vangst-main-page-hero" className="hero-section">
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-12">
