@@ -12,10 +12,10 @@ class BestRecruiters extends Component {
           </div>
         <h2>Seasoned recruiters with  <br/>deep industry knowledge</h2>
         <div className="white-line"></div>
-          <p className="text-white">The cannabis industry has all types of recruiting needs, and that’s why we’ve hired (and are constantly hiring) top recruiters with all different backgrounds. Our 50+ full time recruiting team comes from Executive, Technology, Retail, Pharmaceutical, Food & Beverage, Finance, Engineering, and manufacturing recruiting backgrounds. We believe our recruiting backgrounds + deep cannabis industry knowledge is the key to our success. Our clients are our partners, and we’re proud to work with them every step of the way to ensure effective, long term hires.
+          <p className="text-white">We know you’re growing, so we’re here to ensure you find and keep the talent you need. Our recruiters are an extension of your organization, ready to utilize our cannabis expertise and network to provide you with immediate solutions and exceed your expectations. We’re proud to work with our clients every step of the way to ensure effective, long-term hires.
         </p>
         <div className="white-line"></div>
-        <p id="recruiter-quote">"something about how are recruiters are the best and most qualified Whether you are looking for temporary or permanent employees our recruiters.. blah blah idk idk"</p>
+        <p id="recruiter-quote">"“Vangst has been instrumental in doubling our team size over the past six months by sourcing candidates for finance, sales, engineering, marketing, and customer success. I’m excited to see Vangst continue to expand their offerings through Vangsters and proved much needed services to our rapidly growing industry. The same amount of vetting that we have historically need to do on our own is now being handled by a very capable team that is aware of the high standards we employ in our hiring process."<span id="recruiter-quote-author-name">-Roger Obando, CTO, Baker Technologies</span></p>
         <div id="recruiter-button-container">
           
           <div id="recruiter-button-outline">
@@ -36,6 +36,7 @@ class BestRecruiters extends Component {
             align-items: center;
             min-height: 100vh;
             min-width: 100vw;
+            overflow: hidden;
           }
 
           #recruiter-section-content {
@@ -49,7 +50,13 @@ class BestRecruiters extends Component {
             font-weight: 900 !important;
             font-size: 1.5rem;
             line-height: 28px;
-            padding: 2rem;
+            padding: 1rem 2rem 2rem 2rem;
+          }
+
+          #recruiter-quote-author-name {
+            margin: 20px;
+            font-weight: 400;
+
           }
 
           #recruiter-button-link {

@@ -10,9 +10,9 @@ class CandidateDataBase extends Component {
                 <p className="section-number text-white">.01</p>
                 <p className="section-text text-white">We have the best people in the business</p>
             </div>
-            <h2>We have the largest candidate database</h2>
+            <h2 id="db-title">We have the largest candidate database</h2>
             <div className="white-line"></div>
-            <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a velit in diam dignissim pharetra. Fusce vitae mi sit amet mauris condimentum blandit. Pellentesque sodales dapibus elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent commodo erat non massa pulvinar dignissim. Nunc efficitur accumsan odio, eget finibus.</p>
+            <p className="text-white">We have the largest candidate database in the cannabis industry. With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
             <div className="white-line"></div>
             <div id="stats-row">
               <div className="stat-container text-center">
@@ -26,7 +26,7 @@ class CandidateDataBase extends Component {
               </div>
             </div>
           </div>
-          <div>
+          <div id="db-right-column">
             <div id="db-img-container">
               <img id="db-img" src='/static/images/employer-page/sec_01/woman.jpg' />
             </div> 
@@ -51,6 +51,7 @@ class CandidateDataBase extends Component {
               flex-direction: column;
               align-items: center;
               justify-content: center;
+              overflow: hidden;
             
             }
           #database-section-content {
@@ -117,6 +118,12 @@ class CandidateDataBase extends Component {
             font-weight: 400;
             padding-top: 20px;
             font-size: 1.2rem;
+          }
+
+          @media (max-width: 992px) {
+            #db-title {font-size: 3rem;}
+            #db-right-column {display:none}
+            .stat-text {font-size: 1rem;}
           }
 
 
