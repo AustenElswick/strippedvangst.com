@@ -5,7 +5,7 @@ class SaveMoneyAndTime extends Component {
   render() {
     return (
       <section id="time-money-section">
-        <div id="time-money-title-container">
+        {/* <div id="time-money-title-container">
           <h3 id="section-title" className="text-white">HOW WE SAVE YOU TIME AND MONEY</h3>
           <div className="small-gray-line-h"></div>
         </div>
@@ -32,7 +32,7 @@ class SaveMoneyAndTime extends Component {
                 <p className="infographic-text text-center">Lorem Ispsum dolor bole pintraneous bouserat</p>
               </div>
               
-            </div>
+            </div> */}
             <div id="email-time-money">
               <EmailFormVangsters />
             </div>

@@ -8,7 +8,7 @@ class Companies extends Component {
         <div className="small-gray-line-h"></div>
         <div id="logos-row">
           <div className="company-logo-container">
-            <img className="company-logo" src='static/images/employer-page/company-logos/LeafLink-Color.png' alt='LeafLink' />
+            <img className="company-logo" src='static/images/employer-page/company-logos/ll-logo.png' alt='LeafLink' />
           </div>
           <div className="company-logo-container">
             <img id="GTI" className="company-logo" src='static/images/employer-page/company-logos/GTI.png' alt='GTI' />
@@ -120,8 +120,6 @@ class Companies extends Component {
           
           `}
         </style>
-
-        
       </section>
     );
   }

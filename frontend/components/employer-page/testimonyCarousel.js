@@ -6,11 +6,11 @@ class TestimonyCarousel extends Component {
       <section id="carousel-section">
         <div id="carousel-section-content">
           <div id="left-carousel-column">
-            <h3 id="carousel-quote"><span className="quotation-marks">"</span>Lorem ipsum dolor sit amet, consecur adicing elit. Vivamus diam libero, congue ac rhoncus id, bibendum eget ligula. Cras eget pharetra libero. Maecenas egestas cursus feugiat. In non semper sapien, quis molestie mi. <span className="quotation-marks">"</span></h3>
+            <h3 id="carousel-quote"><span className="quotation-marks">" </span>I have worked with Vangst over time for recruiting services and I rarely write reviews, but felt this one is well deserved. The company is a pleasure to work with. I used to work in the big corporate world and I managed many contracts for recruiting myself. I can honestly say, Vangst is very timely with providing candidates and most importantly the candidates they present are all viable candidates. In addition to that, the employees and the owner have great customer service and are a pleasure to do business with. <span className="quotation-marks">"</span></h3>
           </div>
           <div id="author-container">
             <div className="small-vertical-line-white"></div>
-            <h4 id="quote-author-name">JACOB, DENVER</h4>
+            <h4 id="quote-author-name">KIRSTEN, DENVER</h4>
             <div className="small-vertical-line-white"></div>
           </div>
 
@@ -48,7 +48,7 @@ class TestimonyCarousel extends Component {
 
           #carousel-quote {
             color: white;
-            line-height: 35px;
+            line-height: 33px;
 
           }
 

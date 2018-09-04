@@ -6,7 +6,6 @@ import BestRecruiters from '../components/employer-page/bestRecruiters';
 import GuaranteePlaced from '../components/employer-page/guaranteePlaced';
 import TestimonyCarousel from '../components/employer-page/testimonyCarousel';
 import Companies from '../components/employer-page/companies';
-import SaveTimeAndMoney from '../components/employer-page/saveTimeAndMoney';
 import EmailForm from '../components/employer-page/emailForm';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
@@ -24,7 +23,6 @@ class EmployerPage extends Component {
           <EmailForm />
           <TestimonyCarousel />
           <Companies />
-          <SaveTimeAndMoney />
         </Layout>
       </div>
     );
