@@ -11,9 +11,9 @@ class CandidateDataBase extends Component {
                 <p className="section-text text-white">We have the best people in the business</p>
             </div>
             <h2>We have the largest candidate database</h2>
-            <div id="db-white-line" className="white-line"></div>
+            <div className="white-line"></div>
             <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a velit in diam dignissim pharetra. Fusce vitae mi sit amet mauris condimentum blandit. Pellentesque sodales dapibus elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent commodo erat non massa pulvinar dignissim. Nunc efficitur accumsan odio, eget finibus.</p>
-            <div id="db-white-line" className="white-line"></div>
+            <div className="white-line"></div>
             <div id="stats-row">
               <div className="stat-container text-center">
                 <p className="text-white stat-text">40,000+ <br/>job seekers.</p>
@@ -28,7 +28,7 @@ class CandidateDataBase extends Component {
           </div>
           <div>
             <div id="db-img-container">
-              <img src='/static/images/employer-page/sec_01/woman.jpg' />
+              <img id="db-img" src='/static/images/employer-page/sec_01/woman.jpg' />
             </div> 
             <div id="testimonial-container">
               <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for the cannabis industry recruiting due to their passion, professionalism and deep rooted network within the space."</p>
@@ -40,7 +40,8 @@ class CandidateDataBase extends Component {
           {`
             h2 {color: white !important}
             p {color: white; font-size: 1.2rem;}
-            img {width: 250px; height: auto;}
+            
+            #db-img {width: 250px; height: auto;}
             
             #database-section {
               background-image: url('/static/images/employer-page/sec_01/orange-background.jpg');
@@ -68,9 +69,6 @@ class CandidateDataBase extends Component {
             padding-bottom: 2rem;
           }
 
-          #db-white-line {
-            height: 3px;
-          }
           #stats-row {
             display: flex;
             flex-direction: row;
