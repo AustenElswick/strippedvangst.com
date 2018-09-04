@@ -74,7 +74,7 @@ class Menu extends Component {
                         BLOG
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        CONTRACT
+                        CONTACT
                     </DropdownItem>
 
                     </DropdownMenu>

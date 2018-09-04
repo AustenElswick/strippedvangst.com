@@ -66,12 +66,20 @@ class GigsDetails extends Component {
           }
 
           @media (max-width: 770px) {
-            p {font-size: 0.9rem; padding-right: 0px; padding-left: 0px;}
+            p {font-size: 1rem; padding-right: 0px; padding-left: 0px;}
+            #gigs-detail-section {padding: 1rem;}
+            img {height: 100px; width: 100px;}
           }
           .container {padding-left:0px; padding-right: 0px;}
 
           @media (max-width: 495px) {
-            p {font-size: 0.7rem;}
+            img {height: 70px; width: 70px;}
+            p {font-size: 0.9rem;}
+          }
+
+          @media (max-width: 375px) {
+            img {height: 65px; width: 65px;}
+            p {padding-bottom: 0rem;}
           }
 
           `}</style>
