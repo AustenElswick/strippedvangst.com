@@ -5,6 +5,7 @@ import Link from "next/link";
 import PageWrapper from "../components/PageWrapper.js";
 import VangstMainPage from './vangst-main-page'
 import { Config } from "../config.js";
+import Router from 'next/router'
 
 class Index extends Component {
     static async getInitialProps(context) {
@@ -23,11 +24,14 @@ class Index extends Component {
         return { page, posts, pages };
     }
 
+    componentDidMount() {
+        Router.push('http://localhost:3000/vangst-main-page')
+    }
+
     render() {
       return (
-        <Layout>
-          <VangstMainPage /> 
-        </Layout>
+        <div>
+            </div>
         );
     }
 }
