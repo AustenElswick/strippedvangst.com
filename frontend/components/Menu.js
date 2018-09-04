@@ -48,16 +48,16 @@ class Menu extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                 <NavItem>
-                    <NavLink className="nav-link" href="/">JOB SEEKERS</NavLink>
+                    <NavLink className="nav-link" href="/vangst-cannabis-staffing-services">JOB SEEKERS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="nav-link" href="/">EMPLOYERS</NavLink>
+                    <NavLink className="nav-link" href="/employer-page">EMPLOYERS</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink className="nav-link" href="/">HOW IT WORKS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="nav-link" href="/">CAREER FAIR</NavLink>
+                    <NavLink className="nav-link" href="/vangst-talent-careerfair">CAREER FAIR</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret className="nav-link">
