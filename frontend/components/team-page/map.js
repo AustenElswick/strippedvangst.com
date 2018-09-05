@@ -37,7 +37,7 @@ class Map extends Component {
               background-image: url('/static/images/team-page/map.jpg');
               background-position: left center;
               background-repeat: no-repeat;
-              background-size: contain;
+              background-size: cover;
               display: flex;
               flex-direction: column;
               justify-content: center;

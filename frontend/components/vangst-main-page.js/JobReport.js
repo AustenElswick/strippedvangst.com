@@ -42,14 +42,19 @@ class JobReport extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 report-column">
-                                <img className="report-graphic" src='/static/images/vangst-main-page/report-img.png' alt="vangst salary report graphic"></img>
-                                <img className="play-button-img" src='/static/images/vangst-main-page/play-button.png' alt=""></img>
-                                <div className="text-light"><p>See full report</p></div>
-                        </div>
+                        <a id="salary-report-link" className="col-lg-4 report-column" href="https://blog.vangst.com/cannabis-salary-guide-2018/" target="_blank">
+                            <img className="report-graphic" src='/static/images/vangst-main-page/report-img.png' alt="vangst salary report graphic"></img>
+                            <img className="play-button-img" src='/static/images/vangst-main-page/play-button.png' alt=""></img>
+                            <div className="text-light"><p>See full report</p></div>
+                        </a>
                     </div>
                 </div>
             </div>
+            <style>
+                {`
+                    #salary-report-link {text-decoration: none;}
+                `}
+            </style>
         </section>
         );
     }

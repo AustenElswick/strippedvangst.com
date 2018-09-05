@@ -15,15 +15,19 @@ class CreateAccount extends Component {
           </div>
           <div id="text-container">
             <h4 id="title-2">PROFILE BENEFITS</h4>
-            <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam turpis nibh, vulputate at lacinia sit amet, facilisis ut nisi. Etiam massa nisi, luctus in consectetur rhoncus, pulvinar ut massa. </p>
-            <div className='create-profile-link-button text-center'>
-              <Link to='/create-profile'><a>CREATE A PROFILE</a></Link>
-            </div>
+            <p className="text-dark">Create a profile with Vangst and get matched to jobs that align with your skills and career goals.</p>
+            <Link href='/create-profile'>
+              <a>
+                <div className='create-profile-link-button text-center'>
+                  CREATE A PROFILE
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
         <style jsx>{`
           #create-account-section {
-            min-height: 50vh;
+            min-height: 40vh;
             min-width: 100vw;
             padding: 2rem;
             background-color: #dadada;

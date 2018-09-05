@@ -97,6 +97,16 @@ p {
   margin-bottom: 1rem;
 }
 
+a {
+  text-decoration: none;
+  width: max-content;
+}
+a:hover
+{
+ text-decoration:none;
+ cursor:pointer;
+}
+
 
 // *********************************** Footer.js
 

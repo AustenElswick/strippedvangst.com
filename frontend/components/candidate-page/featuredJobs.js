@@ -7,23 +7,36 @@ class FeaturedJobs extends Component {
       <section id="featuredjobs-section" className="section section-top section-full">
         <div id="featured-jobs-content" className="container">
           <div className="title-container">
-            <h3 className="orange-text">FEATURED JOBS</h3>
+            <h3>FEATURED JOBS</h3>
+            <div className="black-line-h"></div>
           </div>
           <div className='job-posting'>
-            <h4 className="orange-text">Senior Project Manager</h4>
+            <h3>Senior Project Manager</h3>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>VIEW ></a></Link>
+            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
-            <h4 className="orange-text">Product Tester</h4>
+            <h3>Product Tester</h3>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>VIEW ></a></Link>
+            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
-            <h4 className="orange-text">Sales Director</h4>
+            <h3>Sales Director</h3>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>VIEW ></a></Link>
+            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
+         
+          <Link href='/work-for-vangst'>
+            <a>
+              <div id="featured-button-container">
+                <div className="black-line-h"></div>
+                <h3 id="featured-button-text">SHOW MORE JOBS ></h3>
+                <div className="black-line-h"></div>
+              </div>
+            </a>
+          </Link>
+  
+          
         </div>
         <style>
           {`
@@ -49,12 +62,39 @@ class FeaturedJobs extends Component {
             }
             
             .job-posting{ padding-top: 2rem; } 
-            
-            .orange-text{ color: #f0561f }
 
-            p {margin-bottom: 5px;}
 
-            a {font-size: 0.75rem;}
+            .view-link {
+              font-family: Sabon Italic;
+              color: #f0561f;
+            }
+
+            .view-link:hover {
+              color: #f0561f;
+            }
+
+            .black-line-h {
+              height: 1px;
+              width: 175px;
+              background-color: black;
+              opacity: 0.8;
+            }
+
+            #featured-button-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-top: 2rem;
+
+            }
+            #featured-button-text {
+              font-size: 1rem;
+              margin: 0.5rem; 
+              text-decoration: none;
+              color: black;
+
+            }
 
             @media (max-width: 575px){
               h4 {

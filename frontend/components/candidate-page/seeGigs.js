@@ -7,7 +7,7 @@ class SeeGigs extends Component {
       <section id="seegigs-section" className="section section-top section-full">
         <div id="seegigs-content" className='container'>
           <div id="text-content" className="col-9">
-            <h2 className="text-white">EARN CASH TODAY</h2>
+            <h2 className="text-white">TEMPORARY WORK</h2>
             <h2 className="text-white">WITH <span id="black-box">VANGST GIGS.</span></h2>
             <div id='link-alignment'>
               <Link to='/gigs'><a>SEE GIGS NOW ></a></Link>

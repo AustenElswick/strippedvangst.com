@@ -3,30 +3,85 @@ import React, { Component } from 'react';
 class Offices extends Component {
   render() {
     return (
-      <section>
-        <img src='/static/images/dummyImage.png' />
-        <p>.02</p>
-        <p>Offices</p>
-        <div> 
-          <h5>Santa Monica, CA</h5>
-          <div>white line goes here</div>
-          <p>520 Broadway #3016</p>
-          <p>Santa Monica, CA</p>
-          <p>90401</p>
-        </div>
+      <section id="offices-section" className="hero-section">
         <div>
-          <h5>Denver, CO</h5>
-          <div>white line goes here</div>
-          <p>518 17th St</p>
-          <p>Denver, CO</p>
-          <p>80202</p>
+          <div id="map-section-label" className="section-label">
+            <p id="map-label-number" className="section-number text-white">.02</p>
+            <p id="map-label-text" className="section-text text-white">Offices</p>
+          </div>
+          <div id="offices-column-container"> 
+            <div className="offices-column">
+              <h5>Santa Monica, CA</h5>
+              <div className="small-h-line"></div>
+              <p className="offices-text">520 Broadway #3016</p>
+              <p className="offices-text">Santa Monica, CA</p>
+              <p className="offices-text">90401</p>
+            </div>
+            <div>
+              <h5>Denver, CO</h5>
+              <div className="small-h-line"></div>
+              <p className="offices-text">518 17th St</p>
+              <p className="offices-text">Denver, CO</p>
+              <p className="offices-text">80202</p>
+            </div>
+            <div>
+              <h5>Contact us</h5>
+              <div className="small-h-line"></div>
+              <a id="email-link" href="mailto:info@vangst.com"><p className="offices-text">info@vangst.com</p></a>
+              <a id="email-link" href="tel:+18444826478"><p className="offices-text">(844)-482-6478</p></a>
+            </div>
+          </div>
         </div>
-        <div>
-          <h5>Contact us</h5>
-          <div>white line goes here</div>
-          <p>info@vangst.com</p>
-          <p>(844)-482-6478</p>
-        </div>
+        <style>
+          {`
+
+          h5 {
+            color: white;
+            font-family: Brandon Grotesque Bold Italic;
+            font-size: 2.1rem;
+          }
+          
+          #offices-section {
+            padding: 4rem;
+            min-width: 100vw;
+            height: 50vh;
+            background-image: url('/static/images/team-page/ca-background.jpg');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          #map-section-label {
+            margin-bottom: 4rem;
+            padding-left: 3rem;
+          }
+
+          #offices-column-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            padding-right: 10%;
+            padding-right: 10%;
+          }
+
+          #offices-column {
+            
+          }
+
+          .small-h-line {
+            margin: 15px 0 15px 0;
+          }
+
+          .offices-text {
+            color: white;
+            font-family: Brandon Grotesque Regular;
+            font-size: 1.3rem;
+            margin: 1px 0 1px 0;
+          }
+          
+          `}
+        </style>
       </section>
     );
   }
