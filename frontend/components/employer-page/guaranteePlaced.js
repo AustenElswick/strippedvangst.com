@@ -12,7 +12,7 @@ class GuaranteePlaced extends Component {
           </div>
         <h2 id="placement-title">100% guarantee of placed candidates</h2>
         <div className="white-line"></div>
-          <p className="text-white" id="placement-quote">“From the inception of our meeting, Vangst was enthusiastic and attentive to the resource need, and worked diligently to sourced and qualify candidates for the position. Vangst provided attuned service over the course of the engagement to understand and adapt in working to fill the role, and maintained consistent communication with coordinating an exceptional solution to the need.”</p>
+          <p className="text-white" id="placement-quote">“Vangst was enthusiastic and attentive to our resource need and worked diligently to source and qualify candidates for the position. They provided attuned service over the course of the engagement and maintained consistent communication with coordinating an exceptional solution.”</p>
           <div id="placement-quote-container">
             <p id="placement-quote-author">- Nelson Oliver, Controller, O.pen Vape</p>
           </div>

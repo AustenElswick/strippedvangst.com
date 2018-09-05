@@ -8,25 +8,28 @@ class BestRecruiters extends Component {
         <div id="recruiter-section-content">
           <div id="recruiter-section-label" className="section-label">
             <p id="recruiter-label-number" className="section-number text-white">.02</p>
-            <p id="recruiter-label-text" className="section-text text-white">The best recruiters in the biz</p>
+            <p id="recruiter-label-text" className="section-text text-white">The best recruiters</p>
           </div>
-        <h2 id="recruiter-section-title">Seasoned recruiters with  <br/>deep industry knowledge</h2>
-        <div className="white-line"></div>
-          <p id="recruiter-main-text"className="text-white">We know you’re growing, so we’re here to ensure you find and keep the talent you need. Our recruiters are an extension of your organization, ready to utilize our cannabis expertise and network to provide you with immediate solutions and exceed your expectations. We’re proud to work with our clients every step of the way to ensure effective, long-term hires.
-        </p>
-        <div className="white-line"></div>
-        <p id="recruiter-quote">"Vangst has been instrumental in doubling our team size over the past six months by sourcing candidates for finance, sales, engineering, marketing, and customer success. I’m excited to see Vangst continue to expand their offerings through Vangsters and proved much needed services to our rapidly growing industry. The same amount of vetting that we have historically need to do on our own is now being handled by a very capable team that is aware of the high standards we employ in our hiring process."</p>
-        <div id="recruiter-author-container">
-          <p id="recruiter-quote-author-name" className="justify-content-right">-Roger Obando, CTO, Baker Technologies</p>
-        </div>
-        <div id="recruiter-button-container">
+          <h2 id="recruiter-section-title">Seasoned recruiters with  <br/>deep industry knowledge</h2>
+          <div className="white-line"></div>
+            <p id="recruiter-main-text"className="text-white">Growing has its pains. Finding and keeping the right talent shouldn’t be one of them. Rooted in deep industry expertise and expansive networks, our recruiters augment the complicated process of qualifying capable people so you can focus on your business. We communicate every step of the way to ensure effective long-term hires.
+          </p>
+          <div className="white-line"></div>
+          <p id="recruiter-quote">“Vangst doubled our team with finance, sales, engineering, marketing, and customer success talent while maintaining the high standards we employ in our hiring process.”</p>
+          <div id="recruiter-author-container">
+            <p id="recruiter-quote-author-name" className="justify-content-right">-Roger Obando, CTO, Baker Technologies</p>
+          </div>
+          <div id="recruiter-button-container">
           
-          <div id="recruiter-button-outline">
-            <Link href='/team'>
-                <a id="recruiter-button-link">Meet our team of experts ></a>
+          
+            <Link href='/team-page'>
+                <a>
+                <div id="recruiter-button-outline">
+                  <div id="recruiter-button-link">Meet our team of experts ></div>
+                </div>
+                </a>
             </Link>
           </div>
-        </div>
         </div>
         <style>
           {`

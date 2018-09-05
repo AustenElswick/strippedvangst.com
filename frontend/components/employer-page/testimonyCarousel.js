@@ -6,11 +6,11 @@ class TestimonyCarousel extends Component {
       <section id="carousel-section">
         <div id="carousel-section-content">
           <div id="left-carousel-column">
-            <h3 id="carousel-quote">"The company is a pleasure to work with.  I can honestly say, Vangst is very timely with providing candidates and most importantly the candidates they present are all viable candidates. The employees and the owner have great customer service and are a pleasure to do business with."</h3>
+            <h3 id="carousel-quote">“Vangst added 9+ members to our team that have been incredibly valuable for LeafLink. The CEO and team at Vangst understand the industry and their clients on a level we’ve not seen with any other recruiting firms.”</h3>
           </div>
           <div id="author-container">
             <div className="small-vertical-line-white"></div>
-            <h4 id="quote-author-name">KIRSTEN, DENVER</h4>
+            <h4 id="quote-author-name">RYAN, DENVER</h4>
             <div className="small-vertical-line-white"></div>
           </div>
 
