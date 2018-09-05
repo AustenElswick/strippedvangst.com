@@ -16,8 +16,105 @@ class Headshots extends Component {
               <p className="intro-column-text">We vow to use our vast resources and expertise to connect you with the best talent and opportunities in the industry. You can always count on open communication and continuous support from every member of our team.</p>
             </div>
           </div>
-          <div>
-            <p>Headshots go here...</p>
+          <div id="headshot-container">
+
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+            <div className="headshot-card">
+              <div className="headshot-label">
+                <div className="headshot-name">Karson<br/>Humiston</div>
+                <div className="headshot-position">Founder, CEO</div>
+              </div>
+            </div>
+
           </div>
         </div>
         <style>
@@ -53,6 +150,56 @@ class Headshots extends Component {
               width: 50vw;
               padding: 0 3rem 0 1rem;
             }
+
+            #headshot-container {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+
+            .headshot-card {
+              width: 150px;
+              height: 200px;
+              margin: 5px;
+              background-color: lightgray;
+              border-radius: 5px 5px 0 0; 
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              background-image: url('/static/images/team-page/headshots/karson-humiston.jpg');
+              background-position: top center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+
+            .headshot-label {
+              width: 100%;
+              height: auto;
+              padding: 10px;
+              background-image: linear-gradient(to bottom, rgba(240, 86, 31, 0) 0, #f0561f 100%);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+
+            .headshot-name {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 1.5rem;
+              line-height: 20px;
+              font-weight: 600;
+            }
+
+            .headshot-position {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 1rem;
+              font-weight: 700;
+              padding-top: 2px;
+            }
+
+
           
           
           `}
