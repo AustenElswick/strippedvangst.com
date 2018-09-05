@@ -6,7 +6,7 @@ class TestimonyCarousel extends Component {
       <section id="carousel-section">
         <div id="carousel-section-content">
           <div id="left-carousel-column">
-            <h3 id="carousel-quote"><span className="quotation-marks">" </span>I have worked with Vangst over time for recruiting services and I rarely write reviews, but felt this one is well deserved. The company is a pleasure to work with. I used to work in the big corporate world and I managed many contracts for recruiting myself. I can honestly say, Vangst is very timely with providing candidates and most importantly the candidates they present are all viable candidates. In addition to that, the employees and the owner have great customer service and are a pleasure to do business with. <span className="quotation-marks">"</span></h3>
+            <h3 id="carousel-quote">"The company is a pleasure to work with.  I can honestly say, Vangst is very timely with providing candidates and most importantly the candidates they present are all viable candidates. The employees and the owner have great customer service and are a pleasure to do business with."</h3>
           </div>
           <div id="author-container">
             <div className="small-vertical-line-white"></div>
@@ -18,7 +18,7 @@ class TestimonyCarousel extends Component {
         <style>
           {`
           #carousel-section {
-            min-height: 50vh;
+            min-height: 33vh;
             min-width: 100vw;
             background-image: url('/static/images/employer-page/testimonials/carousel-image.jpg');
             background-position: center-top;
@@ -32,7 +32,7 @@ class TestimonyCarousel extends Component {
 
           #carousel-section-content {
             display: flex;
-            flex-diretion: row;
+            flex-direction: row;
             justify-content: center;
             align-content: center;
             align-items: center;
@@ -49,6 +49,8 @@ class TestimonyCarousel extends Component {
           #carousel-quote {
             color: white;
             line-height: 33px;
+            font-size: 1.5rem;
+            opacity: 1;
 
           }
 
@@ -77,6 +79,33 @@ class TestimonyCarousel extends Component {
             height: 35px;
             background-color: white;
             border: none;
+          }
+
+          @media (max-width: 1300px) {
+            #carousel-section-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+            }
+            #left-carousel-column {
+              width: 100%;
+              padding: 0;
+            }
+          }
+
+          @media (max-width: 1100px){
+            #carousel-quote {font-size: 1.2rem;}
+          }
+
+          @media (max-width: 900px){
+            #carousel-quote {font-size: 1rem; line-height: 22px;}
+          }
+
+          @media (max-width: 565px){
+            #carousel-quote {font-size: 1rem; line-height: 18px;}
+            #quote-author-name {font-size: 1rem;}
           }
           
           `}

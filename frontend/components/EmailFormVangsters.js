@@ -66,6 +66,7 @@ const CustomForm = ({ status, message, onValidated }) => {
               height: 2.2rem;
               box-shadow: none;
               padding: 1rem;
+              border: solid 1px #dadada;
           }
           #subscribe-button {
               background-color: #f0561f;

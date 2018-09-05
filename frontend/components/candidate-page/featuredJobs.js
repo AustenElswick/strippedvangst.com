@@ -12,17 +12,17 @@ class FeaturedJobs extends Component {
           <div className='job-posting'>
             <h4 className="orange-text">Senior Project Manager</h4>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>CONTACT US NOW ></a></Link>
+            <Link to='/contact-form'><a>VIEW ></a></Link>
           </div>
           <div className='job-posting'>
             <h4 className="orange-text">Product Tester</h4>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>CONTACT US NOW ></a></Link>
+            <Link to='/contact-form'><a>VIEW ></a></Link>
           </div>
           <div className='job-posting'>
             <h4 className="orange-text">Sales Director</h4>
             <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
-            <Link to='/contact-form'><a>CONTACT US NOW ></a></Link>
+            <Link to='/contact-form'><a>VIEW ></a></Link>
           </div>
         </div>
         <style>
