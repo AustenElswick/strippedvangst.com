@@ -12,7 +12,7 @@ class CandidateDataBase extends Component {
             </div>
             <h2 id="db-title">We have the largest candidate database</h2>
             <div className="white-line"></div>
-            <p id="db-main-text" className="text-white">We have the largest candidate database in the cannabis industry. With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
+            <p id="db-main-text" className="text-white">With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
             <div className="white-line"></div>
             <div id="stats-row">
               <div className="stat-container text-center">
@@ -148,6 +148,13 @@ class CandidateDataBase extends Component {
             .stat-text {font-size: 0.8rem; line-height:15px;}
             .section-text {font-size: 0.9rem;}
             #db-main-text {font-size: 1rem;}
+          }
+
+          @media (max-width: 376px) {
+            .stat-text {font-size: 1.1rem; line-height:17px;}
+            .stat-container {padding: 0 2px 0 2px;}
+            .section-text {font-size: 1rem;}
+            #left-column {margin-right: 0;}
           }
 
 

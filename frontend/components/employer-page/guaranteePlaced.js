@@ -95,12 +95,6 @@ class GuaranteePlaced extends Component {
               #placement-title {font-size: 2rem; line-height: 30px;}
               #placement-quote {font-size: 1rem; line-height: 20px;}
             }
-
-
-
-           
-
-
           `}
         </style>
       </section>
