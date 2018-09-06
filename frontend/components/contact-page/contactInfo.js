@@ -13,8 +13,8 @@ class ContactInfo extends Component {
         <div id="contact-info-container">
           <div className="contact-info-column">
             <div id="contact-info-title-container">
-              <p className="orange-text">You can contact us with anything related to our company.</p>
-              <p className="orange-text">We'll get in touch with you as soon as possible.</p>
+              <p className="orange-text contact-info-title">You can contact us with anything related to our company.</p>
+              <p className="orange-text contact-info-title">We'll get in touch with you as soon as possible.</p>
             </div>
             <div id="contact-info-inputs-container">
               <Form>
@@ -81,18 +81,18 @@ class ContactInfo extends Component {
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>			
                 </Input>
-                <Input type='textarea' rows='7' cols='42' placeholder="Message"></Input>
-                <input type='button' value='SUBMIT' />
+                <Input id="contact-textarea" type='textarea' rows='7' cols='42' placeholder="Message" />
+                <div className="d-flex justify-content-center">
+                  <input id="contact-info-submit-button" type='button' value='SUBMIT' />
+                </div>
               </Form>
             </div>
           </div> 
-          <div className="contact-info-column">
-            
-              <h4>Contact Info</h4>
+          <div className="contact-info-column" id="contact-info-column-2">
+              <h4 id="column-2-title">Contact Info</h4>
               <div id="contact-small-line"></div>
-              <a id="contact-us-link" href="mailto:info@vangst.com">INFO@VANGST.COM</a>
-              <a id="contact-us-link" href="tel:+18444826478">(844)-482-6478</a>
-            
+              <a id="contact-us-link" className="contact-us-link" href="mailto:info@vangst.com">INFO@VANGST.COM</a>
+              <a id="contact-us-link" className="contact-us-link" href="tel:+18444826478">(844)-482-6478</a>
           </div>
         </div>
         <style>
@@ -110,14 +110,18 @@ class ContactInfo extends Component {
               background-repeat: no-repeat;
               background-size: cover;
               width: 100%;
-              height: 20vh;
+              height: 120px;
               padding: 2rem;
             }
             #contact-info-container {
               display: flex;
               flex-direction: row;
-              padding: 4rem;
+              padding:4rem;
               justify-content: space-around;
+              align-items: center;
+              align-content: center;
+              min-height: 100%;
+              min-width: 100%;
             }
 
             .contact-info-column {
@@ -148,8 +152,57 @@ class ContactInfo extends Component {
               margin-top: 5px;
             }
 
+            .contact-info-title {
+              font-family: Brandon Grotesque Regular;
+              font-size: 1.25rem;
+              margin-bottom: 0;
+
+            }
+
             .orange-text {
               color: #f0561f;
+            }
+
+            Input {
+              margin-top: 10px;
+            }
+
+            Select {margin-top: 10px;}
+
+            #contact-textarea {margin-top: 10px}
+
+            #contact-info-submit-button {
+              background-color: #f0561f; 
+              color: white;
+              padding: 8px 35px 8px 35px;
+              border: 0;
+            }
+
+            @media (max-width: 770px) {
+              #contact-info-container {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                justify-content: center;
+                align-items: space-between;
+                align-content: space-between;
+                min-height: 100%;
+                min-width: 100%;
+              }
+              #contact-info-column-2 {
+                margin-top: 3rem;
+              }
+
+              #column-2-title {display: none;}
+              #contact-small-line {display:none;}
+              #contact-info-column-2 {display: flex; flex-direction: row;}
+              .contact-us-link {padding: 1rem; font-size: 0.8rem;}
+            }
+
+            @media (max-width: 400px) {
+              .contact-info-title {font-size: 1rem; line-height: 15px; margin-bottom: 15px;}
+              #contact-info-column-2 {margin-top: 1rem;}
+
             }
 
           
