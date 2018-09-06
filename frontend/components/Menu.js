@@ -64,6 +64,7 @@ class Menu extends Component {
                     ABOUT
                     </DropdownToggle>
                     <DropdownMenu right>
+
                     {/* <DropdownItem className="nav-link">
                         WORK FOR VANGST
                     </DropdownItem> */}
