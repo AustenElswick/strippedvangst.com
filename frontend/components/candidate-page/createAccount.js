@@ -6,7 +6,7 @@ class CreateAccount extends Component {
     return (
       <section id="create-account-section">
       <div id="mobile-title" className="text-center">
-        <h4>PROFILE BENEFITS</h4>
+        <h4 className="create-account-title" id="title-1">PROFILE BENEFITS</h4>
       </div>
         <div id="create-account-content">
         
@@ -14,16 +14,20 @@ class CreateAccount extends Component {
             <img src='/static/images/candidate-page/profile-pic.png' className='circle-picture' />
           </div>
           <div id="text-container">
-            <h4 id="title-2">PROFILE BENEFITS</h4>
-            <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam turpis nibh, vulputate at lacinia sit amet, facilisis ut nisi. Etiam massa nisi, luctus in consectetur rhoncus, pulvinar ut massa. </p>
-            <div className='create-profile-link-button text-center'>
-              <Link to='/create-profile'><a>CREATE A PROFILE</a></Link>
-            </div>
+            <h4 className="create-account-title" id="title-2">PROFILE BENEFITS</h4>
+            <p className="text-dark">Create a profile with Vangst and get matched to jobs that align with your skills and career goals.</p>
+            <Link href='https://vangsters.com/users/sign_up' target='_blank'>
+              <a>
+                <div className='create-profile-link-button text-center'>
+                  CREATE A PROFILE
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
         <style jsx>{`
           #create-account-section {
-            min-height: 50vh;
+            min-height: 40vh;
             min-width: 100vw;
             padding: 2rem;
             background-color: #dadada;
@@ -53,6 +57,8 @@ class CreateAccount extends Component {
           h4 {
             padding-bottom: 3vh;
           }
+
+          .create-account-title {opacity: 0.7;}
 
           #img-container {
             width: 40vw;

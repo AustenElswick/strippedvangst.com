@@ -28,7 +28,7 @@ class GigsDetails extends Component {
           #gigs-detail-section {
             padding: 3rem;
             min-width: 100vw;
-            min-height: 50vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;

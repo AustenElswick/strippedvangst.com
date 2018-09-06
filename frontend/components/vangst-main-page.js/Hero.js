@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from "next/link";
 
 class Hero extends Component {
     render() {
@@ -11,18 +12,25 @@ class Hero extends Component {
                                 Cannabis is hiring.
                             </h1>
                             <div className="hero-cta">
-                                <button className="hero-button">
-                                    <img src='/static/images/vangst-main-page/arrow-left.png'></img>
-                                    <p className="text-light text-center">Hire the perfect person</p>
-                                </button>
-                                <div className="white-div">
+                                <Link href="/employer-page">
+                                    <a>
+                                        <div className="hero-button">
+                                            <img src='/static/images/vangst-main-page/arrow-left.png'></img>
+                                            <p className="text-light text-center">Hire the perfect person</p>
+                                        </div>
+                                    </a>
+                                </Link>
+                                <div id="we-are-ready-text" className="white-div">
                                     <p className="text-center">We're ready.  Are you?</p>
                                 </div>
-                                
-                                <button className="hero-button">
+                                <Link href='/vangst-cannabis-staffing-services'>
+                                <a>
+                                <div className="hero-button">
                                     <p className="text-light text-center">Find your perfect job</p>
                                     <img src='/static/images/vangst-main-page/arrow-right.png'></img>
-                                </button>
+                                </div>
+                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

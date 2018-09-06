@@ -11,19 +11,22 @@ class Map extends Component {
           </div>
           <div id="map-column-container">
             <div className="map-section-column">
-              <div className="map-number">31</div>
-              <div className="small-h-line"></div>
-              <p className="map-text">states served</p>
+              <div className="map-number">12</div>
+              <div className="map-small-h-line"></div>
+              <p className="map-text text-center">states served</p>
             </div>
             <div className="map-section-column">
-              <div className="map-number">2,500</div>
-              <div className="small-h-line"></div>
-              <p className="map-text">partnering companies</p>
+              <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="map-number">600</div>
+                <div className="h3 text-white">+</div>
+              </div>
+              <div className="map-small-h-line"></div>
+              <p className="map-text text-center">partnering companies</p>
             </div>
             <div className="map-section-column">
-              <div className="map-number">15,000</div>
-              <div className="small-h-line"></div>
-              <p className="map-text">jobs placed</p>
+              <div className="map-number">7,500</div>
+              <div className="map-small-h-line"></div>
+              <p className="map-text text-center">jobs placed</p>
             </div>
           </div>
 
@@ -37,7 +40,7 @@ class Map extends Component {
               background-image: url('/static/images/team-page/map.jpg');
               background-position: left center;
               background-repeat: no-repeat;
-              background-size: contain;
+              background-size: cover;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -75,7 +78,7 @@ class Map extends Component {
 
 
 
-            .small-h-line {
+            .map-small-h-line {
               background-color: white;
               width: 60px;
               height: 2px;
@@ -87,6 +90,71 @@ class Map extends Component {
               font-size: 1.5rem;
               font-weight: 500;
               margin-top: 20px;
+            }
+
+            @media (max-width: 800px) {
+              #map-column-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                height: 100%;
+              }
+              .map-number {
+                font-size: 7rem;
+                letter-spacing: 2px;
+              }
+              .map-text {
+                font-size: 1.5rem;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                line-height: 22px;
+              }
+              .map-small-h-line {
+                margin: 10px 0 12px 0 ;
+              }
+              #map-section-label {
+                margin-bottom: 2rem !important;
+              }
+
+            }
+
+            @media (max-width: 420px) {
+              #map-section {
+                padding: 2rem;
+              }
+              #map-column-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                height: 100%;
+              }
+              #map-section-label {
+                margin-bottom: 0 !important;
+                padding-left: 0 !important;
+              }
+
+              .map-number {
+                font-size: 4rem;
+                letter-spacing: 2px;
+              }
+
+              .map-small-h-line {
+                margin: 15px 0 2px 0 !important;
+              }
+              .map-text {
+                font-size: 1.2rem;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                line-height: 19px;
+              }
+
+              #map-section {
+                background-position: center;
+              }
             }
           
           `}

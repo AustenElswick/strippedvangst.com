@@ -28,10 +28,10 @@ class CandidateDataBase extends Component {
           </div>
           <div id="db-right-column">
             <div id="db-img-container">
-              <img id="db-img" src='/static/images/employer-page/sec_01/woman.jpg' />
+              <img id="db-img" src='/static/images/employer-page/sec_01/jeff-radway.jpg' />
             </div> 
             <div id="testimonial-container">
-              <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for the cannabis industry recruiting due to their passion, professionalism and deep rooted network within the space."</p>
+              <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for cannabis industry recruiting."</p>
               <p id="testimonial-name" className="text-white">- Jeff, Green Peak Industries</p>
             </div>             
           </div>
