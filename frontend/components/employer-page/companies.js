@@ -4,7 +4,7 @@ class Companies extends Component {
   render() {
     return (
       <section id="companies-section">
-        <h3>WORKING WITH THE BEST COMPANIES IN CANNABIS</h3>
+        <h3 id="companies-title" className="text-center">WORKING WITH THE BEST COMPANIES IN CANNABIS</h3>
         <div className="small-gray-line-h"></div>
         <div id="logos-row">
           <div className="company-logo-container">
@@ -70,16 +70,22 @@ class Companies extends Component {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              padding: 0 2rem 2rem 2rem;
+              justify-content: flex-start;
+              
+              
+
             }
 
             .company-logo {
-              width: 100%;
+              display: block;
+              width: 50%;
+              height: auto;
+              padding-top: 5vh;
             }
 
             .company-logo-container {
               width: 20%;
-              padding: 2rem;
+
              
               overflow: none;
               display: flex;
@@ -88,35 +94,43 @@ class Companies extends Component {
               align-items: center;
             }
 
-            #greenpeak {
-              height: 70%;
-              width: 45%;
+            @media (max-width: 1025px) {
+              .company-logo-container {
+                width: 25%;
+              }
+              .company-logo {width: 65%;}
             }
 
-            #GTI {
-              height: 60%;
-              width: 60%;
+            @media (max-width: 770px) {
+              .company-logo-container {
+                width: 25%;
+              }
+              .company-logo {width: 65%;}
             }
 
-            #Baker {
-              height: 60%;
-              width: 58%;
+
+            @media (max-width: 530px) {
+              #companies-section {padding: 2rem;}
+              .company-logo-container {
+                width: 33%;
+              }
+              .company-logo {width: 50%; padding-top: 2vh;}
+              #companies-title {
+                font-size: 1.2rem;
+              }
             }
 
-            #HS {
-              height: 63%;
-              width: 63%;
+            @media (max-width: 450px) {
+              #companies-section {padding: 2rem;}
+              .company-logo-container {
+                width: 33%;
+              }
+              .company-logo {width: 60%; padding-top: 2vh;}
+              #companies-title {
+                font-size: 1rem;
+              }
             }
 
-            #NR {
-              height: 80%;
-              width: 80%;
-            }
-
-            #CA {
-              height: 70%;
-              width: 70%;
-            }
           
           `}
         </style>

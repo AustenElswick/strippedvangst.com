@@ -7,7 +7,7 @@ class EmailForm extends Component {
             <section id="email-form-section">
                 <div id="email-form-section-container">
                     <div id="email-form-section-title">
-                        <h3>LET'S GET GOING.</h3>
+                        <h3 className="text-center">LET'S GET GOING.</h3>
                         <div id="small-gray-line-h"></div>
                     </div>
                     <div id="email-form-container">
@@ -20,7 +20,7 @@ class EmailForm extends Component {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
-                        padding: 3rem;
+                        padding: 3rem 0 3rem 0;
                         min-height: 30vh;
                     }
 
@@ -55,6 +55,16 @@ class EmailForm extends Component {
 
                     #email-button-text {
                         color: white !important;
+                    }
+
+                    @media (max-width: 389px) {
+                        #email-form-section {
+                            padding: 2rem 0 0 0;
+                        }
+                        #subscribe-button {
+                            margin-top: 1rem;
+                        }
+
                     }
 
 

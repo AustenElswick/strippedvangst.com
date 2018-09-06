@@ -37,7 +37,7 @@ class Menu extends Component {
   render() {
     return(
         <Navbar className="nav-menu"color="transparent" light expand="lg">
-            <NavbarBrand href="/">
+            <NavbarBrand href="/vangst-main-page">
                 <div className="brand-container">
                     <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo"></img>
                     <img className="vangst-logo-text d-lg-none" src="/static/images/logos/logo-text.png" alt="vangst logo text"></img>
@@ -54,33 +54,39 @@ class Menu extends Component {
                     <NavLink className="nav-link" href="/employer-page">EMPLOYERS</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="nav-link" href="/">HOW IT WORKS</NavLink>
+                    <NavLink className="nav-link" href="https://blog.vangst.com/cannabis-salary-guide-2018/" target="_blank">INDUSTRY INSIGHT</NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                     <NavLink className="nav-link" href="/vangst-talent-careerfair">CAREER FAIR</NavLink>
-                </NavItem>
+                </NavItem> */}
                 <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret className="nav-link">
                     ABOUT
                     </DropdownToggle>
                     <DropdownMenu right>
+
+                    {/* <DropdownItem className="nav-link">
+                        WORK FOR VANGST
+                    </DropdownItem> */}
                     <DropdownItem className="nav-link">
-                        <NavLink href='/vangst-internal-positions'>WORK FOR VANGST</NavLink>
+                        <NavLink className="nav-link dropdown-link" href="/team-page">TEAM</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        <NavLink href='/about-vangst-talent'>TEAM</NavLink>
+                        <NavLink className="nav-link dropdown-link" href="https://www.vangst.com/vangst-cannabis-blog" target="_blank">BLOG</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        <NavLink href='https://blog.vangst.com'>BLOG</NavLink>
-                    </DropdownItem>
-                    <DropdownItem className="nav-link">
-                        <NavLink href='/contact-vangst-talent'>CONTACT</NavLink>
+                        <NavLink className="nav-link dropdown-link" href="/contact-vangst-talent">CONTACT</NavLink>
                     </DropdownItem>
 
                     </DropdownMenu>
                 </UncontrolledDropdown>
                 </Nav>
             </Collapse>
+            <style>
+                {`
+                    .dropdown-link {padding-left: 5px !important;}
+                `}
+            </style>
         </Navbar>
     )
   }

@@ -12,7 +12,7 @@ class CandidateDataBase extends Component {
             </div>
             <h2 id="db-title">We have the largest candidate database</h2>
             <div className="white-line"></div>
-            <p className="text-white">We have the largest candidate database in the cannabis industry. With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
+            <p id="db-main-text" className="text-white">With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
             <div className="white-line"></div>
             <div id="stats-row">
               <div className="stat-container text-center">
@@ -28,10 +28,10 @@ class CandidateDataBase extends Component {
           </div>
           <div id="db-right-column">
             <div id="db-img-container">
-              <img id="db-img" src='/static/images/employer-page/sec_01/woman.jpg' />
+              <img id="db-img" src='/static/images/employer-page/sec_01/jeff-radway.jpg' />
             </div> 
             <div id="testimonial-container">
-              <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for the cannabis industry recruiting due to their passion, professionalism and deep rooted network within the space."</p>
+              <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for cannabis industry recruiting."</p>
               <p id="testimonial-name" className="text-white">- Jeff, Green Peak Industries</p>
             </div>             
           </div>
@@ -120,12 +120,42 @@ class CandidateDataBase extends Component {
             font-size: 1.2rem;
           }
 
+          @media (max-width: 1200px) {
+            .stat-text {font-size: 1.2rem;}
+          }
+
           @media (max-width: 992px) {
             #db-title {font-size: 3rem;}
-            #db-right-column {display:none}
+            #db-right-column {display:none;}
+            .stat-text {font-size: 1rem; line-height: 20px;}
+            #db-main-text {font-size: 1.2rem;}
+          }
+
+          @media (max-width: 600px) {
+            #db-title {font-size: 3rem;}
             .stat-text {font-size: 1rem;}
           }
 
+          @media (max-width: 530px) {
+            #db-title {font-size: 3rem;}
+            .stat-text {font-size: 0.8rem;}
+            .section-text {font-size: 1rem;}
+            #db-main-text {font-size: 1rem;}
+          }
+
+          @media (max-width: 424px) {
+            #db-title {font-size: 2.3rem;}
+            .stat-text {font-size: 0.8rem; line-height:15px;}
+            .section-text {font-size: 0.9rem;}
+            #db-main-text {font-size: 1rem;}
+          }
+
+          @media (max-width: 376px) {
+            .stat-text {font-size: 1.1rem; line-height:17px;}
+            .stat-container {padding: 0 2px 0 2px;}
+            .section-text {font-size: 1rem;}
+            #left-column {margin-right: 0;}
+          }
 
 
 

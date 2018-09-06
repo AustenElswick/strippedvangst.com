@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from "next/link";
 
 class VangstIsDope extends Component {
     render() {
@@ -21,12 +22,14 @@ class VangstIsDope extends Component {
                             <div className="white-line"></div>
                         </div>
                         <div className="col-lg-4">
-                            <div className="play-button-container">
-                                <img src='/static/images/vangst-main-page/play-button.png' alt=""></img>
-                                <div className="play-button">
-                                    <p>See how it works</p>
+                            <Link href="/employer-page">
+                                <div className="play-button-container">
+                                    <img src='/static/images/vangst-main-page/play-button.png' alt=""></img>
+                                    <a className="play-button">
+                                        <p>See how it works</p>
+                                    </a>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

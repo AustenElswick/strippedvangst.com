@@ -3,8 +3,7 @@ import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
 import Menu from '../components/Menu';
 import Hero from '../components/team-page/hero';
-import HeadlineAndDescription from '../components/team-page/headlineAndDescription';
-import TeamPictures from '../components/team-page/teamPictures';
+import Headshots from '../components/team-page/headshots';
 import Map from '../components/team-page/map';
 import ContactUs from '../components/team-page/contactUs';
 import Testimony from '../components/team-page/testimony';
@@ -16,8 +15,7 @@ class TeamPage extends Component {
       <Layout>
         <Menu />
         <Hero />
-        <HeadlineAndDescription />
-        <TeamPictures />
+        <Headshots />
         <Map />
         <Offices />
         <Testimony />

@@ -97,6 +97,16 @@ p {
   margin-bottom: 1rem;
 }
 
+a {
+  text-decoration: none;
+  width: max-content;
+}
+a:hover
+{
+ text-decoration:none;
+ cursor:pointer;
+}
+
 
 // *********************************** Footer.js
 
@@ -369,11 +379,12 @@ footer {
 }
 
 .play-button-container {
-  padding-top: 10rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: max-content;
 }
 
 .play-button-container img {
@@ -513,7 +524,6 @@ footer {
 .gigs-cta-button {
   color: #f0561f;
   border: solid 1px #f0561f;
-  background: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -525,10 +535,8 @@ footer {
   margin-bottom: 0;
 }
 
-.gigs-arrow-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.gigs-cta-text:hover {
+  color: #f0561f;
 }
 
 .gigs-arrow {
@@ -929,6 +937,11 @@ align-items: center;
 }
 
 @media (max-width: 375px) {
+  //hero.js
+  #we-are-ready-text {
+    display: none;
+  }
+
   //JobReport.js
   .job-report-number {
     font-size: 2rem;
@@ -942,7 +955,7 @@ align-items: center;
 
   //VangsIsDope.js
   .play-button-container {
-    padding-top: 4rem;
+    margin-top: 4rem;
   }
 
   //Gigs.js
@@ -1016,7 +1029,7 @@ align-items: center;
     font-size: 32px;
   }
   .play-button-container {
-    padding-top: 4rem;
+    margin-top: 4rem;
   }
   .vangst-talent-title {
     img {
