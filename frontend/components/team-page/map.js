@@ -89,7 +89,35 @@ class Map extends Component {
               margin-top: 20px;
             }
 
-            @media (max-width: 380px) {
+            @media (max-width: 800px) {
+              #map-column-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                height: 100%;
+              }
+              .map-number {
+                font-size: 7rem;
+                letter-spacing: 2px;
+              }
+              .map-text {
+                font-size: 1.5rem;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                line-height: 22px;
+              }
+              .map-small-h-line {
+                margin: 10px 0 12px 0 ;
+              }
+              #map-section-label {
+                margin-bottom: 2rem !important;
+              }
+
+            }
+
+            @media (max-width: 420px) {
               #map-section {
                 padding: 2rem;
               }
@@ -124,7 +152,6 @@ class Map extends Component {
               #map-section {
                 background-position: center;
               }
-
             }
           
           `}

@@ -57,13 +57,13 @@ const CustomForm = ({ status, message, onValidated }) => {
           placeholder="Email"
           className="newsletter-input"
         />
-        <select style={{ fontSize: "1em", padding: 5 }} ref={node => (reason = node)}>
+        <select className="newsletter-select" style={{ fontSize: "1em", padding: 5 }} ref={node => (reason = node)}>
           <option value="" disabled selected hidden>Why are you here?<span><img src="/static/images/vangst-main-page/down-arrow-gray.png"></img></span></option>
           <option value="Hiring Talent">Hiring Talent</option>
           <option value="Looking For Work">Looking for work</option>
           <option value="Other">Other</option>
         </select>
-        <button id="footer-signup-button" className="btn btn-outline text-white" onClick={submit}>
+        <button id="footer-signup-button" className="btn btn-outline text-white newsletter-button" onClick={submit}>
           Sign Up
         </button>
       </div>

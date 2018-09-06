@@ -67,7 +67,23 @@ class Testimony extends Component {
               margin-top: 1rem;
             }
 
-            @media (max-width: 385px) {
+            @media (max-width: 800px) {
+              #testimony-section {
+                padding: 2rem;
+              }
+              #testimony-headshot {
+                width: 60%;
+              }
+              #testimony-quote-container {
+                padding: 1rem 0 1rem 0;
+              }
+              #testimony-author-details {
+                padding-left: 1rem;
+                padding-right: 1rem;
+              }
+            }
+
+            @media (max-width: 420px) {
               #testimony-section {
                 height: 100vh;
                 padding: 2rem;
@@ -79,7 +95,6 @@ class Testimony extends Component {
                 align-items: center;
                 width: 100%;
               }
-
               .testimony-column {
                 width: 100vw;
                 display: flex;
@@ -88,19 +103,24 @@ class Testimony extends Component {
                 align-items: center;
                 align-content: center;
               }
-
               #testimony-headshot {
                 width: 50%;
               }
-
               #testimony-author-details {
                 font-size: 1rem;
                 letter-spacing: 0px;
-
               }
-
             }
-          
+
+            @media (max-width: 380px) {
+              #testimony-quote-container {
+                padding-left: 2rem;
+                padding-right: 1rem;
+              }
+              #testimony-author-details {
+                margin-top: 2rem;
+              }
+            }
           `}
         </style>
       </section>

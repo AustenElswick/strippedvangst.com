@@ -80,7 +80,16 @@ class Offices extends Component {
             margin: 1px 0 1px 0;
           }
 
-          @media (max-width: 385px) {
+          @media (max-width: 800px) {
+            #offices-section {
+              padding: 2rem;
+            }
+            #offices-column-container {
+              padding: 0;
+            }
+          }
+
+          @media (max-width: 420px) {
             #offices-section {
               height: 100vh;
               padding: 2rem;
@@ -92,6 +101,7 @@ class Offices extends Component {
               justify-content: center;
               align-content: center;
               padding-left: 1rem;
+              padding-top: 1rem;
             }
 
             .offices-small-h-line {
@@ -102,8 +112,9 @@ class Offices extends Component {
               line-height: 20px;
 
             }
-
           }
+
+      
           
           `}
         </style>

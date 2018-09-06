@@ -236,7 +236,7 @@ class Headshots extends Component {
               line-height: 15px;
             }
             
-            @media (max-width: 380px) {
+            @media (max-width: 420px) {
               #headshot-section {
                 padding: 2rem;
               }

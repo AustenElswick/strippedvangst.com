@@ -38,16 +38,26 @@ class ContactUs extends Component {
               letter-spacing: 1px;
               font-size: 2rem;
             }
-
-            .mailchimp-form select {
-              border: 1px solid lightgray;
+            .newsletter-input {
+              border: solid 1px #dadada;
+              margin: 2px;
+              padding: 2px;
             }
 
-            .mailchimp-form button {
+            .newsletter-select {
+              border: solid 1px #dadada !important;
+              margin: 2px;
+            }
+
+            .newsletter-button {
               background-color: #f0561f;
+              margin: 2px;
             }
 
-            @media (max-width: 385px) {
+        
+
+
+            @media (max-width: 420px) {
               #contact-us-section {
                 height: 100vh;
                 padding: 2rem;
@@ -69,6 +79,7 @@ class ContactUs extends Component {
                 padding-left: 2rem;
               }
             }
+
           
           `}
         </style>
