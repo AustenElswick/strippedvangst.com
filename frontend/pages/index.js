@@ -23,11 +23,7 @@ class Index extends Component {
         const pages = await pagesRes.json();
         return { page, posts, pages };
     }
-
-    componentDidMount() {
-        Router.push('http://localhost:3000/vangst-main-page')
-    }
-
+    
     render() {
       return (
         <div>

@@ -65,16 +65,16 @@ class Menu extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                     <DropdownItem className="nav-link">
-                        WORK FOR VANGST
+                        <NavLink href='/vangst-internal-positions'>WORK FOR VANGST</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        TEAM
+                        <NavLink href='/about-vangst-talent'>TEAM</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        BLOG
+                        <NavLink href='https://blog.vangst.com'>BLOG</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        CONTACT
+                        <NavLink href='/contact-vangst-talent'>CONTACT</NavLink>
                     </DropdownItem>
 
                     </DropdownMenu>

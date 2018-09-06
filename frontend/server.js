@@ -10,6 +10,10 @@ app
     .then(() => {
         const server = express();
 
+        server.get('/', (req, res) => {
+            res.redirect(302, '/vangst-main-page')
+        })
+
         server.get("/post/:slug", (req, res) => {
             const actualPage = "/post";
             const queryParams = { slug: req.params.slug, apiRoute: "post" };
