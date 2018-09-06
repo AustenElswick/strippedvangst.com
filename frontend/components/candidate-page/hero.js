@@ -11,7 +11,7 @@ class Hero extends Component {
           <div className='all-columns-hero'>
             <div className='single-column'>
               <div className="small-h-line"></div>
-              <div className="job-report-number">419</div>
+              <div className="job-report-number">7,500</div>
               <p className="text-white">FILLED POSITIONS</p>
             </div>
             <div className="large-v-line-white"></div>
@@ -19,18 +19,24 @@ class Hero extends Component {
               <div className="small-h-line"></div>
                 <div className="job-report-number">381</div>
                 <p className="text-white">OPEN POSITIONS</p>
-              </div>
+            </div>
               <div className="large-v-line-white"></div>
             <div className='single-column'>
               <div className="small-h-line"></div>
-              <div className="job-report-number">263</div>
-              <p className="text-white">ACTIVE PROFILES</p>
+              <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="job-report-number">80,000</div>
+                <div className="h3 job-number-symbol">+</div>
+              </div>
+              <p className="text-white">CANDIDATES</p>
             </div>
             <div className="large-v-line-white"></div>
             <div className='single-column'>
               <div className="small-h-line"></div>
-              <div className="job-report-number">345</div>
-              <p className="text-white">COMPANY PROFILES</p>
+              <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="job-report-number">600</div>
+                <div className="h3 job-number-symbol">+</div>
+              </div>
+              <p className="text-white">COMPANIES</p>
             </div>
           </div>
         </div>
@@ -82,6 +88,19 @@ class Hero extends Component {
             margin-left: 2rem;
           }
 
+          #job-number-symbol {
+            font-family: Brandon Grotesque Bold;
+            color: black;
+            font-weight: 700;
+            font-size: 5rem;
+            padding-top: 50px;
+          }
+
+          .number-with-symbol {
+            display: flex;
+            flex-direction: row;
+          }
+
           @media (max-width: 992px) {
             p {
               font-size: 0.75rem;
@@ -114,6 +133,19 @@ class Hero extends Component {
               align-items: center;
               align-content: center;
             }
+          }
+
+          @media (max-width: 415px) {
+            .job-report-number {
+              font-size: 4rem;
+            }
+          }
+
+          #job-number-symbol {
+            font-family: Brandon Grotesque Bold;
+            color: black;
+            font-weight: 700;
+            font-size: 2rem;
           }
 
             

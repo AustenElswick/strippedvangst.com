@@ -5,7 +5,7 @@ class Hero extends Component {
     return (
       <main id="team-section" className="hero-section">
         <div id="team-section-content">
-          <h1 id="team-title" className="text-center">Cannabis is who we are.</h1>
+          <h1 id="team-title" className="text-center">Who We Are</h1>
         </div>
         <style>
           {`

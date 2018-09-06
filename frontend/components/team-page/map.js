@@ -11,17 +11,20 @@ class Map extends Component {
           </div>
           <div id="map-column-container">
             <div className="map-section-column">
-              <div className="map-number">31</div>
+              <div className="map-number">12</div>
               <div className="map-small-h-line"></div>
               <p className="map-text text-center">states served</p>
             </div>
             <div className="map-section-column">
-              <div className="map-number">2,500</div>
+              <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="map-number">600</div>
+                <div className="h3 text-white">+</div>
+              </div>
               <div className="map-small-h-line"></div>
               <p className="map-text text-center">partnering companies</p>
             </div>
             <div className="map-section-column">
-              <div className="map-number">15,000</div>
+              <div className="map-number">7,500</div>
               <div className="map-small-h-line"></div>
               <p className="map-text text-center">jobs placed</p>
             </div>
