@@ -177,7 +177,6 @@ class ContactInfo extends Component {
               padding: 8px 35px 8px 35px;
               border: 0;
             }
-
             @media (max-width: 770px) {
               #contact-info-container {
                 display: flex;
@@ -192,20 +191,16 @@ class ContactInfo extends Component {
               #contact-info-column-2 {
                 margin-top: 3rem;
               }
-
               #column-2-title {display: none;}
               #contact-small-line {display:none;}
               #contact-info-column-2 {display: flex; flex-direction: row;}
               .contact-us-link {padding: 1rem; font-size: 0.8rem;}
             }
-
             @media (max-width: 400px) {
               .contact-info-title {font-size: 1rem; line-height: 15px; margin-bottom: 15px;}
               #contact-info-column-2 {margin-top: 1rem;}
 
             }
-
-          
           `}
         </style>
       </section>

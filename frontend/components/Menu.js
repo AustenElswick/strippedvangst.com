@@ -56,25 +56,25 @@ class Menu extends Component {
                 <NavItem>
                     <NavLink className="nav-link" href="https://blog.vangst.com/cannabis-salary-guide-2018/" target="_blank">INDUSTRY INSIGHT</NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                     <NavLink className="nav-link" href="/vangst-talent-careerfair">CAREER FAIR</NavLink>
-                </NavItem>
+                </NavItem> */}
                 <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret className="nav-link">
                     ABOUT
                     </DropdownToggle>
                     <DropdownMenu right>
-                    <DropdownItem className="nav-link">
+                    {/* <DropdownItem className="nav-link">
                         WORK FOR VANGST
-                    </DropdownItem>
+                    </DropdownItem> */}
                     <DropdownItem className="nav-link">
                         <NavLink className="nav-link dropdown-link" href="/team-page">TEAM</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        BLOG
+                        <NavLink className="nav-link dropdown-link" href="https://www.vangst.com/vangst-cannabis-blog" target="_blank">BLOG</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
-                        CONTACT
+                        <NavLink className="nav-link dropdown-link" href="/contact-vangst-talent">CONTACT</NavLink>
                     </DropdownItem>
 
                     </DropdownMenu>
@@ -83,7 +83,7 @@ class Menu extends Component {
             </Collapse>
             <style>
                 {`
-                    .dropdown-link {padding-left: 0 !important;}
+                    .dropdown-link {padding-left: 5px !important;}
                 `}
             </style>
         </Navbar>

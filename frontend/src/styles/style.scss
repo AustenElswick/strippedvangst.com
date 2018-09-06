@@ -937,6 +937,11 @@ align-items: center;
 }
 
 @media (max-width: 375px) {
+  //hero.js
+  #we-are-ready-text {
+    display: none;
+  }
+
   //JobReport.js
   .job-report-number {
     font-size: 2rem;

@@ -7,22 +7,22 @@ class FeaturedJobs extends Component {
       <section id="featuredjobs-section" className="section section-top section-full">
         <div id="featured-jobs-content" className="container">
           <div className="title-container">
-            <h3>FEATURED JOBS</h3>
+            <h3 id="featured-jobs-section-title">FEATURED JOBS</h3>
             <div className="black-line-h"></div>
           </div>
           <div className='job-posting'>
-            <h3>Senior Project Manager</h3>
-            <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
+            <h3 className="featured-jobs-titles">Senior Project Manager</h3>
+            <p className="text-dark featured-job-description">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
             <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
-            <h3>Product Tester</h3>
-            <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
+            <h3 className="featured-jobs-titles">Product Tester</h3>
+            <p className="text-dark featured-job-description">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
             <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
-            <h3>Sales Director</h3>
-            <p className="text-dark">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
+            <h3 className="featured-jobs-titles">Sales Director</h3>
+            <p className="text-dark featured-job-description">lorem ipsum dolor sit amet, consectuetur adispicsci elit.  Aliquam in diam sed arcu suspcipit consectetur. Pellentescquee elementeum enim vitae.</p>
             <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
           </div>
          
@@ -101,6 +101,16 @@ class FeaturedJobs extends Component {
                 font-size: 1.25rem;
               }
               p {font-size: 0.9rem; line-height: 100%}
+            }
+
+            @media (max-width: 420px) {
+              .featured-jobs-titles {font-size: 1.2rem;}
+              #featured-jobs-section-title {font-size: 1.5rem;}
+              .featured-job-description {margin-bottom: 5px;}
+              .job-posting {padding-top: 1.25rem;}
+              #featured-button-container {margin-top: 1rem;}
+              .view-link {font-size: 0.8rem;}
+            }
           `}
         </style>
       </section>

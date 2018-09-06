@@ -20,7 +20,7 @@ class Hero extends Component {
                                         </div>
                                     </a>
                                 </Link>
-                                <div className="white-div">
+                                <div id="we-are-ready-text" className="white-div">
                                     <p className="text-center">We're ready.  Are you?</p>
                                 </div>
                                 <Link href='/vangst-cannabis-staffing-services'>
