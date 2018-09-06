@@ -6,14 +6,14 @@ class Testimony extends Component {
       <section id="testimony-section">
         <div id="testimony-content">
           <div className="testimony-column">
-            <h3 id="testimony-title">“Vangst has the secret sauce: great people.”</h3>
+            <h3 id="testimony-title" className="text-center">“Vangst has the secret sauce: great people.”</h3>
             <div id="testimony-quote-container">
               <p className="text-dark">“Vangst has been a force multiplier for our business. Together with our in-house recruiting team they hired over 200 GTI team members this calendar year across eight states. Vangst has the secret sauce: they hire great people to recruit great people.”</p>
             </div>
           </div>
           <div className="testimony-column">
             <img id="testimony-headshot" src="/static/images/team-page/pete-kadens.jpg"></img>
-            <p id="testimony-author-details">Peter Kardens | CEO | Green Thumb Industries (GTI)</p>
+            <p id="testimony-author-details" className="text-center">Peter Kardens | CEO | Green Thumb Industries (GTI)</p>
           </div>
         </div>
         <style>
@@ -62,9 +62,43 @@ class Testimony extends Component {
 
             #testimony-author-details {
               font-family: Brandon Grotesque Regular;
-              font-weigth: 400;
+              font-weight: 400;
               letter-spacing: 1px;
               margin-top: 1rem;
+            }
+
+            @media (max-width: 385px) {
+              #testimony-section {
+                height: 100vh;
+                padding: 2rem;
+              }
+              #testimony-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+              }
+
+              .testimony-column {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+              }
+
+              #testimony-headshot {
+                width: 50%;
+              }
+
+              #testimony-author-details {
+                font-size: 1rem;
+                letter-spacing: 0px;
+
+              }
+
             }
           
           `}

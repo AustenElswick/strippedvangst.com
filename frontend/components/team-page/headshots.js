@@ -6,7 +6,7 @@ class Headshots extends Component {
       <section id="headshot-section">
         <div id="headshot-content">
           <div>
-            <h2 id="headshots-title">Meet our team.</h2>
+            <h2 id="headshots-title" className="text-center">Meet our team.</h2>
           </div>
           <div id="intro-columns">
             <div id="intro-column-1">
@@ -235,7 +235,26 @@ class Headshots extends Component {
               padding-top: 3px;
               line-height: 15px;
             }
+            
+            @media (max-width: 380px) {
+              #headshot-section {
+                padding: 2rem;
+              }
 
+              #headshots-title {
+                padding: 0;
+              }
+
+              #intro-column-2 {
+                display: none;
+              }
+
+              #intro-column-1 {
+                width: 100%;
+                padding: 0.5rem;
+              }
+
+            }
 
           
           

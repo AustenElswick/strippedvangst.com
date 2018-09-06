@@ -41,18 +41,21 @@ const CustomForm = ({ status, message, onValidated }) => {
           ref={node => (fname = node)}
           type="text"
           placeholder="First name"
+          className="newsletter-input"
         />
         <input
           style={{ fontSize: "1em", padding: 5 }}
           ref={node => (lname = node)}
           type="text"
           placeholder="Last name"
+          className="newsletter-input"
         />
         <input
           style={{ fontSize: "1em", padding: 5 }}
           ref={node => (email = node)}
           type="email"
           placeholder="Email"
+          className="newsletter-input"
         />
         <select style={{ fontSize: "1em", padding: 5 }} ref={node => (reason = node)}>
           <option value="" disabled selected hidden>Why are you here?<span><img src="/static/images/vangst-main-page/down-arrow-gray.png"></img></span></option>

@@ -7,10 +7,10 @@ class ContactUs extends Component {
       <section id="contact-us-section">
         <div>
           <div id="contact-us-text">
-            <h3 id="contact-us-title">Join our mailing list.</h3>
+            <h3 id="contact-us-title" className="text-center">Join our mailing list.</h3>
             <p className="text-dark">Stay in the know. Be the first to receive career opportunities, industry news, Vangst updates, and more.</p>
           </div>
-          <div>
+          <div id="contact-us-form-container">
             <MailChimpForm />
           </div>
         </div>
@@ -45,6 +45,29 @@ class ContactUs extends Component {
 
             .mailchimp-form button {
               background-color: #f0561f;
+            }
+
+            @media (max-width: 385px) {
+              #contact-us-section {
+                height: 100vh;
+                padding: 2rem;
+              }
+
+              #contact-us-title {
+                font-size: 2.3rem;
+                padding-bottom: 1rem;
+              }
+
+              #contact-us-form {
+                background-color: black;
+              }
+              .newsletter-input {
+                border: solid 1px #dadada;
+              }
+              #contact-us-form-container {
+                padding-right: 2rem;
+                padding-left: 2rem;
+              }
             }
           
           `}
