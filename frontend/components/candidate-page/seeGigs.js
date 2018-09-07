@@ -10,7 +10,7 @@ class SeeGigs extends Component {
             <h2 className="text-white">TEMPORARY WORK</h2>
             <h2 className="text-white">WITH <span id="black-box">VANGST GIGS.</span></h2>
             <div id='link-alignment'>
-              <Link to='/gigs'><a>SEE GIGS NOW ></a></Link>
+              <a href="https://gigs.vangst.com/" className="nav-link text-dark">SEE GIGS NOW ></a>
             </div>
           </div> 
         </div>

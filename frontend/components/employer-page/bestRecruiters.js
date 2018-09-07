@@ -22,11 +22,11 @@ class BestRecruiters extends Component {
           <div id="recruiter-button-container">
           
           
-            <Link href='/team-page'>
+            <Link href='/about-vangst-talent'>
                 <a>
-                <div id="recruiter-button-outline">
-                  <div id="recruiter-button-link">Meet our team of experts ></div>
-                </div>
+                  <div id="recruiter-button-outline">
+                    <div id="recruiter-button-link">Meet our team of experts ></div>
+                  </div>
                 </a>
             </Link>
           </div>
@@ -156,6 +156,7 @@ class BestRecruiters extends Component {
           @media (max-width: 400px) {
             #recruiter-section-content {max-width: 75%; padding: 1rem;}
             #recruiter-button-link {font-size: 1rem;}
+            #recruiter-button-outline {width: 250px; margin-left: 15px}
           }
           
           

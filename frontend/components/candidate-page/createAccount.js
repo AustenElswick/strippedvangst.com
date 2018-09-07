@@ -44,7 +44,6 @@ class CreateAccount extends Component {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-c: center;
           }
 
           #text-container {
@@ -112,18 +111,9 @@ class CreateAccount extends Component {
           }
 
           @media (max-width: 430px) {
-            img {width: 80px; height: 80px;}
+            img {width: 140px; height: 140px; margin-right: 30px;}
+            #text-container {padding-left: 20px;}
           }
-
-          @media (max-width: 375px) {
-            img { width: 90px; height: 90px; margin-right: 10px; margin-bottom: 55px;}
-            #create-account-section {padding: 1rem;}
-            #img-container {width: 30%}
-            #text-container {width: 70%; padding: 10px 0px 10px 0px;}
-            h4 {padding-bottom: 0px;}
-          }
-
-
           `}</style>
       </section>
     );

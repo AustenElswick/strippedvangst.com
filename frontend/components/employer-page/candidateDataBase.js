@@ -12,11 +12,11 @@ class CandidateDataBase extends Component {
             </div>
             <h2 id="db-title">We have the largest candidate database</h2>
             <div className="white-line"></div>
-            <p id="db-main-text" className="text-white">With over 40,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
+            <p id="db-main-text" className="text-white">With over 80,000 job seekers in our database, we cover the most extensive range of skill sets that vary from entry level to executive positions. All of our candidates are pre-qualified and screened to ensure we provide you with the best talent pool from both inside and outside the industry.</p>
             <div className="white-line"></div>
             <div id="stats-row">
               <div className="stat-container text-center">
-                <p className="text-white stat-text">40,000+ <br/>job seekers.</p>
+                <p className="text-white stat-text">80,000+ <br/>job seekers.</p>
               </div>
               <div className="stat-container text-center">
                 <p className="text-white stat-text">The best talent from inside<br/> &amp; outside the industry.</p>
