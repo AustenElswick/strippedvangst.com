@@ -7,6 +7,8 @@ const handle = app.getRequestHandler();
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const sgMail = require('@sendgrid/mail');
+const multiparty = require('multiparty');
+const fs = require('fs');
 sgMail.setApiKey('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');
 
 app
@@ -22,17 +24,39 @@ server.use(bodyParser.json());
 	})
 
 	server.post('/sendgrid', (req, res) => {
-	  console.log(req.body)
-	  const body = req.body
-	  const msg = {
- 	    to: body.name,
-  	    from: 'info@vangst.com',
-  	    subject: body.subject,
-  	    text: body.content,
-  	    html: '<strong>' + body.content + '</strong>',
-	 };
-	 sgMail.send(msg);
-	})
+        const formData = new multiparty.Form();
+        formData.parse(req, async (err, fields, files) => {
+          if (err) {
+            console.log(err)
+          }
+          console.log(files)
+          const path = files.file[0].path;
+          const name = files.file[0].originalFilename;
+          const buffer = fs.readFileSync(path);
+          const base64 = new Buffer(buffer).toString('base64')
+          const email = fields.email[0];
+          const subject = fields.subject[0];
+          const firstName = fields.firstName[0];
+          const lastName = fields.lastName[0];
+          const jobTitle = fields.jobTitle[0];
+          const jobUrl = fields.jobUrl[0];
+          const msg = {
+            to: 'info@vangst.com',
+            from: email,
+            subject: subject,
+            text: `${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}`,
+            html: `<strong>${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}</strong>`,
+            attachments: [{
+              content: base64,
+              filename: name,
+              disposition: 'attachment',
+              content_id: 'mytext'
+            }]
+          };
+          sgMail.send(msg);
+        })
+        res.status(200).send('success')
+      })
 
         server.get('/', (req, res) => {
             res.redirect(302, '/vangst-main-page')

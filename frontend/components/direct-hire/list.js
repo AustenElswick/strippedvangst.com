@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import axios from 'axios';
+import ApplyModal from './applyModal'
 import { UncontrolledCollapse, Collapse, Button, CardBody, Card } from 'reactstrap';
 
 class List extends Component {
@@ -11,6 +12,8 @@ class List extends Component {
       jobs: [],
       store: [],
       isLoading: true,
+      jobTitle: '',
+      jobUrl: ''
     }
   }
   componentDidMount() {
@@ -57,7 +60,11 @@ class List extends Component {
 
   clickMe(job){
     console.log(job.job_id)
-
+    if(job.job_url) {
+      this.setState({ jobTitle: job.job_title, jobUrl: job.job_url })
+    } else {
+      this.setState({ jobTitle: job.job_title, jobUrl: job.job_id })
+    }
   }
 
   render() {
@@ -94,7 +101,9 @@ class List extends Component {
                     </div>
                     <hr></hr>
                     <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                    <Button className="apply-button" onClick={this.clickMe.bind(this, job)}>Apply</Button>
+
+                    <div className="apply-button" onClick={this.clickMe.bind(this, job)}>Apply</div>
+                        <ApplyModal onClick={this.clickMe.bind(this, job)} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
                     </CardBody>
                   </Card>
                 </UncontrolledCollapse>
