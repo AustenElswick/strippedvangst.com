@@ -19,7 +19,7 @@ app
 server.use(bodyParser.json());
 
 	server.get('/jobs', (req, res) => {
-	  axios.get('https://vangsters.com/api/v1/companies/job-postings')
+	  axios.get('https://vangsters.com/api/v1/companies/job-postings?keyword=vangst&match=1')
 	  .then(json => res.send(json.data))
 	})
 
