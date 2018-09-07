@@ -24,14 +24,16 @@ class SendEmail extends Component {
   }
 
   sendEmail = () => {
-    fetch('http://54.185.129.161:8080/send_email_test.php', {
+    fetch('http://54.185.129.161/sendgrid', {
       method: 'POST',
-      body: {
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({
         subject: this.state.subject,
         content: this.state.content,
         name: this.state.sendTo
-      }
+      })
     })
+.then(res => console.log(res))
   }
 
   render() {
