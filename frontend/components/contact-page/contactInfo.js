@@ -48,7 +48,7 @@ class ContactInfo extends Component {
     formData.append('subject', this.state.subject)
     formData.append('content', this.state.content)
     formData.append('state', this.state.state)
-    fetch('http://localhost:3000/sendgridcontact', {
+    fetch('/sendgridcontact', {
       method: 'POST',
       body: formData
     })

@@ -47,7 +47,7 @@ class ApplyModal extends React.Component {
     formData.append('subject', this.state.subject)
     formData.append('jobTitle', this.props.jobTitle)
     formData.append('jobUrl', this.props.jobUrl)
-    fetch('http://localhost:3000/sendgrid', {
+    fetch('/sendgrid', {
       method: 'POST',
       body: formData
     })
