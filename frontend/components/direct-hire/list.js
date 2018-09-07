@@ -17,7 +17,7 @@ class List extends Component {
     }
   }
   componentDidMount() {
-    axios.get('http://54.185.129.161/jobs')
+    axios.get('/jobs')
       .then(json => {
         return json.data.data.map(job => ({
         job_id: job.id,
