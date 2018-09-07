@@ -20,7 +20,7 @@ const Footer = () => (
                     <ul id="footer-list-1" className="footer-link-group">
                         <li><Link href="/about-vangst-talent"><a className="nav-link text-white">ABOUT VANGST</a></Link></li>
                         <li><Link href="/direct-hire"><a className="nav-link text-white">CAREERS</a></Link></li>
-                        <li><a className="nav-link text-white" href="https://www.vangst.com/vangst-cannabis-blog" target="_blank">BLOG</a></li>
+                        <li><a className="nav-link text-white" href="https://blog.vangst.com/" target="_blank">BLOG</a></li>
                         <li className="nav-link footer-copyright">&#169; 2018 VANGST</li>
                     </ul>
                     <ul className="footer-link-group">
