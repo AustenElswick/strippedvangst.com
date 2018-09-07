@@ -101,6 +101,7 @@ class List extends Component {
                     </div>
                     <hr></hr>
                     <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
+
                     <div className="apply-button" onClick={this.clickMe.bind(this, job)}>Apply</div>
                         <ApplyModal onClick={this.clickMe.bind(this, job)} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
                     </CardBody>
@@ -147,6 +148,17 @@ class List extends Component {
               padding: 0.5rem;
             }
             #search-results-container {padding: 4rem;}
+
+            @media (max-width: 420px) {
+              #search-results-container {padding: 1rem;}
+              h4 {font-size: 0.8rem; }
+              h3 {font-size: 1rem;}
+              h2 {font-size: 1rem;}
+              p {margin-bottom: 3px;}
+              .card-body {padding: 0.75rem;}
+              .list-card-header {padding-top: 15px;}
+              .job-post-date {padding-left: 2.5rem;}
+            }
             
             
           `}</style>
