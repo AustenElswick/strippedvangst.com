@@ -13,17 +13,17 @@ class FeaturedJobs extends Component {
           <div className='job-posting'>
             <h3 className="featured-jobs-titles">Director of Extraction | Boston, MA</h3>
             <p className="text-dark featured-job-description">Manage day-to-day operations in a regulated, cannabis extraction facility. This includes extracting cannabis, post-extraction processing, product development, packaging, and distribution.</p>
-            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
+            <Link href='/direct-hire'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
             <h3 className="featured-jobs-titles">Director of Cultivation | Los Angeles, CA</h3>
             <p className="text-dark featured-job-description">Our Director of Cultivation will provide leadership, oversight and management to our entire Cultivation Department. We’re looking for someone who has extensive cannabis growing experience as well as grow management experience.</p>
-            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
+            <Link href='/direct-hire'><a className="view-link">View ></a></Link>
           </div>
           <div className='job-posting'>
             <h3 className="featured-jobs-titles">Dispensary Store Manager | Seattle, WA</h3>
             <p className="text-dark featured-job-description">Oversee the grand opening of our client’s dispensary, as well as, creating and implementing SOPs, training staff, onboarding a POS system, as well as working closely with the executive team.</p>
-            <Link href='/work-for-vangst'><a className="view-link">View ></a></Link>
+            <Link href='/direct-hire'><a className="view-link">View ></a></Link>
           </div>
           <Link href='/direct-hire'>
             <a>
