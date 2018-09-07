@@ -1,0 +1,15 @@
+--2018-09-06 22:42:21--  http://robo.li/robo.phar
+Resolving robo.li (robo.li)... 104.27.148.169, 104.27.149.169
+Connecting to robo.li (robo.li)|104.27.148.169|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://robo.li/robo.phar [following]
+--2018-09-06 22:42:22--  https://robo.li/robo.phar
+Connecting to robo.li (robo.li)|104.27.148.169|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2461714 (2.3M) [application/octet-stream]
+Saving to: ‘robo.phar’
+
+robo.phar                                  0%[                                                                                  ]       0  --.-KB/s               robo.phar                                  8%[======>                                                                           ] 208.54K   979KB/s               robo.phar                                 73%[==========================================================>                       ]   1.71M  3.85MB/s               robo.phar                                100%[=================================================================================>]   2.35M  4.92MB/s    in 0.5s    
+
+2018-09-06 22:42:22 (4.92 MB/s) - ‘robo.phar’ saved [2461714/2461714]
+
