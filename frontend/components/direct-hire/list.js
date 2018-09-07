@@ -55,8 +55,13 @@ class List extends Component {
     })
   };
 
+  clickMe(job){
+    console.log(job.job_id)
+
+  }
+
   render() {
-    console.log(this.state.job)
+    console.log(this.state.jobs[0])
     if(!this.state.isLoading){
       return (
         <section id="direct-hire-list-section">
@@ -69,35 +74,61 @@ class List extends Component {
               <div key={job.job_id} className="job-post-container">
                 <h3 className="job-post-title">{job.job_title}</h3>
                 <h4 className="job-post-location">{job.city}, {job.state}</h4>
-                <div></div>
-                <Button className="btn btn-link more-info-button" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
-                  More Info >
+                <Button className="more-info-button" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
+                  <p>More Info ></p>
                 </Button>
                 <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
                   <Card>
                     <CardBody>
-                      <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                      <li>{job.job_pay_range}</li>
-                      <li>{job.state}</li>
-                      <li>{job.city}</li>
-                      <li>{job.company_email}</li>
-                      <li>Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</li>
+                    <Button className="more-info-button text-center" color="link" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
+                      <p>Close</p>
+                    </Button>
+                    <div className="list-card-header">
+                      <div>
+                        <h3 className="job-post-title">{job.job_title}</h3>
+                        <h4 className="job-post-location">{job.city}, {job.state}</h4>
+                      </div>
+                      <div>
+                        <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
+                      </div>
+                    </div>
+                    <hr></hr>
+                    <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
+                    <div className="apply-button" onClick={this.clickMe.bind(this, job)}>Apply</div>
                     </CardBody>
                   </Card>
                 </UncontrolledCollapse>
-                
               </div>)}
             )}
           </div>
           <style>{`
-            h2 {font-size: 1.4rem;}
-            .job-post-title {letter-spacing: 1px; margin-bottom: -5px;}
-            .job-post-location {font-size: 1.25rem; font-family: Brandon Grotesque Regular Italic; padding:0;}
+            h2 {font-size: 1.2rem;}
+            h3 {font-size: 1.2rem;}
+            p {font-weight: 400; letter-spacing: 1.25px; line-height: 1rem; font-family: Brandon Grotesque Regular;}
+            li {font-weight: 400; letter-spacing: 1.25px; line-height: 1.5rem; font-family: Brandon Grotesque Regular; letter}
+            div {font-weight: 400; letter-spacing: 1.25px; line-height: 1rem; font-family: Brandon Grotesque Regular}
+            span {line-height: 1rem;}
+
+            .apply-button {background-color: #f0561f; font-family: Brandon Grotesque Regular; padding: 3px 10px 3px 10px}
+            .apply-button:focus {background-color: #f0561f; } 
+
+            .list-card-header {display: flex; flex-direction: row;}
+          
+            .job-post-title {letter-spacing: 1px; margin-bottom: -5px; font-weight: 700;}
+            
+            .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0;}
+            .job-post-date {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding-left: 5rem;;}
+
+            .job-post-container {padding: 0.3rem 0 0 0; border-bottom: solid 1px #f5f5f5;}
+            
             #direct-hire-list-section {
               width: 100vw;
               height: auto;
             }
-            .more-info-button {border: 0; background-color: white; color: orange; margin: 0 !important; padding: 0;}
+            .more-info-button { font-size: 11px; border: 0; background-color: white; color: #f0561f; margin: 0 !important; padding: 0;}
+            .more-info-button:hover {text-decoration:none; color:#f0561f; }
+            .more-info-button:focus {text-decoration:none; color:#f0561f; }
+
             .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
             #search-bar-container {
               display: flex; flex-direction: row; justify-content: center;
@@ -105,10 +136,11 @@ class List extends Component {
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
-              padding: 2rem;
+              padding: 0.5rem;
             }
             #search-results-container {padding: 4rem;}
-            .job-post-container {padding: 1rem 0 1rem 0; border-bottom: solid 1px #dadada;}
+            
+            
           `}</style>
         </section>
       );
