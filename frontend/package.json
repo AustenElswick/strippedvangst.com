@@ -4,9 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "next build",
-        "start": "node server.js",
-        "prod:start": "npm install && node server.js",
+        "build": "scripts/buildZip.sh",
+        "next:build": "next build",
+        "start": "NODE_ENV=production node server.js",
+        "prod:start": " sudo npm install && node server.js",
         "docker:build": "docker build -t frontend .",
         "docker:clean": "docker rm -f frontend || true",
         "docker:run": "docker run -p 3000:3000 --name frontend frontend",
@@ -30,13 +31,14 @@
         "isomorphic-unfetch": "^2.0.0",
         "jquery": "^3.3.1",
         "moment": "^2.22.2",
+        "multiparty": "^4.2.1",
         "next": "^6.1.1",
         "popper.js": "^1.14.4",
         "react": "^16.4.2",
+        "react-dom": "^16.4.2",
         "react-mailchimp-subscribe": "^2.0.2",
         "reactstrap": "^6.4.0",
-        "styled-components": "^3.4.5",
-        "multiparty": "^4.2.1"
+        "styled-components": "^3.4.5"
     },
     "devDependencies": {
         "autoprefixer": "7.1.5",
@@ -44,12 +46,11 @@
         "babel-plugin-wrap-in-js": "^1.1.0",
         "glob": "^7.1.2",
         "node-sass": "^4.4.0",
-        "normalize.css": "^7.0.0",
         "postcss-easy-import": "^3.0.0",
-        "postcss-loader": "^2.0.7",
         "raw-loader": "^0.5.1",
-        "react-dom": "^16.4.2",
+        "postcss-loader": "^2.0.7",
         "sass-loader": "^6.0.6",
-        "webpack": "^3.12.0"
+        "webpack": "^3.12.0",
+        "normalize.css": "^7.0.0"
     }
 }
