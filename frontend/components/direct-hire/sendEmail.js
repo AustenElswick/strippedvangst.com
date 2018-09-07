@@ -33,7 +33,6 @@ class SendEmail extends Component {
         name: this.state.sendTo
       })
     })
-.then(res => console.log(res))
   }
 
   render() {

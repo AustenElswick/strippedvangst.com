@@ -61,10 +61,9 @@ class ApplyModal extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+        <Button id="modal-apply-button" color="danger" onClick={this.toggle}>Apply</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>
             <div>
@@ -73,34 +72,43 @@ class ApplyModal extends React.Component {
             </div>
           </ModalHeader>
           <ModalBody>
-            <div>
-              <h4>Personal Info</h4>
-              <div>white line goes here</div>
-              <label htmlFor='first name'>First Name</label>
-              <input type='text' name='first name' onChange={this.firstNameChange} />
-              <label htmlFor='last name'>Last Name</label>
-              <input type='text' name='last name' onChange={this.lastNameChange} />
-              <label htmlFor='email'>Email</label>
-              <input type='text' name='email' onChange={this.sendChange} />
-              <h4>Upload Resume</h4>
-              <div>white line goes here</div>
-              <label htmlFor='resume'>Choose File</label>
-              <input type='file' name='resume' onChange={this.attachmentChange} />
-              <div className='and-style'>
-                <div>white line goes here</div>
-                <p>And</p>
-                <div>white line goes here</div>
+            <div id="modal-body">
+              <h4 id="modal-title" className="text-center">Personal Info</h4>
+              <div className="small-h-line"></div>
+              
+              <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} />
+              <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} />
+              <input className="modal-text-input" type='text' name='email' placeholder="Email" onChange={this.sendChange} />
+              <h4 id="modal-title">Upload Resume</h4>
+              <div className="small-h-line"></div>
+              <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} />
+              <div className='text-center submit-button-style'>
+                <input id="submit-button-modal" type='button' value='Submit'  onClick={this.sendEmail} />
               </div>
-              <label htmlFor='linkedin'>Connect LinkedIn</label>
-              <div className='linkedin-contact-button' name='linkedin'><img src='/static/images/social/linked-in-white.png' /></div>
-              <input type='button' value='Submit' className='submit-button-style' onClick={this.sendEmail} />
             </div>
           </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
         </Modal>
+        <style>{`
+          #modal-body {background-image: url("/static/images/employer-page/sec_01/orange-background.jpg"); height: 500px; padding: 0; margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            #modal-apply-button {margin-top: 1rem;}
+            .modal-text-input {padding: 5px; margin: 5px; width: 250px;}
+
+            .small-h-line {height: 2px; width: 70px; background-color: white; margin: 0 0 10px 0;}
+
+            #modal-title {font-size: 1.5rem; color: white; padding: 1rem 0 0.25rem 0;}
+            
+            .submit-button-style {background-color: #262626; color: white; margin-top: 20px; width: 150px; padding: 5px;}
+
+            #file-upload {background-color: white; width: 90%; border: solid 1px #262626;}
+
+            #submit-button-modal {color: white; background-color: #262626; border: 0;}
+        
+        `}</style>
       </div>
     );
   }
