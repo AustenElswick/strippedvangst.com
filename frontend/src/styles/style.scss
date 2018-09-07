@@ -865,6 +865,9 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: start;
   }
+
+  // JobReport.js
+  .report-graphic {height: 350px; margin: 1rem;}
 }
 
 @media (min-width: 1024px) {
@@ -912,7 +915,7 @@ align-items: center;
 }
 
 @media (max-width: 420px){
-  //Gigs.js
+  
   .job-report-number-column {
     padding: 0;
   }
@@ -925,6 +928,12 @@ align-items: center;
     width: 80px;
     margin: 5px;
   }
+
+  //JobReport.js
+  .report-graphic {height: 175px;}
+
+  //Footer 
+  .mailchimp-form {padding-right: 25px; padding-left: 25px;}
 }
 
 @media (min-width: 376px) {
@@ -949,31 +958,14 @@ align-items: center;
   }
  
   .report-graphic {
-    margin-top: -30px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    height: 150px;
   }
 
   //VangsIsDope.js
   .play-button-container {
     margin-top: 4rem;
-  }
-
-  //Gigs.js
-  #gigs-cta-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #gigs-steps-container {
-    display: none;
-  }
-  .gigs-cta-button {
-    margin-top: 2rem;
-  }
-
-  #gigs-cta-text-1 {
-    display: none;
   }
 
   //News.js

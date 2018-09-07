@@ -156,16 +156,11 @@ class ContactInfo extends Component {
               font-family: Brandon Grotesque Regular;
               font-size: 1.25rem;
               margin-bottom: 0;
-
             }
 
-            .orange-text {
-              color: #f0561f;
-            }
+            .orange-text {color: #f0561f;}
 
-            Input {
-              margin-top: 10px;
-            }
+            Input {margin-top: 10px;}
 
             Select {margin-top: 10px;}
 
@@ -183,10 +178,7 @@ class ContactInfo extends Component {
                 flex-direction: column;
                 padding: 2rem;
                 justify-content: center;
-                align-items: space-between;
-                align-content: space-between;
-                min-height: 100%;
-                min-width: 100%;
+                align-content: space-around;
               }
               #contact-info-column-2 {
                 margin-top: 3rem;
@@ -194,11 +186,12 @@ class ContactInfo extends Component {
               #column-2-title {display: none;}
               #contact-small-line {display:none;}
               #contact-info-column-2 {display: flex; flex-direction: row;}
-              .contact-us-link {padding: 1rem; font-size: 0.8rem;}
+              .contact-us-link {padding: 1rem; font-size: 0.9rem; opacity: 0.6;}
             }
-            @media (max-width: 400px) {
+            @media (max-width: 420px) {
               .contact-info-title {font-size: 1rem; line-height: 15px; margin-bottom: 15px;}
               #contact-info-column-2 {margin-top: 1rem;}
+              #contact-info-section-label {height: 60px; padding: 1rem 0 0 2rem;}
 
             }
           `}

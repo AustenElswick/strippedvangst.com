@@ -35,6 +35,12 @@ class Hero extends Component {
                         </div>
                     </div>
                 </div>
+                <style>{`
+                    @media (max-width: 770px) {
+                        #we-are-ready-text {display:none};
+                    }
+                
+                `}</style>
             </section>
         );
     }

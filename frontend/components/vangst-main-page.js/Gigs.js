@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 class Gigs extends Component {
     render() {
         return (
-            <div>
-                <section className="section section-top section-full gigs-section">
+            <section className="section section-top section-full gigs-section">
                 <div className="container">
                     <div className="row justify-content-left align-items-center">
-                        <div className="col-10 col-lg-7">
+                        <div className="col-8 col-lg-7">
                             <div className="section-label">
                                 <p className="section-number-orange">.03</p>
                                 <p className="section-text-orange">Vangst Gigs</p>
@@ -46,9 +45,31 @@ class Gigs extends Component {
                         </div>
                     </div>
                 </div>
+                <style>{`
+                    @media (max-width: 420px) {
+                        #gigs-cta-button-container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+
+                        .section-copy {padding-right: 10px;}
+                        
+                        #gigs-steps-container {display: none;}
+                            
+                        .gigs-cta-button { margin-top: 2rem;}
+                        
+                        #gigs-cta-text-1 {display: none;}
+                        #gigs-cta-text-2 {display: block;}
+                    }
+
+                    @media (min-width: 419px) {
+                        #gigs-cta-text-1 { display: block; }
+                        #gigs-cta-text-2 { display: none; }
+                        
+                      }
+                `}</style>
             </section>
-                
-            </div>
         );
     }
 }

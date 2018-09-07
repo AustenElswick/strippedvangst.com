@@ -21,7 +21,7 @@ class VangstIsDope extends Component {
                             </p>
                             <div className="white-line"></div>
                         </div>
-                        <div className="col-lg-4">
+                        <div id="play-button-container" className="col-lg-4">
                             <Link href="/employer-page">
                                 <div className="play-button-container">
                                     <img src='/static/images/vangst-main-page/play-button.png' alt=""></img>
@@ -33,6 +33,12 @@ class VangstIsDope extends Component {
                         </div>
                     </div>
                 </div>
+                <style>{`
+                    @media (max-width: 770px){
+                        #play-button-container {display: flex; flex-direction: row; justify-content: center;}
+
+                    }
+                `}</style>
             </section>
         );
     }

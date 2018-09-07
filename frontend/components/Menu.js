@@ -69,7 +69,7 @@ class Menu extends Component {
                         WORK FOR VANGST
                     </DropdownItem> */}
                     <DropdownItem className="nav-link">
-                        <NavLink className="nav-link dropdown-link" href="/team-page">TEAM</NavLink>
+                        <NavLink className="nav-link dropdown-link" href="/about-vangst-talent">TEAM</NavLink>
                     </DropdownItem>
                     <DropdownItem className="nav-link">
                         <NavLink className="nav-link dropdown-link" href="https://www.vangst.com/vangst-cannabis-blog" target="_blank">BLOG</NavLink>
