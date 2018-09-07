@@ -52,6 +52,7 @@ class ApplyModal extends React.Component {
       body: formData
     })
       .catch(err => console.log(err))
+      console.log("hi")
   }
   toggle() {
     this.props.onClick()

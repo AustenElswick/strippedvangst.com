@@ -36,6 +36,14 @@ class Hero extends Component {
                     </div>
                 </div>
                 <style>{`
+
+                    #vangst-main-page-hero {
+                        background-image: url("/static/images/vangst-main-page/plant-in-hand-1472.jpg");
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+
                     @media (max-width: 770px) {
                         #we-are-ready-text {display:none};
                     }
