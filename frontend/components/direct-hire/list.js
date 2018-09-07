@@ -59,7 +59,6 @@ class List extends Component {
   };
 
   clickMe(job){
-    console.log(job.job_id)
     if(job.job_url) {
       this.setState({ jobTitle: job.job_title, jobUrl: job.job_url })
     } else {
@@ -68,7 +67,6 @@ class List extends Component {
   }
 
   render() {
-    console.log(this.state.jobs[0])
     if(!this.state.isLoading){
       return (
         <section id="direct-hire-list-section">
@@ -81,8 +79,8 @@ class List extends Component {
               <div key={job.job_id} className="job-post-container">
                 <h3 className="job-post-title">{job.job_title}</h3>
                 <h4 className="job-post-location">{job.city}, {job.state}</h4>
-                <Button className="more-info-button" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
-                  <p>More Info ></p>
+                <Button id="more-info-button" className="more-info-button" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
+                  More Info >
                 </Button>
                 <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
                   <Card>
@@ -101,9 +99,7 @@ class List extends Component {
                     </div>
                     <hr></hr>
                     <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-
-                    <div className="apply-button" onClick={this.clickMe.bind(this, job)}>Apply</div>
-                        <ApplyModal onClick={this.clickMe.bind(this, job)} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
+                    <ApplyModal onClick={this.clickMe.bind(this, job)} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
                     </CardBody>
                   </Card>
                 </UncontrolledCollapse>
@@ -134,9 +130,9 @@ class List extends Component {
               width: 100vw;
               height: auto;
             }
-            .more-info-button { font-size: 11px; border: 0; background-color: white; color: #f0561f; margin: 0 !important; padding: 0;}
-            .more-info-button:hover {text-decoration:none; color:#f0561f; }
-            .more-info-button:focus {text-decoration:none; color:#f0561f; }
+            .more-info-button { font-size: 11px; border: 0; background-color: white; color: #f0561f; margin: 0 !important; padding: 0 3px 0 3px;}
+            .more-info-button:hover {text-decoration:none; color:#ffffff; }
+            .more-info-button:focus {text-decoration:none; color:#ffffff; }
 
             .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
             #search-bar-container {

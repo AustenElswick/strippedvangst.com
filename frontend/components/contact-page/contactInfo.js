@@ -3,6 +3,58 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
 class ContactInfo extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      sendFrom: '',
+      firstName: '',
+      lastName: '',
+      state: '',
+      subject: '',
+      content: ''
+    }
+  }
+
+  sendChange = (e) => {
+    this.setState({ sendFrom: e.target.value })
+  }
+
+  firstNameChange = (e) => {
+    this.setState({ firstName: e.target.value })
+  }
+
+  lastNameChange = (e) => {
+    this.setState({ lastName: e.target.value })
+  }
+
+  subjectChange = (e) => {
+    this.setState({ subject: e.target.value })
+  }
+
+  stateChange = (e) => {
+    this.setState({ state: e.target.value })
+  }
+
+  contentChange = (e) => {
+    this.setState({ content: e.target.value })
+  }
+
+  sendEmail = () => {
+    const formData = new FormData()
+    formData.append('email', this.state.sendFrom)
+    formData.append('firstName', this.state.firstName)
+    formData.append('lastName', this.state.lastName)
+    formData.append('subject', this.state.subject)
+    formData.append('content', this.state.content)
+    formData.append('state', this.state.state)
+    fetch('http://localhost:3000/sendgridcontact', {
+      method: 'POST',
+      body: formData
+    })
+      .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <section id="contact-info-section">
@@ -18,16 +70,16 @@ class ContactInfo extends Component {
             </div>
             <div id="contact-info-inputs-container">
               <Form>
-                <Input type='text' placeholder='First Name' />
-                <Input type='text' placeholder='Last Name' />
-                <Input type='email' placeholder='Email' />
-                <Input type='select' name='subject' style={{ fontSize: "1em", padding: 5 }}>
+                <Input type='text' placeholder='First Name' onChange={this.firstNameChange} />
+                <Input type='text' placeholder='Last Name' onChange={this.lastNameChange} />
+                <Input type='email' placeholder='Email' onChange={this.sendChange} />
+                <Input type='select' name='subject' onChange={this.subjectChange} style={{ fontSize: "1em", padding: 5 }}>
                   <option value="" disabled selected hidden>Select a Subject</option>
                   <option value="#">Hiring Talent</option>
                   <option value="#">Looking For Work</option>
                   <option value="#">Other</option>
                 </Input>
-                <Input type='select' style={{ fontSize: "1em", padding: 5 }}>
+                <Input type='select' onChange={this.stateChange} style={{ fontSize: "1em", padding: 5 }}>
                   <option value="" disabled selected hidden>Select State</option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -81,9 +133,9 @@ class ContactInfo extends Component {
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>			
                 </Input>
-                <Input id="contact-textarea" type='textarea' rows='7' cols='42' placeholder="Message" />
+                <Input id="contact-textarea" type='textarea' onChange={this.contentChange} rows='7' cols='42' placeholder="Message" />
                 <div className="d-flex justify-content-center">
-                  <input id="contact-info-submit-button" type='button' value='SUBMIT' />
+                  <input id="contact-info-submit-button" type='button' value='SUBMIT' onClick={this.sendEmail} />
                 </div>
               </Form>
             </div>
@@ -123,7 +175,6 @@ class ContactInfo extends Component {
               min-height: 100%;
               min-width: 100%;
             }
-
             .contact-info-column {
               display: flex;
               flex-direction: column;
@@ -132,40 +183,31 @@ class ContactInfo extends Component {
               display: flex;
               flex-direction: column;
             }
-
             #contact-info-inputs-container {
               display: flex;
               flex-direction: column;
             }
-
             #contact-small-line {
               height: 2px;
               width: 65px;
               background-color: black;
               margin: 10px 0 10px 0;
             }
-
             #contact-us-link {
               text-decoration: none;
               color: black;
               margin-bottom: 5px;
               margin-top: 5px;
             }
-
             .contact-info-title {
               font-family: Brandon Grotesque Regular;
               font-size: 1.25rem;
               margin-bottom: 0;
             }
-
             .orange-text {color: #f0561f;}
-
             Input {margin-top: 10px;}
-
             Select {margin-top: 10px;}
-
             #contact-textarea {margin-top: 10px}
-
             #contact-info-submit-button {
               background-color: #f0561f; 
               color: white;
@@ -192,7 +234,6 @@ class ContactInfo extends Component {
               .contact-info-title {font-size: 1rem; line-height: 15px; margin-bottom: 15px;}
               #contact-info-column-2 {margin-top: 1rem;}
               #contact-info-section-label {height: 60px; padding: 1rem 0 0 2rem;}
-
             }
           `}
         </style>
@@ -200,5 +241,4 @@ class ContactInfo extends Component {
     );
   }
 }
-
 export default ContactInfo;

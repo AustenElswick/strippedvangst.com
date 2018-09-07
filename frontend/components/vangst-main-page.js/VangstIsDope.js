@@ -17,7 +17,7 @@ class VangstIsDope extends Component {
                             </h2>
                             <div className="white-line"></div>
                             <p className="text-white section-copy">
-                                Since launching in 2015, we’ve connected over 5,500 candidates with jobs in the rapidly emerging cannabis industry. Through direct hire, Vangst GIGs, career fairs, and our job board, our team continues to pioneer recruiting solutions tailored specifically to the cannabis industry. 
+                                Since launching in 2015, we’ve connected over 7,500 candidates with jobs in the rapidly emerging cannabis industry. Through direct hire, Vangst GIGs, career fairs, and our job board, our team continues to pioneer recruiting solutions tailored specifically to the cannabis industry. 
                             </p>
                             <div className="white-line"></div>
                         </div>
