@@ -12,7 +12,8 @@ class ContactInfo extends Component {
       lastName: '',
       state: '',
       subject: '',
-      content: ''
+      content: '',
+      successMessage: ''
     }
   }
 
@@ -40,7 +41,7 @@ class ContactInfo extends Component {
     this.setState({ content: e.target.value })
   }
 
-  sendEmail = () => {
+  sendEmail = async () => {
     const formData = new FormData()
     formData.append('email', this.state.sendFrom)
     formData.append('firstName', this.state.firstName)
@@ -48,11 +49,14 @@ class ContactInfo extends Component {
     formData.append('subject', this.state.subject)
     formData.append('content', this.state.content)
     formData.append('state', this.state.state)
-    fetch('/sendgridcontact', {
+    this.setState({ successMessage: 'Sending...'})
+    await fetch('/sendgridcontact', {
       method: 'POST',
       body: formData
+    }).catch(err => console.log(err))
+    this.setState({
+      successMessage: "Your message has been sent!"
     })
-      .catch(err => console.log(err))
   }
 
   render() {
@@ -135,8 +139,9 @@ class ContactInfo extends Component {
                 </Input>
                 <Input id="contact-textarea" type='textarea' onChange={this.contentChange} rows='7' cols='42' placeholder="Message" />
                 <div className="d-flex justify-content-center">
-                  <input id="contact-info-submit-button" type='button' value='SUBMIT' onClick={this.sendEmail} />
+                  <input id="contact-info-submit-button" disabled={Boolean(this.state.successMessage)} type='button' value='SUBMIT' onClick={this.sendEmail} />
                 </div>
+                {this.state.successMessage ? <div className="text-success">{this.state.successMessage}</div> : null}
               </Form>
             </div>
           </div> 

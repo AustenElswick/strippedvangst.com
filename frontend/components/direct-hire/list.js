@@ -29,7 +29,8 @@ class List extends Component {
        city: job.city,
        company_email: job.company_email,
        external_job_id: job.external_job_id,
-       activation_date: job.activation_date
+       activation_date: job.activation_date,
+       recruiter_email: job.recruiter_email
      }))})
       .then(newData => this.setState({
         jobs: newData,
@@ -59,11 +60,7 @@ class List extends Component {
   };
 
   clickMe(job){
-    if(job.job_url) {
-      this.setState({ jobTitle: job.job_title, jobUrl: job.job_url })
-    } else {
-      this.setState({ jobTitle: job.job_title, jobUrl: job.job_id })
-    }
+    this.setState({ job: job })
   }
 
   render() {
@@ -99,7 +96,7 @@ class List extends Component {
                     </div>
                     <hr></hr>
                     <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                    <ApplyModal onClick={this.clickMe.bind(this, job)} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
+                    <ApplyModal onClick={this.clickMe.bind(this, job)} job={this.state.job} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
                     </CardBody>
                   </Card>
                 </UncontrolledCollapse>

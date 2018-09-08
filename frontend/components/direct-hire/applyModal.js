@@ -13,9 +13,10 @@ class ApplyModal extends React.Component {
       firstName: '',
       lastName: '',
       jobTitle: 'test',
-      jobUrl: 'test'
+      jobUrl: 'test',
+      recruiter_email: ''
     };
-
+    
     this.toggle = this.toggle.bind(this);
   }
 
@@ -47,12 +48,13 @@ class ApplyModal extends React.Component {
     formData.append('subject', this.state.subject)
     formData.append('jobTitle', this.props.jobTitle)
     formData.append('jobUrl', this.props.jobUrl)
+    formData.append('recruiter_email', this.props.job.recruiter_email)
+    console.log('PreSend')
     fetch('/sendgrid', {
       method: 'POST',
       body: formData
-    })
-      .catch(err => console.log(err))
-      console.log("hi")
+    }).catch(err => console.log(err))
+    console.log('PostSend')
   }
   toggle() {
     this.props.onClick()
@@ -62,6 +64,7 @@ class ApplyModal extends React.Component {
   }
 
   render() {
+    console.log('ModalProps: ', this.props)
     return (
       <div>
         <Button id="modal-apply-button" color="danger" onClick={this.toggle}>Apply</Button>

@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-const port = process.env.PORT || 3000;
+const port = 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -41,7 +41,7 @@ server.use(bodyParser.json());
           const jobTitle = fields.jobTitle[0];
           const jobUrl = fields.jobUrl[0];
           const msg = {
-            to: 'info@vangst.com',
+            to: 'mike@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}`,
@@ -53,7 +53,7 @@ server.use(bodyParser.json());
               content_id: 'mytext'
             }]
           };
-          sgMail.send(msg);
+          await sgMail.send(msg);
         })
         res.status(200).send('success')
       })
