@@ -5,7 +5,7 @@ class Hero extends Component {
     return (
       <section id="career-fair-hero-section">
         <div>
-          <h1 className="text-center text-white">Hosting the worlds largest cannabis career fair since 2015</h1>
+          <h1 id="career-fair-title" className="text-center text-white">Hosting the worlds largest cannabis career fair since 2015</h1>
         </div>
         <style jsx>
           {`
@@ -16,9 +16,13 @@ class Hero extends Component {
               align-items: center;
               width: 100vw;
               height: 50vh;
-              background-color: orange;
+              padding: 4rem;
               background-image: url("/static/images/employer-page/sec_01/orange-background.jpg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
             }
+            #career-fair-title {font-size: 6rem;}
           `}
         </style>
       </section>
