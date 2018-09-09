@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -41,7 +41,7 @@ server.use(bodyParser.json());
           const jobTitle = fields.jobTitle[0];
           const jobUrl = fields.jobUrl[0];
           const msg = {
-            to: 'mike@vangst.com',
+            to: 'chas.fricke@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}`,
@@ -71,7 +71,7 @@ server.use(bodyParser.json());
           const content = fields.content[0];
           const state = fields.state[0];
           const msg = {
-            to: 'info@vangst.com',
+            to: 'chas.fricke@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
