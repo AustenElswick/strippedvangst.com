@@ -41,7 +41,7 @@ server.use(bodyParser.json());
           const jobTitle = fields.jobTitle[0];
           const jobUrl = fields.jobUrl[0];
           const msg = {
-            to: 'info@vangst.com',
+            to: 'chas.fricke@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}`,
@@ -53,7 +53,7 @@ server.use(bodyParser.json());
               content_id: 'mytext'
             }]
           };
-          sgMail.send(msg);
+          await sgMail.send(msg);
         })
         res.status(200).send('success')
       })
@@ -71,7 +71,7 @@ server.use(bodyParser.json());
           const content = fields.content[0];
           const state = fields.state[0];
           const msg = {
-            to: 'info@vangst.com',
+            to: 'chas.fricke@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
@@ -85,6 +85,10 @@ server.use(bodyParser.json());
         server.get('/', (req, res) => {
             res.redirect(302, '/vangst-main-page')
         })
+
+        server.get('/vangst-talent-career-fair-info-page', (req, res) => {
+          res.redirect(302, '/vangst-talent-careerfair')
+      })
 
         server.get("/post/:slug", (req, res) => {
             const actualPage = "/post";
