@@ -23,6 +23,13 @@ class Hero extends Component {
               background-size: cover;
             }
             #career-fair-title {font-size: 6rem;}
+
+            @media (max-width: 420px) {
+              #career-fair-title {font-size: 3rem;}
+            }
+            @media (max-width: 361px) {
+              #career-fair-title {font-size: 2.25rem;}
+            }
           `}
         </style>
       </section>

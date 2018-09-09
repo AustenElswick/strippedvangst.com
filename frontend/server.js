@@ -86,6 +86,10 @@ server.use(bodyParser.json());
             res.redirect(302, '/vangst-main-page')
         })
 
+        server.get('/vangst-talent-career-fair-info-page', (req, res) => {
+          res.redirect(302, '/vangst-talent-careerfair')
+      })
+
         server.get("/post/:slug", (req, res) => {
             const actualPage = "/post";
             const queryParams = { slug: req.params.slug, apiRoute: "post" };

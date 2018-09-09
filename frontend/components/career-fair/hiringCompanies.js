@@ -93,7 +93,7 @@ class HiringCompanies extends Component {
       );
     });
     return (
-      <section>
+      <section id="company-carousel">
         <h3>THANK YOU TO ALL HIRING COMPANIES</h3>
         <div>gray line goes here</div>
         <div className='centered'>
@@ -110,6 +110,7 @@ class HiringCompanies extends Component {
         </div>
         <style>
           {`
+          #company-carousel {min-height: 50vh; min-width: 100vw; padding: 4rem;}
           .carousel-control-prev-icon {
             background-image: url('/static/images/career-fair-page/l-arrow-orange.png');
           }

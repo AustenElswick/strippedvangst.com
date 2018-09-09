@@ -7,7 +7,8 @@ import Stats from '../components/career-fair/stats';
 import UpcomingFair from '../components/career-fair/upcomingFair';
 import PastEvents from '../components/career-fair/pastEvents';
 import FutureCareerFairs from '../components/career-fair/futureCareerFairs';
-import HiringCompanies from '../components/career-fair/hiringCompanies';
+// import HiringCompanies from '../components/career-fair/hiringCompanies';
+import Companies from '../components/employer-page/companies';
 
 class CareerFair extends Component {
   render() {
@@ -19,7 +20,7 @@ class CareerFair extends Component {
         <UpcomingFair />
         <PastEvents />
         <FutureCareerFairs />
-        <HiringCompanies />
+        <Companies />
       </Layout>
     );
   }
