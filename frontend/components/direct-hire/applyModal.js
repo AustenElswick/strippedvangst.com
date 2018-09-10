@@ -89,8 +89,8 @@ class ApplyModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader id="modal-header" toggle={this.toggle}>
             <div>
-              <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo" />
-              <img className="vangst-logo-text d-lg-none" src="/static/images/logos/logo-text.png" alt="vangst logo text" />
+              <img id="logo-img" src="/static/images/logos/logo-graphic.png" alt="vangst logo" />
+              <img id="logo-text" src="/static/images/logos/logo-text.png" alt="vangst logo text" />
             </div>
           </ModalHeader>
           <ModalBody>
@@ -109,7 +109,7 @@ class ApplyModal extends React.Component {
           </ModalBody>
         </Modal>
         <style>{`
-          #modal-header {background-color: #f0561f}
+          #modal-header {background-color: #ffffff;}
 
           #modal-body {background-color: #f0561f; height: 500px; padding: 0; margin: 0;
             display: flex;
@@ -118,6 +118,11 @@ class ApplyModal extends React.Component {
             align-items: center;
             padding: 0;
         }
+
+ 
+        #logo-img {height: 30px; padding-right: 15px;}
+        #logo-text {height: 25px;}
+        
             #modal-apply-button {margin-top: 1rem;}
             .modal-text-input {padding: 5px; margin: 5px; width: 250px;}
 
