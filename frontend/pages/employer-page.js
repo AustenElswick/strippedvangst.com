@@ -7,6 +7,7 @@ import GuaranteePlaced from '../components/employer-page/guaranteePlaced';
 import TestimonyCarousel from '../components/employer-page/testimonyCarousel';
 import Companies from '../components/employer-page/companies';
 import EmailForm from '../components/employer-page/emailForm';
+import ContactSales from '../components/employer-page/contactSales';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
 
@@ -17,6 +18,7 @@ class EmployerPage extends Component {
         <Layout>
           <Menu />
           <Hero />
+          <ContactSales />
           <CandidateDataBase />
           <BestRecruiters />
           <GuaranteePlaced />

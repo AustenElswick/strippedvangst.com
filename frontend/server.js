@@ -90,6 +90,29 @@ server.use(bodyParser.json());
         res.status(200).send('success')
       })
 
+      server.post('/sendgridsalescontact', (req, res) => {
+        const formData = new multiparty.Form();
+        formData.parse(req, async (err, fields, files) => {
+          if (err) {
+            console.log(err)
+          }
+          const email = fields.email[0];
+          const subject = fields.subject[0];
+          const firstName = fields.firstName[0];
+          const lastName = fields.lastName[0];
+          const content = fields.content[0];
+          const msg = {
+            to: 'austen.elswick@vangst.com',
+            from: email,
+            subject: subject,
+            text: `${firstName} ${lastName} is reaching out with this message: "${content}"`,
+            html: `<strong>${firstName} ${lastName} is reaching out with this message: "${content}"</strong>`
+          };
+          sgMail.send(msg);
+        })
+        res.status(200).send('success')
+      })
+
         server.get('/', (req, res) => {
             res.redirect(302, '/vangst-main-page')
         })
