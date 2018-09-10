@@ -47,7 +47,7 @@ server.use(bodyParser.json());
       let crelate = fields.crelateUrl[0];
 
       if(crelate.match(/(?:^|\W)null(?:$|\W)/)) {
-        crelate = 'No crelate url provided by recruiter at posting.'
+        crelate = 'No Crelate URL was provided.'
       }
       const msg = {
         to: [{"email": "chas.fricke@vangst.com"}],
