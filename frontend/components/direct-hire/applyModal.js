@@ -42,32 +42,40 @@ class ApplyModal extends React.Component {
   }
 
   sendEmail = () => {
-    this.setState ({success_message: "Sending..."})
-    const formData = new FormData()
-    console.log(this.props);
-    formData.append('file', this.state.attachment)
-    formData.append('email', this.state.sendFrom)
-    formData.append('firstName', this.state.firstName)
-    formData.append('lastName', this.state.lastName)
-    formData.append('subject', this.state.subject)
-    formData.append('jobTitle', this.props.job.job_title)
-    formData.append('jobUrl', this.props.job.job_url)
-    formData.append('crelateUrl', `${this.state.crelateURL}${this.props.job.external_job_id}`)
-    formData.append('recruiter_email', this.props.job.recruiter_email)
-    formData.append('city', this.props.job.city)
-    formData.append('state', this.props.job.state)
+    if (this.state.firstName && this.state.lastName && this.state.sendFrom && this.state.attachment){
+      this.setState ({success_message: "Sending..."})
+      const formData = new FormData()
+      console.log(this.props);
+      formData.append('file', this.state.attachment)
+      formData.append('email', this.state.sendFrom)
+      formData.append('firstName', this.state.firstName)
+      formData.append('lastName', this.state.lastName)
+      formData.append('subject', this.state.subject)
+      formData.append('jobTitle', this.props.job.job_title)
+      formData.append('jobUrl', this.props.job.job_url)
+      formData.append('crelateUrl', `${this.state.crelateURL}${this.props.job.external_job_id}`)
+      formData.append('recruiter_email', this.props.job.recruiter_email)
+      formData.append('city', this.props.job.city)
+      formData.append('state', this.props.job.state)
+      fetch('/sendgrid', {
+        method: 'POST',
+        body: formData
+      }).catch(err => console.log(err))
+      console.log('PostSend')
+      this.setState({success_message: "Application submitted"})
+      setTimeout (this.toggle, 3000);
 
 
-    fetch('/sendgrid', {
-      method: 'POST',
-      body: formData
-    }).catch(err => console.log(err))
-    console.log('PostSend')
-    this.setState({success_message: "Application submitted"})
-  }
+    } else {
+      console.log('last name', this.state.attachment);
+      this.setState ({success_message: "Please fill out all fields."})
+    }
+  };
+
+  
+    
+
   toggle() {
-    console.log("this.props.job")
-    this.props.onClick()
     this.setState({
       modal: !this.state.modal,
     });
@@ -90,12 +98,13 @@ class ApplyModal extends React.Component {
               <h4 id="modal-title" className="text-center">Personal Info</h4>
               <div className="small-h-line"></div>
               
-              <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} />
-              <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} />
-              <input className="modal-text-input" type='text' name='email' placeholder="Email" onChange={this.sendChange} />
+              <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} required/>
+              <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} required/>
+              <input className="modal-text-input" type='text' name='email' placeholder="Email" onChange={this.sendChange} required/>
               <h4 id="modal-title">Upload Resume</h4>
               <div className="small-h-line"></div>
-              <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} />
+              <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} required/>
+              <div>{this.state.success_message}</div>
               <div className='text-center submit-button-style'>
                 <input id="submit-button-modal" type='button' value='Submit'  onClick={this.sendEmail} />
               </div>

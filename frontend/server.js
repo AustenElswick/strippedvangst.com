@@ -50,7 +50,7 @@ server.use(bodyParser.json());
         crelate = 'No crelate url provided by recruiter at posting.'
       }
       const msg = {
-        to: [{"email": recruiterEmail}],
+        to: [{"email": "chas.fricke@vangst.com"}],
         from: email,
         subject: `${subject} - ${jobTitle} - ${city}, ${state}`,
         text: `${firstName} ${lastName} has applied to ${jobTitle}.  Vangsters: ${jobUrl} Crelate: ${crelate}`,
