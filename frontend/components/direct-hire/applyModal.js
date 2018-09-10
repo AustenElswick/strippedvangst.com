@@ -42,7 +42,7 @@ class ApplyModal extends React.Component {
   }
 
   sendEmail = () => {
-    if (this.state.firstName && this.state.lastName && this.state.sendFrom && this.state.attachment){
+    if (this.state.firstName && this.state.lastName && this.state.sendFrom.match(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/) && this.state.attachment){
       this.setState ({success_message: "Sending..."})
       const formData = new FormData()
       console.log(this.props);
@@ -87,7 +87,7 @@ class ApplyModal extends React.Component {
       <div>
         <Button id="modal-apply-button" color="danger" onClick={this.toggle}>Apply</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>
+          <ModalHeader id="modal-header" toggle={this.toggle}>
             <div>
               <img className="vangst-logo-graphic d-lg-none" src="/static/images/logos/logo-graphic.png" alt="vangst logo" />
               <img className="vangst-logo-text d-lg-none" src="/static/images/logos/logo-text.png" alt="vangst logo text" />
@@ -96,27 +96,27 @@ class ApplyModal extends React.Component {
           <ModalBody>
             <div id="modal-body">
               <h4 id="modal-title" className="text-center">Personal Info</h4>
-              <div className="small-h-line"></div>
-              
+              <div className="small-h-line"></div> 
               <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} required/>
               <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} required/>
-              <input className="modal-text-input" type='text' name='email' placeholder="Email" onChange={this.sendChange} required/>
+              <input className="modal-text-input" type='email' name='email' placeholder="Email" onChange={this.sendChange} required/>
               <h4 id="modal-title">Upload Resume</h4>
               <div className="small-h-line"></div>
               <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} required/>
               <div>{this.state.success_message}</div>
-              <div className='text-center submit-button-style'>
-                <input id="submit-button-modal" type='button' value='Submit'  onClick={this.sendEmail} />
-              </div>
+              <Button id="submit-button-modal" onClick={this.sendEmail}>Submit</Button>
             </div>
           </ModalBody>
         </Modal>
         <style>{`
-          #modal-body {background-image: url("/static/images/employer-page/sec_01/orange-background.jpg"); height: 500px; padding: 0; margin: 0;
+          #modal-header {background-color: #f0561f}
+
+          #modal-body {background-color: #f0561f; height: 500px; padding: 0; margin: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 0;
         }
             #modal-apply-button {margin-top: 1rem;}
             .modal-text-input {padding: 5px; margin: 5px; width: 250px;}
@@ -127,9 +127,9 @@ class ApplyModal extends React.Component {
             
             .submit-button-style {background-color: #262626; color: white; margin-top: 20px; width: 150px; padding: 5px;}
 
-            #file-upload {background-color: white; width: 90%; border: solid 1px #262626;}
+            #file-upload {background-color: white; width: 250px; border: 0;}
 
-            #submit-button-modal {color: white; background-color: #262626; border: 0;}
+            #submit-button-modal {color: white; background-color: #262626; border: 0; margin-top: 2rem;}
         
         `}</style>
      </div>
