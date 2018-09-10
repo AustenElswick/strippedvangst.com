@@ -67,6 +67,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           Sign Up
         </button>
       </div>
+      <style jsx>{`#footer-signup-button {background-color: #f0561f;`}</style>
     </div>
   );
 };

@@ -10,7 +10,7 @@ class UpcomingFair extends Component {
             <h5 id="event-title">Upcoming Fair</h5>
             <div className="gray-line-h"></div>
             <h2 id="event-date">October 11, 2018</h2>
-            <h5 id="event-time">9:30am-6:00pm</h5>
+            <h5 id="event-time">10:00am-4:00pm</h5>
             <div className="gray-line-h"></div>
             <p className="event-address">Oakland Marriot City Center</p>
             <p className="event-address">1001 Broadway</p>
