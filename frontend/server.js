@@ -29,7 +29,7 @@ server.use(bodyParser.json());
       if (err) {
         console.log(err)
       }
-      console.log(fields.jobUrl)
+      console.log(fields.recruiter_email)
       const path = files.file[0].path;
       const name = files.file[0].originalFilename;
       const buffer = fs.readFileSync(path);
@@ -47,10 +47,10 @@ server.use(bodyParser.json());
       let crelate = fields.crelateUrl[0];
 
       if(crelate.match(/(?:^|\W)null(?:$|\W)/)) {
-        crelate = 'No crelate url provided by recruiter at posting.'
+        crelate = 'No Crelate URL was provided.'
       }
       const msg = {
-        to: 'chas.fricke@vangst.com',
+        to: [{"email": "chas.fricke@vangst.com"}],
         from: email,
         subject: `${subject} - ${jobTitle} - ${city}, ${state}`,
         text: `${firstName} ${lastName} has applied to ${jobTitle}.  Vangsters: ${jobUrl} Crelate: ${crelate}`,
@@ -79,7 +79,7 @@ server.use(bodyParser.json());
           const content = fields.content[0];
           const state = fields.state[0];
           const msg = {
-            to: 'chas.fricke@vangst.com',
+            to: 'info@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
