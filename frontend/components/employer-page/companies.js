@@ -32,7 +32,7 @@ class Companies extends Component {
             <img id="NR" className="company-logo" src='static/images/employer-page/company-logos/Native-Roots.jpg' alt='Native Roots' />
           </div>
           <div className="company-logo-container">
-            <img className="company-logo" src='static/images/employer-page/company-logos/Greenbits.webp' alt='GreenBits' />
+            <img className="company-logo" src='static/images/employer-page/company-logos/GreenBits.png' alt='GreenBits' />
           </div>
           <div className="company-logo-container">
             <img id="greenpeak" className="company-logo" src='static/images/employer-page/company-logos/Greenpeak innovations.png' alt='Green Peak Innovation' />

@@ -6,7 +6,7 @@ class ApplyModal extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      subject: 'i am applying',
+      subject: 'Direct Hire Application',
       sendFrom: '',
       content: 'i am applying to this job',
       attachment: '',
@@ -14,9 +14,11 @@ class ApplyModal extends React.Component {
       lastName: '',
       jobTitle: 'test',
       jobUrl: 'test',
-      recruiter_email: ''
+      recruiter_email: '',
+      success_message: '',
+      crelateURL: 'https://app.crelate.com/go#stage/_Jobs/DefaultView/'
     };
-    
+    console.log('*************', this.props);
     this.toggle = this.toggle.bind(this);
   }
 
@@ -40,26 +42,34 @@ class ApplyModal extends React.Component {
   }
 
   sendEmail = () => {
+    this.setState ({success_message: "Sending..."})
     const formData = new FormData()
+    console.log(this.props);
     formData.append('file', this.state.attachment)
     formData.append('email', this.state.sendFrom)
     formData.append('firstName', this.state.firstName)
     formData.append('lastName', this.state.lastName)
     formData.append('subject', this.state.subject)
-    formData.append('jobTitle', this.props.jobTitle)
-    formData.append('jobUrl', this.props.jobUrl)
+    formData.append('jobTitle', this.props.job.job_title)
+    formData.append('jobUrl', this.props.job.job_url)
+    formData.append('crelateUrl', `${this.state.crelateURL}${this.props.job.external_job_id}`)
     formData.append('recruiter_email', this.props.job.recruiter_email)
-    console.log('PreSend')
+    formData.append('city', this.props.job.city)
+    formData.append('state', this.props.job.state)
+
+
     fetch('/sendgrid', {
       method: 'POST',
       body: formData
     }).catch(err => console.log(err))
     console.log('PostSend')
+    this.setState({success_message: "Application submitted"})
   }
   toggle() {
+    console.log("this.props.job")
     this.props.onClick()
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
     });
   }
 
@@ -113,7 +123,7 @@ class ApplyModal extends React.Component {
             #submit-button-modal {color: white; background-color: #262626; border: 0;}
         
         `}</style>
-      </div>
+     </div>
     );
   }
 }

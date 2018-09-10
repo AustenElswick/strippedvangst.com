@@ -23,6 +23,7 @@ class List extends Component {
         job_id: job.id,
        business_name: job.business,
        job_title: job.job_title,
+       job_url: job.job_url,
        job_description: job.job_description,
        job_pay_range: job.pay_range,
        state: job.state,
@@ -64,6 +65,7 @@ class List extends Component {
   }
 
   render() {
+   console.log("list.state", this.state)
     if(!this.state.isLoading){
       return (
         <section id="direct-hire-list-section">
@@ -72,6 +74,7 @@ class List extends Component {
           </div>
           <div id="search-results-container">
             {this.state.jobs.map(job => {
+              console.log('JOB', job);
               return (
               <div key={job.job_id} className="job-post-container">
                 <h3 className="job-post-title">{job.job_title}</h3>
@@ -90,13 +93,13 @@ class List extends Component {
                         <h3 className="job-post-title">{job.job_title}</h3>
                         <h4 className="job-post-location">{job.city}, {job.state}</h4>
                       </div>
-                      <div>
+                      {/* <div>
                         <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
-                      </div>
+                      </div> */}
                     </div>
                     <hr></hr>
                     <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                    <ApplyModal onClick={this.clickMe.bind(this, job)} job={this.state.job} jobTitle={this.state.jobTitle} jobUrl={this.state.jobUrl} />
+                    <ApplyModal onClick={this.clickMe.bind(this, job)} job={job} />
                     </CardBody>
                   </Card>
                 </UncontrolledCollapse>

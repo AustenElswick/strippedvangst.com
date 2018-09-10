@@ -23,41 +23,49 @@ server.use(bodyParser.json());
 	  .then(json => res.send(json.data))
 	})
 
-	server.post('/sendgrid', (req, res) => {
-        const formData = new multiparty.Form();
-        formData.parse(req, async (err, fields, files) => {
-          if (err) {
-            console.log(err)
-          }
-          console.log(files)
-          const path = files.file[0].path;
-          const name = files.file[0].originalFilename;
-          const buffer = fs.readFileSync(path);
-          const base64 = new Buffer(buffer).toString('base64')
-          const email = fields.email[0];
-          const subject = fields.subject[0];
-          const firstName = fields.firstName[0];
-          const lastName = fields.lastName[0];
-          const jobTitle = fields.jobTitle[0];
-          const jobUrl = fields.jobUrl[0];
-          const msg = {
-            to: 'chas.fricke@vangst.com',
-            from: email,
-            subject: subject,
-            text: `${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}`,
-            html: `<strong>${firstName} ${lastName} is applying to ${jobTitle} at this link ${jobUrl}</strong>`,
-            attachments: [{
-              content: base64,
-              filename: name,
-              disposition: 'attachment',
-              content_id: 'mytext'
-            }]
-          };
-          await sgMail.send(msg);
-        })
-        res.status(200).send('success')
-      })
+  server.post('/sendgrid', (req, res) => {
+    const formData = new multiparty.Form();
+    formData.parse(req, async (err, fields, files) => {
+      if (err) {
+        console.log(err)
+      }
+      console.log(fields.jobUrl)
+      const path = files.file[0].path;
+      const name = files.file[0].originalFilename;
+      const buffer = fs.readFileSync(path);
+      const base64 = new Buffer(buffer).toString('base64')
+      const email = fields.email[0];
+      const subject = fields.subject[0];
+      const firstName = fields.firstName[0];
+      const lastName = fields.lastName[0];
+      const jobTitle = fields.jobTitle[0];
+      const recruiterEmail = fields.recruiter_email[0];
+      const jobUrl = fields.jobUrl[0];
+      const city = fields.city[0];
+      const state = fields.state[0];
+      
+      let crelate = fields.crelateUrl[0];
 
+      if(crelate.match(/(?:^|\W)null(?:$|\W)/)) {
+        crelate = 'No crelate url provided by recruiter at posting.'
+      }
+      const msg = {
+        to: 'chas.fricke@vangst.com',
+        from: email,
+        subject: `${subject} - ${jobTitle} - ${city}, ${state}`,
+        text: `${firstName} ${lastName} has applied to ${jobTitle}.  Vangsters: ${jobUrl} Crelate: ${crelate}`,
+        html: `<p><strong>${firstName} ${lastName}</strong> has applied to <strong>${jobTitle}</strong>.  Vangsters: ${jobUrl} Crelate: ${crelate}</p>`,
+        attachments: [{
+          content: base64,
+          filename: name,
+          disposition: 'attachment',
+          content_id: 'mytext'
+        }]
+      };
+      await sgMail.send(msg);
+    })
+    res.status(200).send('success')
+  })
       server.post('/sendgridcontact', (req, res) => {
         const formData = new multiparty.Form();
         formData.parse(req, async (err, fields, files) => {
