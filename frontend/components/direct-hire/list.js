@@ -20,19 +20,20 @@ class List extends Component {
     axios.get('/jobs')
       .then(json => {
         return json.data.data.map(job => ({
-        job_id: job.id,
-       business_name: job.business,
-       job_title: job.job_title,
-       job_url: job.job_url,
-       job_description: job.job_description,
-       job_pay_range: job.pay_range,
-       state: job.state,
-       city: job.city,
-       company_email: job.company_email,
-       external_job_id: job.external_job_id,
-       activation_date: job.activation_date,
-       recruiter_email: job.recruiter_email
-     }))})
+          job_id: job.id,
+          business_name: job.business,
+          job_title: job.job_title,
+          job_url: job.job_url,
+          job_description: job.job_description,
+          job_pay_range: job.pay_range,
+          state: job.state,
+          city: job.city,
+          company_email: job.company_email,
+          external_job_id: job.external_job_id,
+          activation_date: job.activation_date,
+          recruiter_email: job.recruiter_email
+        }))
+      })
       .then(newData => this.setState({
         jobs: newData,
         store: newData,
@@ -42,7 +43,7 @@ class List extends Component {
   }
 
   setInnerHtml = (job) => {
-    return {__html: job.job_description}
+    return { __html: job.job_description }
   }
 
   getFilteredJobs(e) {
@@ -60,13 +61,12 @@ class List extends Component {
     })
   };
 
-  clickMe(job){
+  clickMe(job) {
     this.setState({ job: job })
   }
 
   render() {
-   console.log("list.state", this.state)
-    if(!this.state.isLoading){
+    if (!this.state.isLoading) {
       return (
         <section id="direct-hire-list-section">
           <div id="search-bar-container">
@@ -76,34 +76,44 @@ class List extends Component {
             {this.state.jobs.map(job => {
               console.log('JOB', job);
               return (
-              <div key={job.job_id} className="job-post-container">
-                <h3 className="job-post-title">{job.job_title}</h3>
-                <h4 className="job-post-location">{job.city}, {job.state}</h4>
-                <Button id="more-info-button" className="more-info-button" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
-                  More Info >
-                </Button>
-                <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
-                  <Card>
-                    <CardBody>
-                    <Button className="more-info-button text-center" color="link" id={`id-${job.job_id}`} style={{ marginBottom: '1rem' }}>
-                      <p>Close</p>
+                <div key={job.job_id} className="job-post-container">
+                  <div>
+                    <h3 className="job-post-title">{job.job_title}</h3>
+                    <h4 className="job-post-location">{job.city}, {job.state}</h4>
+                  </div>
+                  <div>
+                    <Button id="more-info-button" className="more-info-button" id={`id-${job.job_id}`}>
+                      More Info >
                     </Button>
-                    <div className="list-card-header">
-                      <div>
-                        <h3 className="job-post-title">{job.job_title}</h3>
-                        <h4 className="job-post-location">{job.city}, {job.state}</h4>
-                      </div>
-                      {/* <div>
+                  </div>
+                  <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
+                    <Card>
+                      <CardBody>
+                        <button type="button" class="close" id={`id-${job.job_id}`} aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div className="list-card-header">
+                          <div>
+                            <h3 className="job-post-title">Job Description</h3>
+                            <div>
+                              <p id="job-info-collapse">{job.job_title} - {job.city}, {job.state}</p>
+                            </div>
+                          </div>
+                          {/* <div>
                         <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
                       </div> */}
-                    </div>
-                    <hr></hr>
-                    <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                    <ApplyModal onClick={this.clickMe.bind(this, job)} job={job} />
-                    </CardBody>
-                  </Card>
-                </UncontrolledCollapse>
-              </div>)}
+                        </div>
+                        <hr></hr>
+                        <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
+                        <hr></hr>
+                        <div id="apply-button-container">
+                          <ApplyModal onClick={this.clickMe.bind(this, job)} job={job} />
+                        </div>
+                      </CardBody>
+                    </Card>
+                  </UncontrolledCollapse>
+                </div>)
+            }
             )}
           </div>
           <style>{`
@@ -119,20 +129,20 @@ class List extends Component {
 
             .list-card-header {display: flex; flex-direction: row;}
           
-            .job-post-title {letter-spacing: 1px; margin-bottom: -5px; font-weight: 700;}
+            .job-post-title {letter-spacing: 2px; margin-bottom: -5px; font-weight: 600;}
             
-            .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0;}
+            .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0; margin-bottom: 0;}
             .job-post-date {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding-left: 5rem;;}
 
-            .job-post-container {padding: 0.3rem 0 0 0; border-bottom: solid 1px #f5f5f5;}
+            .job-post-container {padding: 0.5rem; border-bottom: solid 1px #f5f5f5;}
             
             #direct-hire-list-section {
               width: 100vw;
               height: auto;
             }
-            .more-info-button { font-size: 11px; border: 0; background-color: white; color: #f0561f; margin: 0 !important; padding: 0 3px 0 3px;}
+            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
-            .more-info-button:focus {text-decoration:none; color:#ffffff; }
+            .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
 
             .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
             #search-bar-container {
@@ -144,6 +154,11 @@ class List extends Component {
               padding: 0.5rem;
             }
             #search-results-container {padding: 4rem;}
+
+            #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;}
+
+            #job-info-collapse {padding: 5px 0 5px 0; margin: 0;}
+
 
             @media (max-width: 420px) {
               #search-results-container {padding: 1rem;}

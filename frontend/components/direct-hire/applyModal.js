@@ -42,8 +42,8 @@ class ApplyModal extends React.Component {
   }
 
   sendEmail = () => {
-    if (this.state.firstName && this.state.lastName && this.state.sendFrom.match(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/) && this.state.attachment){
-      this.setState ({success_message: "Sending..."})
+    if (this.state.firstName && this.state.lastName && this.state.sendFrom.match(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/) && this.state.attachment) {
+      this.setState({ success_message: "Sending..." })
       const formData = new FormData()
       console.log(this.props);
       formData.append('file', this.state.attachment)
@@ -61,12 +61,12 @@ class ApplyModal extends React.Component {
         method: 'POST',
         body: formData
       }).catch(err => console.log(err))
-      this.setState({success_message: "Application submitted"})
-      setTimeout (this.toggle, 3000);
+      this.setState({ success_message: "Application submitted" })
+      setTimeout(this.toggle, 3000);
 
 
     } else {
-      this.setState ({success_message: "Please fill out all fields."})
+      this.setState({ success_message: "Please fill out all fields." })
     }
   };
 
@@ -79,7 +79,7 @@ class ApplyModal extends React.Component {
   render() {
     return (
       <div>
-        <Button id="modal-apply-button" color="danger" onClick={this.toggle}>Apply</Button>
+        <Button id="modal-apply-button" onClick={this.toggle}>Apply</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader id="modal-header" toggle={this.toggle}>
             <div>
@@ -90,13 +90,13 @@ class ApplyModal extends React.Component {
           <ModalBody>
             <div id="modal-body">
               <h4 id="modal-title" className="text-center">Personal Info</h4>
-              <div className="small-h-line"></div> 
-              <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} required/>
-              <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} required/>
-              <input className="modal-text-input" type='email' name='email' placeholder="Email" onChange={this.sendChange} required/>
+              <div className="small-h-line"></div>
+              <input className="modal-text-input" type='text' name='first name' placeholder="First Name" onChange={this.firstNameChange} required />
+              <input className="modal-text-input" type='text' name='last name' placeholder="Last Name" onChange={this.lastNameChange} required />
+              <input className="modal-text-input" type='email' name='email' placeholder="Email" onChange={this.sendChange} required />
               <h4 id="modal-title">Upload Resume</h4>
               <div className="small-h-line"></div>
-              <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} required/>
+              <input className="modal-text-input" id="file-upload" type='file' name='resume' onChange={this.attachmentChange} required />
               <div>{this.state.success_message}</div>
               <Button id="submit-button-modal" onClick={this.sendEmail}>Submit</Button>
             </div>
@@ -117,7 +117,7 @@ class ApplyModal extends React.Component {
         #logo-img {height: 30px; padding-right: 15px;}
         #logo-text {height: 25px;}
         
-            #modal-apply-button {margin-top: 1rem;}
+            #modal-apply-button {margin-top: 1rem; background-color: #f0561f; border: 0; font-family: Brandon Grotesque Regular;}
             .modal-text-input {padding: 5px; margin: 5px; width: 250px;}
 
             .small-h-line {height: 2px; width: 70px; background-color: white; margin: 0 0 10px 0;}
@@ -131,7 +131,7 @@ class ApplyModal extends React.Component {
             #submit-button-modal {color: white; background-color: #262626; border: 0; margin-top: 2rem;}
         
         `}</style>
-     </div>
+      </div>
     );
   }
 }
