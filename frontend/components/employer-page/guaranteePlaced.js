@@ -10,13 +10,13 @@ class GuaranteePlaced extends Component {
             <p id="placement-section-number" className="section-number text-white">.03</p>
             <p id="placement-section-text" className="section-text text-white">We back every one of our candidates</p>
           </div>
-        <h2 id="placement-title">100% guarantee of placed candidates</h2>
-        <div className="white-line"></div>
+          <h2 id="placement-title">100% guarantee of placed candidates</h2>
+          <div className="white-line"></div>
           <p className="text-white" id="placement-quote">“Vangst was enthusiastic and attentive to our resource need and worked diligently to source and qualify candidates for the position. They provided attuned service over the course of the engagement and maintained consistent communication with coordinating an exceptional solution.”</p>
           <div id="placement-quote-container">
             <p id="placement-quote-author">- Nelson Oliver, Controller, O.pen Vape</p>
           </div>
-        <div className="white-line"></div>
+          <div className="white-line"></div>
         </div>
         <style>
           {`
@@ -41,7 +41,7 @@ class GuaranteePlaced extends Component {
             }
 
             #placement-section-text {
-              font-weight: 700;
+              font-weight: 400;
             }
           
             #placement-title {
