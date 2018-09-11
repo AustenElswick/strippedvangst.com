@@ -50,7 +50,7 @@ server.use(bodyParser.json());
         crelate = 'No Crelate URL was provided.'
       }
       const msg = {
-        to: [{"email": "chas.fricke@vangst.com"}],
+        to: [{"email": recruiterEmail}],
         from: email,
         subject: `${subject} - ${jobTitle} - ${city}, ${state}`,
         text: `${firstName} ${lastName} has applied to ${jobTitle}.  Vangsters: ${jobUrl} Crelate: ${crelate}`,
@@ -102,7 +102,7 @@ server.use(bodyParser.json());
           const lastName = fields.lastName[0];
           const content = fields.content[0];
           const msg = {
-            to: 'austen.elswick@vangst.com',
+            to: 'sales@vangst.com',
             from: email,
             subject: subject,
             text: `${firstName} ${lastName} is reaching out with this message: "${content}"`,

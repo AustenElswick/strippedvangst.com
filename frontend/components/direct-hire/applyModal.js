@@ -61,19 +61,14 @@ class ApplyModal extends React.Component {
         method: 'POST',
         body: formData
       }).catch(err => console.log(err))
-      console.log('PostSend')
       this.setState({success_message: "Application submitted"})
       setTimeout (this.toggle, 3000);
 
 
     } else {
-      console.log('last name', this.state.attachment);
       this.setState ({success_message: "Please fill out all fields."})
     }
   };
-
-  
-    
 
   toggle() {
     this.setState({
@@ -82,7 +77,6 @@ class ApplyModal extends React.Component {
   }
 
   render() {
-    console.log('ModalProps: ', this.props)
     return (
       <div>
         <Button id="modal-apply-button" color="danger" onClick={this.toggle}>Apply</Button>
