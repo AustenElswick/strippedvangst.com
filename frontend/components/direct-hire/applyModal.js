@@ -117,7 +117,7 @@ class ApplyModal extends React.Component {
         #logo-img {height: 30px; padding-right: 15px;}
         #logo-text {height: 25px;}
         
-            #modal-apply-button {margin-top: 1rem; background-color: #f0561f; border: 0; font-family: Brandon Grotesque Regular;}
+            #modal-apply-button {background-color: #f0561f; border: 0; font-family: Brandon Grotesque Regular;}
             .modal-text-input {padding: 5px; margin: 5px; width: 250px;}
 
             .small-h-line {height: 2px; width: 70px; background-color: white; margin: 0 0 10px 0;}
