@@ -16,7 +16,7 @@ class JobReport extends Component {
                                 Download the <br/>Vangst Salary Report
                             </h2>
                             <div className="white-line job-report-line"></div>
-                            <p className="section-copy job-report-section-copy">The Vangst Cannabis Industry Salary Survey Guide is the first-ever report to establish the average salary of specific roles within the cannabis industry. As the cannabis industry grows at an exponential rate, we will continue to report the most accurate and reliable data possible from leading companies.</p>
+                            <p className="section-copy job-report-section-copy">The Vangst Cannabis Industry Salary Guide is the first-ever report to establish the average salary of specific roles within the cannabis industry. As the cannabis industry grows at an exponential rate, we will continue to report the most accurate and reliable data possible from leading companies.</p>
                             <div className="white-line job-report-line"></div>
                             {/* <div className="job-report-numbers">
                                 <div id="states-number"className="col-lg-4 text-light job-report-number-column">

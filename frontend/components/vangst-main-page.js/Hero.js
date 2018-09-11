@@ -21,7 +21,7 @@ class Hero extends Component {
                                     </a>
                                 </Link>
                                 <div id="we-are-ready-text" className="white-div">
-                                    <p className="text-center">We're ready.  Are you?</p>
+                                    <p className="text-center">We're growing.  Are you?</p>
                                 </div>
                                 <Link href='/vangst-cannabis-staffing-services'>
                                 <a>

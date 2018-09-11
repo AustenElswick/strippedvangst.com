@@ -22,7 +22,7 @@ class CandidateDataBase extends Component {
                 <p className="text-white stat-text">The best talent from inside<br/> &amp; outside the industry.</p>
               </div>
               <div className="stat-container text-center">
-                <p className="text-white stat-text">Pre-qualified <br/> and super legit.</p>
+                <p className="text-white stat-text">Pre-qualified <br/> and ready to work.</p>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ class CandidateDataBase extends Component {
             </div> 
             <div id="testimonial-container">
               <p id="testimonial-quote" className="text-white text-center">"Vangst is the clear choice for cannabis industry recruiting."</p>
-              <p id="testimonial-name" className="text-white">- Jeff, Green Peak Industries</p>
+              <p id="testimonial-name" className="text-white">- Jeff Radway, CEO,<br/> Green Peak Industries</p>
             </div>             
           </div>
         </div>

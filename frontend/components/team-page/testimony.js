@@ -13,7 +13,7 @@ class Testimony extends Component {
           </div>
           <div className="testimony-column">
             <img id="testimony-headshot" src="/static/images/team-page/pete-kadens.jpg"></img>
-            <p id="testimony-author-details" className="text-center">Peter Kardens | CEO | Green Thumb Industries (GTI)</p>
+            <p id="testimony-author-details" className="text-center">Peter Kadens | CEO | Green Thumb Industries (GTI)</p>
           </div>
         </div>
         <style>

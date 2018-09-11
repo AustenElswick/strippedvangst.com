@@ -69,9 +69,9 @@ class ContactSales extends Component {
         <div id="small-gray-line-h"></div>
       </div>
         <div className="d-flex justify-content-center">
-          <input id="contact-sales-submit-button" disabled={Boolean(this.state.successMessage)} type='button' value='Contact Us' onClick={this.toggle} />
+          <input id="contact-sales-submit-button" type='button' value='Contact Us' onClick={this.toggle} />
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} >
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader id="modal-header" toggle={this.toggle}>
             <div>
               <img id="logo-img" src="/static/images/logos/logo-graphic.png" alt="vangst logo" />
@@ -90,7 +90,7 @@ class ContactSales extends Component {
             <Input className="contact-sales-input" id="contact-textarea" type='textarea' onChange={this.contentChange} rows='7' cols='42' placeholder="Message" />
             {this.state.successMessage ? <div className="text-success text-center">{this.state.successMessage}</div> : null}
             <div className="d-flex justify-content-center">
-              <input id="contact-sales-submit-button" disabled={Boolean(this.state.successMessage)} type='button' value='Submit' onClick={this.sendEmail} />
+              <input id="contact-sales-submit-button" type='button' value='Submit' onClick={this.sendEmail} />
             </div>
          </Form>
           </ModalBody>

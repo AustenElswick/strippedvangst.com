@@ -58,7 +58,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           className="newsletter-input"
         />
         <select className="newsletter-select" style={{ fontSize: "1em", padding: 5 }} ref={node => (reason = node)}>
-          <option value="" disabled selected hidden>Why are you here?<span><img src="/static/images/vangst-main-page/down-arrow-gray.png"></img></span></option>
+          <option value="" disabled selected hidden>How Can We Help?<span><img src="/static/images/vangst-main-page/down-arrow-gray.png"></img></span></option>
           <option value="Hiring Talent">Hiring Talent</option>
           <option value="Looking For Work">Looking for work</option>
           <option value="Other">Other</option>

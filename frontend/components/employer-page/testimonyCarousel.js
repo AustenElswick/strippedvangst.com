@@ -10,7 +10,7 @@ class TestimonyCarousel extends Component {
           </div>
           <div id="author-container">
             <div className="small-vertical-line-white"></div>
-            <h4 id="quote-author-name">RYAN, DENVER</h4>
+            <h4 id="quote-author-name">RYAN G. SMITH,<br/>CO-FOUNDER AND CEO,<br/>LEAFLINK</h4>
             <div className="small-vertical-line-white"></div>
           </div>
 

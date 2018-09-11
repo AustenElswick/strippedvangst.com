@@ -69,8 +69,8 @@ class ContactInfo extends Component {
         <div id="contact-info-container">
           <div className="contact-info-column">
             <div id="contact-info-title-container">
-              <p className="orange-text contact-info-title">You can contact us with anything related to our company.</p>
-              <p className="orange-text contact-info-title">We'll get in touch with you as soon as possible.</p>
+              <p className="orange-text contact-info-title">Questions? Contact Us.</p>
+              <p className="orange-text contact-info-title">We'll be in touch with you as soon as possible.</p>
             </div>
             <div id="contact-info-inputs-container">
               <Form>
