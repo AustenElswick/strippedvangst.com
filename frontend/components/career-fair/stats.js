@@ -21,9 +21,9 @@ class Stats extends Component {
                 <div className="job-report-number">45</div>
                 <div className="job-number-symbol">+</div>
               </div>
-                <p className="text-center">RECRUITING<br/> COMPANIES</p>
+              <p className="text-center">RECRUITING<br /> COMPANIES</p>
             </div>
-              <div className="large-v-line-white"></div>
+            <div className="large-v-line-white"></div>
             <div className='single-column'>
               <div className="small-h-line"></div>
               <div className="d-flex flex-row justify-content-center align-items-center">
@@ -75,6 +75,14 @@ class Stats extends Component {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 3rem;
+          }
+
+          .job-report-number  {
+            font-size: 5rem;
+            margin-bottom: 0;
+            font-family: Hennigar;
+            opacity: 1;
+            margin-bottom: -0.5rem;
           }
 
           .job-report-number {color: #505050;}

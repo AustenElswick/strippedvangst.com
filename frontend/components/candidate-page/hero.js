@@ -17,14 +17,15 @@ class Hero extends Component {
             <div className="large-v-line-white"></div>
             <div className='single-column'>
               <div className="small-h-line"></div>
-                <div className="job-report-number">381</div>
-                <p className="text-white">OPEN POSITIONS</p>
+              <div className="job-report-number">381</div>
+              <p className="text-white">OPEN POSITIONS</p>
             </div>
-              <div className="large-v-line-white"></div>
+            <div className="large-v-line-white"></div>
             <div className='single-column'>
               <div className="small-h-line"></div>
               <div className="d-flex flex-row justify-content-center align-items-center">
-                <div className="job-report-number">80,000</div>
+                <div id="cand-num-1" className="job-report-number">80,000</div>
+                <div id="cand-num-2" className="job-report-number">80K</div>
                 <div className="h3 job-number-symbol">+</div>
               </div>
               <p className="text-white">CANDIDATES</p>
@@ -88,12 +89,19 @@ class Hero extends Component {
             margin-left: 2rem;
           }
 
-          #job-number-symbol {
-            font-family: Brandon Grotesque Bold;
-            color: black;
-            font-weight: 700;
+          .job-report-number  {
             font-size: 5rem;
-            padding-top: 50px;
+            margin-bottom: 0;
+            font-family: Hennigar;
+            opacity: 1;
+            margin-bottom: -0.5rem;
+            color: white;
+          }
+
+          .job-number-symbol {
+            font-family: Brandon Grotesque Bold;
+            color: white;
+            font-weight: 700;
           }
 
           .number-with-symbol {
@@ -139,6 +147,10 @@ class Hero extends Component {
             .job-report-number {
               font-size: 4rem;
             }
+            #cand-num-1 {display: none;}
+          }
+          @media (min-width: 416px) {
+            #cand-num-2 {display: none;}
           }
 
           #job-number-symbol {
