@@ -408,82 +408,6 @@ footer {
   font-style: italic;
 }
 
-// ******************************** Job Report
-
-.job-report {
-  background-image: url('static/images/vangst-main-page/Home-Section-3-Cropped.jpg');
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.job-report-title {
-  color: white;
-}
-
-.report-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-.play-button-img {
-  width: 16px;
-  margin-bottom: 0.5rem;
-  transform: rotate(90deg);
-}
-
-.job-report-number {
-  font-size: 5rem;
-  margin-bottom: 0;
-  font-family: Hennigar;
-  opacity: 1;
-  margin-bottom: -0.5rem;
-}
-
-.job-report-numbers {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.job-report-number-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.white-line-div {
-  background-color:white;
-  height: 1px;
-  width: 150px;
-}
-
-.section-number-orange {
-  border: solid 1px #f0561f;
-  padding: 3px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-right: 10px;
-  color: #f0561f;
-}
-
-.section-text-orange {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-style: italic; 
-  color: #f0561f;
-}
-
 
 // ***********************Gigs
 
@@ -953,9 +877,8 @@ align-items: center;
   }
  
   .report-graphic {
-    margin-top: 15px;
-    padding-bottom: 5px;
-    height: 150px;
+    margin-top: 5px;
+    height: 80px;
   }
 
   //VangsIsDope.js
