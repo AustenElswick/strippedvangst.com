@@ -20,6 +20,7 @@ class EmailForm extends Component {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
+                        align-items: center;
                         padding: 3rem 0 3rem 0;
                         min-height: 30vh;
                     }
@@ -28,7 +29,6 @@ class EmailForm extends Component {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        
                     }
 
                     #email-form-section-title {
@@ -71,7 +71,7 @@ class EmailForm extends Component {
                     `}
                 </style>
             </section>
-            
+
         );
     }
 }

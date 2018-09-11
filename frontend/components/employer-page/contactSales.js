@@ -65,7 +65,7 @@ class ContactSales extends Component {
     return (
       <section id="contact-sales-form-section">
       <div id="section-title-container">
-        <h3 id="contact-sales-form-title" className="text-center">QUESTIONS ?</h3>
+        <h3 id="contact-sales-form-title" className="text-center">GET STARTED</h3>
         <div id="small-gray-line-h"></div>
       </div>
         <div className="d-flex justify-content-center">
