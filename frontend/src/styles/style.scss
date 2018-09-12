@@ -1,50 +1,47 @@
-@import 'theme-colors';
+@import "theme-colors";
 $theme-font: 100% verdana, sans-serif;
 
 @font-face {
   font-family: Brandon Grotesque Thin;
-  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Thin.otf')
+  src: url("../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Thin.otf");
 }
 @font-face {
   font-family: Brandon Grotesque Regular;
-  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Regular.otf')
+  src: url("../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Regular.otf");
 }
 
 @font-face {
   font-family: Brandon Grotesque Regular Italic;
-  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-RegularItalic.otf')
+  src: url("../static/Fonts/Brandon-Grotesque/BrandonGrotesque-RegularItalic.otf");
 }
-
 
 @font-face {
   font-family: Brandon Grotesque Bold Italic;
-  src: url('../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf')
+  src: url("../static/Fonts/Brandon-Grotesque/HVD Fonts - BrandonGrotesque-BlackItalic.otf");
 }
 
 @font-face {
   font-family: Brandon Grotesque Bold;
-  src: url('../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Bold.otf')
+  src: url("../static/Fonts/Brandon-Grotesque/BrandonGrotesque-Bold.otf");
 }
 
 @font-face {
   font-family: Sabon Italic;
-  src: url('../static/Fonts/Sabon/SabonLTStd-Italic.otf');
+  src: url("../static/Fonts/Sabon/SabonLTStd-Italic.otf");
 }
 @font-face {
   font-family: Hennigar;
-  src: url('../static/Fonts/Numbers/hennigar/HennigarD.otf');
+  src: url("../static/Fonts/Numbers/hennigar/HennigarD.otf");
 }
-
-
-
 
 body {
   -webkit-font-smoothing: antialiased;
   font: $theme-font;
   background-color: $themeColor-Light;
-  h1, h2 {
-      color: $themeColor-Dark;
-      font-family: Brandon Grotesque Bold Italic;
+  h1,
+  h2 {
+    color: $themeColor-Dark;
+    font-family: Brandon Grotesque Bold Italic;
   }
 }
 
@@ -79,8 +76,8 @@ p {
   margin-bottom: 1rem;
 }
 
-.white-line{
-  background-color:white;
+.white-line {
+  background-color: white;
   height: 3px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -101,12 +98,10 @@ a {
   text-decoration: none;
   width: max-content;
 }
-a:hover
-{
- text-decoration:none;
- cursor:pointer;
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
-
 
 // *********************************** Footer.js
 
@@ -173,7 +168,7 @@ footer {
 
 .mailchimp-form {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -214,7 +209,6 @@ footer {
   color: #f0561f;
 }
 
-
 .footer-link-group {
   padding: 1rem;
 }
@@ -231,7 +225,7 @@ footer {
 }
 
 .input-title {
-  font-family: Sabon
+  font-family: Sabon;
 }
 
 .footer-signup {
@@ -262,7 +256,6 @@ footer {
   padding-left: 2rem;
 }
 
-
 .vangst-logo-graphic {
   height: 25px;
 }
@@ -276,9 +269,8 @@ footer {
   height: 45px;
 }
 
-
-// ************************************************************************************************* vangst-main-page.js 
-// ******************************* Hero.js 
+// ************************************************************************************************* vangst-main-page.js
+// ******************************* Hero.js
 
 .hero-section {
   height: 100vh;
@@ -286,8 +278,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
 
 .hero-cta {
   display: flex;
@@ -340,7 +330,7 @@ footer {
 // ***************************** VangstIsDope
 
 .vangst-is-dope {
-  background-image: url('static/images/vangst-main-page/Home-Section-2.jpg');
+  background-image: url("static/images/vangst-main-page/Home-Section-2.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -350,12 +340,11 @@ footer {
   align-items: center;
 }
 
-
 .section-label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-style: italic; 
+  font-style: italic;
 }
 
 .section-number {
@@ -367,10 +356,9 @@ footer {
   color: white;
 }
 
-
 .section-copy {
- margin: 0;
- color: white;
+  margin: 0;
+  color: white;
 }
 
 .play-button-container {
@@ -408,11 +396,10 @@ footer {
   font-style: italic;
 }
 
-
 // ***********************Gigs
 
 .gigs-section {
-  background-image: url('static/images/vangst-main-page/female-phone-2.jpg');
+  background-image: url("static/images/vangst-main-page/female-phone-2.jpg");
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,8 +422,8 @@ footer {
 }
 
 #gigs-cta-button-container {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -511,7 +498,6 @@ footer {
   padding: 1rem;
 }
 
-
 // ****************************** Events
 
 .events-section {
@@ -524,15 +510,15 @@ footer {
 }
 
 .events-row-container {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .event-container {
- position: relative;
- margin-top: 1.5rem;
+  position: relative;
+  margin-top: 1.5rem;
 }
 
 .event-date-icon {
@@ -541,11 +527,11 @@ align-items: center;
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 10px;
-  position:absolute;
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 50px;
   height: 55px;
 }
@@ -586,7 +572,6 @@ align-items: center;
 .section-title-line {
   width: 125px;
 }
-
 
 // ******************************** Vangst Talent
 
@@ -635,21 +620,13 @@ align-items: center;
   height: 225px;
 }
 
-
 // candidate-page.js************************************************************************************************
 
 //hero.js**********************************************************
 
-
 // featuredjobs.js*************************************************
 
-
-
 // MEDIA QUERIES****************************************************************************************************
-
-
-
-
 
 @media (min-width: 320px) {
   h1 {
@@ -667,8 +644,6 @@ align-items: center;
     font-size: 3.5rem;
   }
 }
-
-
 
 @media (max-width: 627px) {
   .footer-social-icons {
@@ -689,8 +664,12 @@ align-items: center;
 }
 
 @media (min-width: 768px) {
-  h1 {font-size: 7rem;}
-  h2 {font-size: 4rem;}
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 993px) {
@@ -726,10 +705,10 @@ align-items: center;
     margin-top: 30px;
     width: 280px;
   }
-  
+
   // JobReport.js
   .color-overlay {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -763,13 +742,12 @@ align-items: center;
   .play-button-img {
     display: none;
   }
-
 }
 
 @media (max-width: 768px) {
   //Gigs.js
   .gigs-cta-button {
-    background-color: rgba(255,255,255,0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     border: #f0561f solid 1px;
     display: flex;
     flex-direction: row;
@@ -786,15 +764,22 @@ align-items: center;
   }
 
   // JobReport.js
-  .report-graphic {height: 350px; margin: 1rem;}
+  .report-graphic {
+    height: 350px;
+    margin: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  h1 {font-size: 8rem;}
+  h1 {
+    font-size: 8rem;
+  }
 }
 
 @media (min-width: 1440px) {
-  h1 {font-size: 9rem;}
+  h1 {
+    font-size: 9rem;
+  }
 }
 
 @media (max-width: 566px) {
@@ -807,7 +792,7 @@ align-items: center;
   .white-line-div {
     width: 100%;
   }
-  
+
   //Footer.js
   .footer-links-container {
     display: flex;
@@ -817,7 +802,7 @@ align-items: center;
     padding-left: 0;
     padding-right: 0;
   }
-  .footer-link-group{
+  .footer-link-group {
     padding: 0;
   }
   .footer-social-icons {
@@ -827,14 +812,13 @@ align-items: center;
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .mailchimp-form {
     margin-bottom: 1rem;
   }
 }
 
-@media (max-width: 420px){
-  
+@media (max-width: 420px) {
   .job-report-number-column {
     padding: 0;
   }
@@ -849,10 +833,15 @@ align-items: center;
   }
 
   //JobReport.js
-  .report-graphic {height: 175px;}
+  .report-graphic {
+    height: 175px;
+  }
 
-  //Footer 
-  .mailchimp-form {padding-right: 25px; padding-left: 25px;}
+  //Footer
+  .mailchimp-form {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 @media (min-width: 376px) {
@@ -875,7 +864,7 @@ align-items: center;
     font-size: 2rem;
     letter-spacing: 2px;
   }
- 
+
   .report-graphic {
     margin-top: 5px;
     height: 80px;
@@ -888,7 +877,7 @@ align-items: center;
 
   //News.js
   #entreprenuer {
-    order:1
+    order: 1;
   }
 
   //Footer.js
@@ -900,7 +889,7 @@ align-items: center;
     padding-left: 0;
     padding-right: 0;
   }
-  .footer-link-group{
+  .footer-link-group {
     padding: 0;
   }
   .footer-social-icons {
@@ -928,7 +917,6 @@ align-items: center;
     border-radius: 0px;
     margin-top: 10px;
   }
-
 }
 
 @media (max-width: 320px) {
@@ -948,8 +936,9 @@ align-items: center;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    display: none;
-  }
-}
+// BREAKS FORMS ON ANDROID PHONES, NEEDS TO BE FIXED
+// @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+//   html {
+//     display: none;
+//   }
+// }

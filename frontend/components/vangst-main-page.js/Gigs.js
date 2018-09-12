@@ -13,7 +13,7 @@ class Gigs extends Component {
               </div>
               <h2 className="text-dark text-left">
                 Work today. <br />
-                Get paid today.
+                Get paid fast.
               </h2>
               <div className="dark-line" />
               <p className="text-dark section-copy">
