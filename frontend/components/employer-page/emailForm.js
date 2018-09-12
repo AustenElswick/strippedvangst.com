@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import EmailFormVangsters from '../EmailFormVangsters';
+import React, { Component } from "react";
+import EmailFormVangsters from "../EmailFormVangsters";
 
 class EmailForm extends Component {
-    render() {
-        return (
-            <section id="email-form-section">
-                <div id="email-form-section-container">
-                    <div id="email-form-section-title">
-                        <h3 className="text-center">LET'S GET GOING.</h3>
-                        <div id="small-gray-line-h"></div>
-                    </div>
-                    <div id="email-form-container">
-                        <EmailFormVangsters />
-                    </div>
-                </div>
-                <style>
-                    {`
+  render() {
+    return (
+      <section id="email-form-section">
+        <div id="email-form-section-container">
+          <div id="email-form-section-title">
+            <h3 id="lets-get-going-title" className="text-center">
+              LET'S GET GOING.
+            </h3>
+            <div id="small-gray-line-h" />
+          </div>
+          <div id="email-form-container">
+            <EmailFormVangsters />
+          </div>
+        </div>
+        <style>
+          {`
                     #email-form-section {
                         display: flex;
                         flex-direction: row;
@@ -66,14 +68,16 @@ class EmailForm extends Component {
                         }
 
                     }
+                    @media (max-width: 321px) {
+                        #lets-get-going-title {font-size: 1.5rem;}
+                    }
 
 
                     `}
-                </style>
-            </section>
-
-        );
-    }
+        </style>
+      </section>
+    );
+  }
 }
 
 export default EmailForm;

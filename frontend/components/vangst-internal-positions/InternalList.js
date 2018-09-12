@@ -79,6 +79,10 @@ class InternalList extends Component {
             <h1 id="internal-hire-title">Vangst is Hiring</h1>
           </div>
           <div id="internal-hire-content">
+            <div id="featured-jobs-title-container">
+              <h3 id="featured-jobs-section-title">FEATURED JOBS</h3>
+              <div className="black-line-h" />
+            </div>
             <div id="search-bar-container">
               <input
                 className="searchBar"
@@ -87,6 +91,7 @@ class InternalList extends Component {
                 onChange={e => this.getFilteredJobs(e)}
               />
             </div>
+
             <div id="search-results-container">
               {this.state.jobs.map(job => {
                 return (
@@ -100,7 +105,7 @@ class InternalList extends Component {
                             id="vangst-logo-graphic"
                           />
                         </div>
-                        <div>
+                        <div className="job-title-and-location">
                           <h3 className="job-post-title">{job.job_title}</h3>
                           <h4 className="job-post-location">
                             {job.city}, {job.state}
@@ -182,22 +187,35 @@ class InternalList extends Component {
                 align-content: center;
                 align-items: center;
             }
+
+            .black-line-h {
+                height: 1px;
+                width: 175px;
+                background-color: black;
+                opacity: 0.8;
+              }
+
+            #featured-jobs-title {color: gray; font-weight: 400;}
            
                 #internal-hire-title {color: white;}
+
+                #featured-jobs-title-container {
+                    display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; margin: 2rem 0 2rem 0;
+                }
 
                 .logo-job-title-header {
                     display: flex;
                     flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    margin: 15px 0 10px 0;
                 }
 
                 .logo-title-button-header-container {display: flex; flex-direction: column;}
 
-            #vangst-logo-graphic {width: 50px; height: auto;}
+            #vangst-logo-graphic {width: 50px; height: auto; margin-right: 5px; margin-left: 5px;}
             .logo-container {display: flex; flex-direction: column; justify-content: center; padding-right: 10px;
             }
-
-            .apply-button {background-color: #f0561f; font-family: Brandon Grotesque Regular; padding: 3px 10px 3px 10px}
-            .apply-button:focus {background-color: #f0561f; } 
 
             .list-card-header {display: flex; flex-direction: row;}
           
@@ -214,7 +232,7 @@ class InternalList extends Component {
             }
 
 
-            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
+            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; padding: 0 5px 0 5px; margin:15px 0 5px 0;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
 
@@ -223,7 +241,7 @@ class InternalList extends Component {
               display: flex; flex-direction: row; justify-content: center;            
               padding: 0.5rem;
             }
-            #search-results-container {padding: 4rem;}
+            #search-results-container {padding: 0 4rem 2rem 4rem;}
 
             #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;}
 
@@ -248,7 +266,9 @@ class InternalList extends Component {
     } else {
       return (
         <section id="direct-hire-loading-section">
-          <h3 id="loading-message">Jobs are loading...</h3>
+          <h3 id="loading-message" className="text-center">
+            Jobs are loading...
+          </h3>
           <style>
             {`
               #direct-hire-loading-section {padding: 2rem; height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center;}

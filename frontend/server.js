@@ -98,7 +98,7 @@ app
           from: email,
           subject: subject,
           text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
-          html: `<strong>${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"</strong>`
+          html: `<p>${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"</p>`
         };
         sgMail.send(msg);
       });

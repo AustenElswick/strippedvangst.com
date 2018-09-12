@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Map extends Component {
   render() {
@@ -6,13 +6,17 @@ class Map extends Component {
       <section id="map-section">
         <div id="map-section-container">
           <div id="map-section-label" className="section-label">
-            <p id="map-label-number" className="section-number text-white">.01</p>
-            <p id="map-label-text" className="section-text text-white">The hard facts</p>
+            <p id="map-label-number" className="section-number text-white">
+              .01
+            </p>
+            <p id="map-label-text" className="section-text text-white">
+              The hard facts
+            </p>
           </div>
           <div id="map-column-container">
             <div className="map-section-column">
               <div className="map-number">12</div>
-              <div className="map-small-h-line"></div>
+              <div className="map-small-h-line" />
               <p className="map-text text-center">states served</p>
             </div>
             <div className="map-section-column">
@@ -20,16 +24,15 @@ class Map extends Component {
                 <div className="map-number">600</div>
                 <div className="h3 text-white">+</div>
               </div>
-              <div className="map-small-h-line"></div>
+              <div className="map-small-h-line" />
               <p className="map-text text-center">partnering companies</p>
             </div>
             <div className="map-section-column">
               <div className="map-number">7,500</div>
-              <div className="map-small-h-line"></div>
+              <div className="map-small-h-line" />
               <p className="map-text text-center">jobs placed</p>
             </div>
           </div>
-
         </div>
         <style>
           {`
@@ -155,6 +158,10 @@ class Map extends Component {
               #map-section {
                 background-position: center;
               }
+            }
+
+            @media (max-width: 321px) {
+              .map-number {font-size: 3rem;}
             }
           
           `}
