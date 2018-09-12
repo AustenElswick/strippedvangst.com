@@ -1,0 +1,2 @@
+user-agent: *
+sitemap: http://vangst.com/sitemap.xml
