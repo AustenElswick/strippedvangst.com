@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Hero extends Component {
   render() {
     return (
       <main className="hero-section" id="employee-hero-section">
         <div id="hero-content" className="container">
-          <h1 id="employer-hero-title">Hiring made simple</h1>
-          <div id='white-div-employee' className="text-center">
-           <p id="employer-hero-button-text">See how easy it is. Get started now.</p>
+          <h1 id="employer-hero-title" className="text-center">
+            Hiring made simple
+          </h1>
+          <div id="white-div-employee" className="text-center">
+            <p id="employer-hero-button-text">See how easy it is.</p>
           </div>
         </div>
         <style>{`

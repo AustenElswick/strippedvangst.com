@@ -74,72 +74,98 @@ class InternalList extends Component {
   render() {
     if (!this.state.isLoading) {
       return (
-        <section id="direct-hire-list-section">
-          <div id="search-bar-container">
-            <input
-              className="searchBar"
-              type="text"
-              placeholder="Search jobs"
-              onChange={e => this.getFilteredJobs(e)}
-            />
+        <section id="internal-hire-list-section">
+          <div id="internal-hire-title-container">
+            <h1 id="internal-hire-title">Vangst is Hiring</h1>
           </div>
-          <div id="search-results-container">
-            {this.state.jobs.map(job => {
-              console.log("JOB", job);
-              return (
-                <div key={job.job_id} className="job-post-container">
-                  <div>
-                    <h3 className="job-post-title">{job.job_title}</h3>
-                    <h4 className="job-post-location">
-                      {job.city}, {job.state}
-                    </h4>
-                  </div>
-                  <div>
-                    <Button
-                      id="more-info-button"
-                      className="more-info-button"
-                      id={`id-${job.job_id}`}
-                    >
-                      More Info >
-                    </Button>
-                  </div>
-                  <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
-                    <Card>
-                      <CardBody>
-                        <button
-                          type="button"
-                          class="close"
-                          id={`id-${job.job_id}`}
-                          aria-label="Close"
-                        >
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div className="list-card-header">
-                          <div>
-                            <h3 className="job-post-title">Job Description</h3>
-                            <div>
-                              <p id="job-info-collapse">
-                                {job.job_title} - {job.city}, {job.state}
-                              </p>
-                            </div>
-                          </div>
-                          {/* <div><h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4></div> */}
-                        </div>
-                        <hr />
-                        <div dangerouslySetInnerHTML={this.setInnerHtml(job)} />
-                        <hr />
-                        <div id="apply-button-container">
-                          <ApplyModal
-                            onClick={this.clickMe.bind(this, job)}
-                            job={job}
+          <div id="internal-hire-content">
+            <div id="featured-jobs-title-container">
+              <h3 id="featured-jobs-section-title">FEATURED JOBS</h3>
+              <div className="black-line-h" />
+            </div>
+            <div id="search-bar-container">
+              <input
+                className="searchBar"
+                type="text"
+                placeholder="Search jobs"
+                onChange={e => this.getFilteredJobs(e)}
+              />
+            </div>
+
+            <div id="search-results-container">
+              {this.state.jobs.map(job => {
+                return (
+                  <div key={job.job_id} className="job-post-container">
+                    <div className="logo-title-button-header-container">
+                      <div className="logo-job-title-header">
+                        <div className="logo-container">
+                          <img
+                            src="static/images/logos/logo-graphic.png"
+                            alt="vangst logo"
+                            id="vangst-logo-graphic"
                           />
                         </div>
-                      </CardBody>
-                    </Card>
-                  </UncontrolledCollapse>
-                </div>
-              );
-            })}
+                        <div className="job-title-and-location">
+                          <h3 className="job-post-title">{job.job_title}</h3>
+                          <h4 className="job-post-location">
+                            {job.city}, {job.state}
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <Button
+                        id="more-info-button"
+                        className="more-info-button"
+                        id={`id-${job.job_id}`}
+                      >
+                        More Info >
+                      </Button>
+                    </div>
+
+                    <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
+                      <Card>
+                        <CardBody>
+                          <button
+                            type="button"
+                            class="close"
+                            id={`id-${job.job_id}`}
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <div className="list-card-header">
+                            <div>
+                              <h3 className="job-post-title">
+                                Job Description
+                              </h3>
+                              <div>
+                                <p id="job-info-collapse">
+                                  {job.job_title} - {job.city}, {job.state}
+                                </p>
+                              </div>
+                            </div>
+                            {/* <div><h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4></div> */}
+                          </div>
+                          <hr />
+                          <div
+                            dangerouslySetInnerHTML={this.setInnerHtml(job)}
+                          />
+                          <hr />
+                          <div id="apply-button-container">
+                            <ApplyModal
+                              onClick={this.clickMe.bind(this, job)}
+                              job={job}
+                            />
+                          </div>
+                        </CardBody>
+                      </Card>
+                    </UncontrolledCollapse>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <style>{`
             h2 {font-size: 1.2rem;}
@@ -149,8 +175,47 @@ class InternalList extends Component {
             div {font-weight: 400; letter-spacing: 1.25px; line-height: 1rem; font-family: Brandon Grotesque Regular}
             span {line-height: 1rem;}
 
-            .apply-button {background-color: #f0561f; font-family: Brandon Grotesque Regular; padding: 3px 10px 3px 10px}
-            .apply-button:focus {background-color: #f0561f; } 
+            #internal-hire-title-container {
+                min-height: 50vh; min-width: 100%; 
+                background-image: url('/static/images/vangst-internal-positions/internal-job-hero.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+
+            .black-line-h {
+                height: 1px;
+                width: 175px;
+                background-color: black;
+                opacity: 0.8;
+              }
+
+            #featured-jobs-title {color: gray; font-weight: 400;}
+           
+                #internal-hire-title {color: white;}
+
+                #featured-jobs-title-container {
+                    display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; margin: 2rem 0 2rem 0;
+                }
+
+                .logo-job-title-header {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    align-content: center;
+                    margin: 15px 0 10px 0;
+                }
+
+                .logo-title-button-header-container {display: flex; flex-direction: column;}
+
+            #vangst-logo-graphic {width: 50px; height: auto; margin-right: 5px; margin-left: 5px;}
+            .logo-container {display: flex; flex-direction: column; justify-content: center; padding-right: 10px;
+            }
 
             .list-card-header {display: flex; flex-direction: row;}
           
@@ -161,24 +226,22 @@ class InternalList extends Component {
 
             .job-post-container {padding: 0.5rem; border-bottom: solid 1px #f5f5f5;}
             
-            #direct-hire-list-section {
+            #internal-hire-list-section {
               width: 100vw;
               height: auto;
             }
-            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
+
+
+            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; padding: 0 5px 0 5px; margin:15px 0 5px 0;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
 
             .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
             #search-bar-container {
-              display: flex; flex-direction: row; justify-content: center;
-              background-image: url('/static/images/employer-page/sec_01/orange-background.jpg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
+              display: flex; flex-direction: row; justify-content: center;            
               padding: 0.5rem;
             }
-            #search-results-container {padding: 4rem;}
+            #search-results-container {padding: 0 4rem 2rem 4rem;}
 
             #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;}
 
@@ -203,7 +266,9 @@ class InternalList extends Component {
     } else {
       return (
         <section id="direct-hire-loading-section">
-          <h3 id="loading-message">Jobs are loading...</h3>
+          <h3 id="loading-message" className="text-center">
+            Jobs are loading...
+          </h3>
           <style>
             {`
               #direct-hire-loading-section {padding: 2rem; height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center;}

@@ -1,90 +1,124 @@
-import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
+import React, { Component } from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 class ContactInfo extends Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
-      sendFrom: '',
-      firstName: '',
-      lastName: '',
-      state: '',
-      subject: '',
-      content: '',
-      successMessage: ''
-    }
+      sendFrom: "",
+      firstName: "",
+      lastName: "",
+      state: "",
+      subject: "",
+      content: "",
+      successMessage: ""
+    };
   }
 
-  sendChange = (e) => {
-    this.setState({ sendFrom: e.target.value })
-  }
+  sendChange = e => {
+    this.setState({ sendFrom: e.target.value });
+  };
 
-  firstNameChange = (e) => {
-    this.setState({ firstName: e.target.value })
-  }
+  firstNameChange = e => {
+    this.setState({ firstName: e.target.value });
+  };
 
-  lastNameChange = (e) => {
-    this.setState({ lastName: e.target.value })
-  }
+  lastNameChange = e => {
+    this.setState({ lastName: e.target.value });
+  };
 
-  subjectChange = (e) => {
-    this.setState({ subject: e.target.value })
-  }
+  subjectChange = e => {
+    this.setState({ subject: e.target.value });
+  };
 
-  stateChange = (e) => {
-    this.setState({ state: e.target.value })
-  }
+  stateChange = e => {
+    this.setState({ state: e.target.value });
+  };
 
-  contentChange = (e) => {
-    this.setState({ content: e.target.value })
-  }
+  contentChange = e => {
+    this.setState({ content: e.target.value });
+  };
 
   sendEmail = async () => {
-    const formData = new FormData()
-    formData.append('email', this.state.sendFrom)
-    formData.append('firstName', this.state.firstName)
-    formData.append('lastName', this.state.lastName)
-    formData.append('subject', this.state.subject)
-    formData.append('content', this.state.content)
-    formData.append('state', this.state.state)
-    this.setState({ successMessage: 'Sending...'})
-    await fetch('/sendgridcontact', {
-      method: 'POST',
+    const formData = new FormData();
+    formData.append("email", this.state.sendFrom);
+    formData.append("firstName", this.state.firstName);
+    formData.append("lastName", this.state.lastName);
+    formData.append("subject", this.state.subject);
+    formData.append("content", this.state.content);
+    formData.append("state", this.state.state);
+    this.setState({ successMessage: "Sending..." });
+    await fetch("/sendgridcontact", {
+      method: "POST",
       body: formData
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(err));
     this.setState({
       successMessage: "Your message has been sent!"
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <section id="contact-info-section">
-       <div id="contact-info-section-label" className="section-label">
-          <p id="contact-info-label-number" className="section-number text-white">.01</p>
-          <p id="contact-info-label-text" className="section-text text-white">Contact Us</p>
+        <div id="contact-info-section-label" className="section-label">
+          <p
+            id="contact-info-label-number"
+            className="section-number text-white"
+          >
+            .01
+          </p>
+          <p id="contact-info-label-text" className="section-text text-white">
+            Contact Us
+          </p>
         </div>
         <div id="contact-info-container">
           <div className="contact-info-column">
             <div id="contact-info-title-container">
-              <p className="orange-text contact-info-title">Questions? Contact Us.</p>
-              <p className="orange-text contact-info-title">We'll be in touch with you as soon as possible.</p>
+              <p className="orange-text contact-info-title">
+                Questions? Contact Us.
+              </p>
+              <p className="orange-text contact-info-title">
+                We'll be in touch with you as soon as possible.
+              </p>
             </div>
             <div id="contact-info-inputs-container">
               <Form>
-                <Input type='text' placeholder='First Name' onChange={this.firstNameChange} />
-                <Input type='text' placeholder='Last Name' onChange={this.lastNameChange} />
-                <Input type='email' placeholder='Email' onChange={this.sendChange} />
-                <Input type='select' name='subject' onChange={this.subjectChange} style={{ fontSize: "1em", padding: 5 }}>
-                  <option value="" disabled selected hidden>Select a Subject</option>
+                <Input
+                  type="text"
+                  placeholder="First Name"
+                  onChange={this.firstNameChange}
+                />
+                <Input
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={this.lastNameChange}
+                />
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  onChange={this.sendChange}
+                />
+                <Input
+                  type="select"
+                  name="subject"
+                  onChange={this.subjectChange}
+                  style={{ fontSize: "1em", padding: 5 }}
+                >
+                  <option value="" disabled selected hidden>
+                    Select a Subject
+                  </option>
                   <option value="#">Hiring Talent</option>
                   <option value="#">Looking For Work</option>
                   <option value="#">Other</option>
                 </Input>
-                <Input type='select' onChange={this.stateChange} style={{ fontSize: "1em", padding: 5 }}>
-                  <option value="" disabled selected hidden>Select State</option>
+                <Input
+                  type="select"
+                  onChange={this.stateChange}
+                  style={{ fontSize: "1em", padding: 5 }}
+                >
+                  <option value="" disabled selected hidden>
+                    Select State
+                  </option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -135,21 +169,50 @@ class ContactInfo extends Component {
                   <option value="WA">Washington</option>
                   <option value="WV">West Virginia</option>
                   <option value="WI">Wisconsin</option>
-                  <option value="WY">Wyoming</option>			
+                  <option value="WY">Wyoming</option>
                 </Input>
-                <Input id="contact-textarea" type='textarea' onChange={this.contentChange} rows='7' cols='42' placeholder="Message" />
+                <Input
+                  id="contact-textarea"
+                  type="textarea"
+                  onChange={this.contentChange}
+                  rows="7"
+                  cols="42"
+                  placeholder="Message"
+                />
+                {this.state.successMessage ? (
+                  <div className="text-success">
+                    {this.state.successMessage}
+                  </div>
+                ) : null}
                 <div className="d-flex justify-content-center">
-                  <input id="contact-info-submit-button" disabled={Boolean(this.state.successMessage)} type='button' value='SUBMIT' onClick={this.sendEmail} />
+                  <input
+                    id="contact-info-submit-button"
+                    disabled={Boolean(this.state.successMessage)}
+                    type="button"
+                    value="SUBMIT"
+                    onClick={this.sendEmail}
+                  />
                 </div>
-                {this.state.successMessage ? <div className="text-success">{this.state.successMessage}</div> : null}
               </Form>
             </div>
-          </div> 
+          </div>
           <div className="contact-info-column" id="contact-info-column-2">
-              <h4 id="column-2-title">Contact Info</h4>
-              <div id="contact-small-line"></div>
-              <a id="contact-us-link" className="contact-us-link" href="mailto:info@vangst.com">INFO@VANGST.COM</a>
-              <a id="contact-us-link" className="contact-us-link" href="tel:+18444826478">(844)-482-6478</a>
+            <h4 id="column-2-title">Contact Info</h4>
+            <div id="contact-small-line" />
+            <a
+              id="contact-us-link"
+              className="contact-us-link"
+              href="mailto:info@vangst.com"
+            >
+              INFO@VANGST.COM
+            </a>
+            <a
+              id="contact-us-link"
+              className="contact-us-link"
+              href="tel:+18444826478"
+            >
+              (844).4.VANGST
+            </a>
           </div>
         </div>
         <style>

@@ -1,23 +1,29 @@
-import React, { Component } from 'react';
-import moment from 'moment';
-import axios from 'axios';
-import ApplyModal from './applyModal'
-import { UncontrolledCollapse, Collapse, Button, CardBody, Card } from 'reactstrap';
+import React, { Component } from "react";
+import moment from "moment";
+import axios from "axios";
+import ApplyModal from "./applyModal";
+import {
+  UncontrolledCollapse,
+  Collapse,
+  Button,
+  CardBody,
+  Card
+} from "reactstrap";
 
 class List extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       jobs: [],
       store: [],
       isLoading: true,
-      jobTitle: '',
-      jobUrl: ''
-    }
+      jobTitle: "",
+      jobUrl: ""
+    };
   }
   componentDidMount() {
-    axios.get('/jobs')
+    axios
+      .get("/jobs")
       .then(json => {
         return json.data.data.map(job => ({
           job_id: job.id,
@@ -32,37 +38,37 @@ class List extends Component {
           external_job_id: job.external_job_id,
           activation_date: job.activation_date,
           recruiter_email: job.recruiter_email
-        }))
+        }));
       })
-      .then(newData => this.setState({
-        jobs: newData,
-        store: newData,
-        isLoading: false,
-      }))
-      .catch(error => alert(error))
+      .then(newData =>
+        this.setState({
+          jobs: newData,
+          store: newData,
+          isLoading: false
+        })
+      )
+      .catch(error => alert(error));
   }
 
-  setInnerHtml = (job) => {
-    return { __html: job.job_description }
-  }
-
-  getFilteredJobs(e) {
-    const filteredJobs = this.state.store.filter(item => (
-      item.state.toLowerCase().includes(e.target.value.toLowerCase())
-      ||
-      item.city.toLowerCase().includes(e.target.value.toLowerCase())
-      ||
-      item.job_title.toLowerCase().includes(e.target.value.toLowerCase())
-      ||
-      item.business_name.toLowerCase().includes(e.target.value.toLowerCase())
-    ))
-    this.setState({
-      jobs: filteredJobs,
-    })
+  setInnerHtml = job => {
+    return { __html: job.job_description };
   };
 
+  getFilteredJobs(e) {
+    const filteredJobs = this.state.store.filter(
+      item =>
+        item.state.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        item.city.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        item.job_title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        item.business_name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    this.setState({
+      jobs: filteredJobs
+    });
+  }
+
   clickMe(job) {
-    this.setState({ job: job })
+    this.setState({ job: job });
   }
 
   render() {
@@ -70,51 +76,72 @@ class List extends Component {
       return (
         <section id="direct-hire-list-section">
           <div id="search-bar-container">
-            <input className="searchBar" type="text" placeholder="Search jobs" onChange={(e) => this.getFilteredJobs(e)} />
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search jobs"
+              onChange={e => this.getFilteredJobs(e)}
+            />
           </div>
           <div id="search-results-container">
             {this.state.jobs.map(job => {
-              console.log('JOB', job);
+              console.log("JOB", job);
               return (
                 <div key={job.job_id} className="job-post-container">
                   <div>
                     <h3 className="job-post-title">{job.job_title}</h3>
-                    <h4 className="job-post-location">{job.city}, {job.state}</h4>
+                    <h4 className="job-post-location">
+                      {job.city}, {job.state}
+                    </h4>
                   </div>
                   <div>
-                    <Button id="more-info-button" className="more-info-button" id={`id-${job.job_id}`}>
+                    <Button
+                      id="more-info-button"
+                      className="more-info-button"
+                      id={`id-${job.job_id}`}
+                    >
                       More Info >
                     </Button>
                   </div>
                   <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
                     <Card>
                       <CardBody>
-                        <button type="button" class="close" id={`id-${job.job_id}`} aria-label="Close">
+                        <button
+                          type="button"
+                          class="close"
+                          id={`id-${job.job_id}`}
+                          aria-label="Close"
+                        >
                           <span aria-hidden="true">&times;</span>
                         </button>
                         <div className="list-card-header">
                           <div>
                             <h3 className="job-post-title">Job Description</h3>
                             <div>
-                              <p id="job-info-collapse">{job.job_title} - {job.city}, {job.state}</p>
+                              <p id="job-info-collapse">
+                                {job.job_title} - {job.city}, {job.state}
+                              </p>
                             </div>
                           </div>
                           {/* <div>
                         <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
                       </div> */}
                         </div>
-                        <hr></hr>
-                        <div dangerouslySetInnerHTML={this.setInnerHtml(job)}></div>
-                        <hr></hr>
+                        <hr />
+                        <div dangerouslySetInnerHTML={this.setInnerHtml(job)} />
+                        <hr />
                         <div id="apply-button-container">
-                          <ApplyModal onClick={this.clickMe.bind(this, job)} job={job} />
+                          <ApplyModal
+                            onClick={this.clickMe.bind(this, job)}
+                            job={job}
+                          />
                         </div>
                       </CardBody>
                     </Card>
                   </UncontrolledCollapse>
-                </div>)
-            }
-            )}
+                </div>
+              );
+            })}
           </div>
           <style>{`
             h2 {font-size: 1.2rem;}
@@ -178,7 +205,9 @@ class List extends Component {
     } else {
       return (
         <section id="direct-hire-loading-section">
-          <h3 id="loading-message">Jobs are loading...</h3>
+          <h3 className="text-center" id="loading-message">
+            Jobs are loading...
+          </h3>
           <style>
             {`
               #direct-hire-loading-section {padding: 2rem; height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center;}

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Link from 'next/link'
+import React, { Component } from "react";
+import Link from "next/link";
 
 class BestRecruiters extends Component {
   render() {
@@ -7,27 +7,52 @@ class BestRecruiters extends Component {
       <section id="recruiter-section" className="hero-section">
         <div id="recruiter-section-content">
           <div id="recruiter-section-label" className="section-label">
-            <p id="recruiter-label-number" className="section-number text-white">.02</p>
-            <p id="recruiter-label-text" className="section-text text-white">The best recruiters</p>
+            <p
+              id="recruiter-label-number"
+              className="section-number text-white"
+            >
+              .02
+            </p>
+            <p id="recruiter-label-text" className="section-text text-white">
+              The best recruiters
+            </p>
           </div>
-          <h2 id="recruiter-section-title">Seasoned recruiters with  <br/>deep industry knowledge</h2>
-          <div className="white-line"></div>
-            <p id="recruiter-main-text"className="text-white">Growing has its pains. Finding and keeping the right talent shouldn’t be one of them. Rooted in deep industry expertise and expansive networks, our recruiters augment the complicated process of qualifying capable people so you can focus on your business. We communicate every step of the way to ensure effective long-term hires.
+          <h2 id="recruiter-section-title">
+            Seasoned recruiters with <br />
+            deep industry knowledge
+          </h2>
+          <div className="white-line" />
+          <p id="recruiter-main-text" className="text-white">
+            Growing has its pains. Finding and keeping the right talent
+            shouldn’t be one of them. Rooted in deep industry expertise and
+            expansive networks, our recruiters augment the complicated process
+            of qualifying capable people so you can focus on your business. We
+            communicate every step of the way to ensure effective long-term
+            hires.
           </p>
-          <div className="white-line"></div>
-          <p id="recruiter-quote">“Vangst doubled our team with finance, sales, engineering, marketing, and customer success talent while maintaining the high standards we employ in our hiring process.”</p>
+          <div className="white-line" />
+          <p id="recruiter-quote">
+            “Vangst doubled our team with finance, sales, engineering,
+            marketing, and customer success talent while maintaining the high
+            standards we employ in our hiring process.”
+          </p>
           <div id="recruiter-author-container">
-            <p id="recruiter-quote-author-name" className="justify-content-right">-Roger Obando, CTO, Baker Technologies</p>
+            <p
+              id="recruiter-quote-author-name"
+              className="justify-content-right"
+            >
+              -Roger Obando, CTO, Baker Technologies
+            </p>
           </div>
           <div id="recruiter-button-container">
-          
-          
-            <Link href='/about-vangst-talent'>
-                <a>
-                  <div id="recruiter-button-outline">
-                    <div id="recruiter-button-link">Meet our team of experts ></div>
+            <Link href="/about-vangst-talent">
+              <a>
+                <div id="recruiter-button-outline">
+                  <div id="recruiter-button-link">
+                    Meet our team of experts >
                   </div>
-                </a>
+                </div>
+              </a>
             </Link>
           </div>
         </div>
@@ -158,6 +183,10 @@ class BestRecruiters extends Component {
             #recruiter-button-link {font-size: 1rem;}
             #recruiter-button-outline {width: 250px; margin-left: 15px}
           }
+          @media (max-width: 321px) {
+            #recruiter-section-title {font-size: 1.25rem;}
+            #recruiter-button-outline {width: 250px; margin-left: 35px}
+        }
           
           
           `}
