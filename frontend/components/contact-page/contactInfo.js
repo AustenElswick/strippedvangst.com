@@ -107,9 +107,9 @@ class ContactInfo extends Component {
                   <option value="" disabled selected hidden>
                     Select a Subject
                   </option>
-                  <option value="#">Hiring Talent</option>
-                  <option value="#">Looking For Work</option>
-                  <option value="#">Other</option>
+                  <option value="Hiring Talent">Hiring Talent</option>
+                  <option value="Looking For Work">Looking For Work</option>
+                  <option value="Other">Other</option>
                 </Input>
                 <Input
                   type="select"
