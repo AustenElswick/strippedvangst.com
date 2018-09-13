@@ -77,7 +77,6 @@ class Menu extends Component {
               <NavLink
                 className="nav-link"
                 href="https://blog.vangst.com/cannabis-salary-guide-2018/"
-                target="_blank"
               >
                 INDUSTRY INSIGHT
               </NavLink>
@@ -92,15 +91,10 @@ class Menu extends Component {
                 ABOUT
               </DropdownToggle>
               <DropdownMenu right>
-                {/* <DropdownItem className="nav-link">
-                            WORK FOR VANGST
-                        </DropdownItem> */}
-
                 <DropdownItem className="nav-link">
                   <NavLink
                     className="nav-link dropdown-link"
                     href="https://blog.vangst.com/"
-                    target="_blank"
                   >
                     BLOG
                   </NavLink>

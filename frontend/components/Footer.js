@@ -32,7 +32,6 @@ const Footer = () => (
               <a
                 className="nav-link text-white"
                 href="https://blog.vangst.com/"
-                target="_blank"
               >
                 BLOG
               </a>
