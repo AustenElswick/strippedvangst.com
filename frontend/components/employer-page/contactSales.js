@@ -127,12 +127,6 @@ class ContactSales extends Component {
                 <Input
                   className="contact-sales-input"
                   type="text"
-                  placeholder="Company Name"
-                  onChange={this.companyNameChange}
-                />
-                <Input
-                  className="contact-sales-input"
-                  type="text"
                   placeholder="First Name"
                   onChange={this.firstNameChange}
                 />
@@ -142,6 +136,8 @@ class ContactSales extends Component {
                   placeholder="Last Name"
                   onChange={this.lastNameChange}
                 />
+              </div>
+              <div id="contact-inputs">
                 <Input
                   className="contact-sales-input"
                   type="email"
@@ -151,28 +147,37 @@ class ContactSales extends Component {
                 <Input
                   className="contact-sales-input"
                   type="text"
+                  placeholder="Phone"
+                  onChange={this.phoneNumberChange}
+                />
+              </div>
+              <div id="contact-inputs">
+                <Input
+                  className="contact-sales-input"
+                  type="text"
+                  placeholder="Company Name"
+                  onChange={this.companyNameChange}
+                />
+                <Input
+                  className="contact-sales-input"
+                  type="text"
                   placeholder="Location"
                   onChange={this.locationChange}
                 />
-                <Input
-                  className="contact-sales-input"
-                  type="text"
-                  placeholder="Position"
-                  onChange={this.positionChange}
-                />
-                <Input
-                  className="contact-sales-input"
-                  type="text"
-                  placeholder="phoneNumber"
-                  onChange={this.phoneNumberChange}
-                />
-                <Input
-                  className="contact-sales-input"
-                  type="text"
-                  placeholder="How did you hear about us?"
-                  onChange={this.marketingSourceChange}
-                />
               </div>
+              <Input
+                className="contact-sales-input"
+                type="text"
+                placeholder="Position"
+                onChange={this.positionChange}
+              />
+
+              <Input
+                className="contact-sales-input"
+                type="text"
+                placeholder="How did you hear about us?"
+                onChange={this.marketingSourceChange}
+              />
 
               <Input
                 className="contact-sales-input"
