@@ -117,11 +117,14 @@ app
         const lastName = fields.lastName[0];
         const content = fields.content[0];
         const msg = {
-          to: "sales@vangst.com",
+          to: [
+            { email: "sales@vangst.com" },
+            { email: "sales@vangsttalent.com" }
+          ],
           from: email,
           subject: subject,
           text: `${firstName} ${lastName} is reaching out with this message: "${content}"`,
-          html: `<strong>${firstName} ${lastName} is reaching out with this message: "${content}"</strong>`
+          html: `<p>${firstName} ${lastName} is reaching out with this message: "${content}"</p>`
         };
         sgMail.send(msg);
       });
