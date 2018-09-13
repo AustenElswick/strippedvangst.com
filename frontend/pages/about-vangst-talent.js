@@ -8,11 +8,13 @@ import Map from '../components/team-page/map';
 import ContactUs from '../components/team-page/contactUs';
 import Testimony from '../components/team-page/testimony';
 import Offices from '../components/team-page/offices';
+import Header from '../components/Header';
 
 class TeamPage extends Component {
   render() {
     return (
       <Layout>
+        <Header />
         <Menu />
         <Hero />
         <Headshots />

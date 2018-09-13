@@ -10,12 +10,14 @@ import EmailForm from '../components/employer-page/emailForm';
 import ContactSales from '../components/employer-page/contactSales';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
+import Header from '../components/Header';
 
 class EmployerPage extends Component {
   render() {
     return (
       <div>
         <Layout>
+          <Header />
           <Menu />
           <Hero />
           <ContactSales />

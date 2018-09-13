@@ -10,12 +10,13 @@ import JobReport from '../components/vangst-main-page.js/JobReport';
 import Gigs from '../components/vangst-main-page.js/Gigs';
 import News from '../components/vangst-main-page.js/News';
 import VangstTalent from '../components/vangst-main-page.js/VangstTalent';
-import { Config } from "../config.js";
+import Header from '../components/Header';
 
 class VangstMainPage extends Component {
     render() {
         return (
             <Layout>
+                <Header />
                 <Menu />
                 <Hero />
                 <VangstIsDope />

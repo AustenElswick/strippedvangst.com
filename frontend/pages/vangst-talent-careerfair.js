@@ -9,11 +9,13 @@ import PastEvents from '../components/career-fair/pastEvents';
 import FutureCareerFairs from '../components/career-fair/futureCareerFairs';
 // import HiringCompanies from '../components/career-fair/hiringCompanies';
 import Companies from '../components/employer-page/companies';
+import Header from '../components/Header';
 
 class CareerFair extends Component {
   render() {
     return (
       <Layout>
+        <Header />
         <Menu />
         <Hero />
         <Stats />
