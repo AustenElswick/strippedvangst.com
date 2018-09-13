@@ -182,10 +182,7 @@ class List extends Component {
             }
             #search-results-container {padding: 4rem;}
 
-            // #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;}
-
             #job-info-collapse {padding: 5px 0 5px 0; margin: 0;}
-
 
             @media (max-width: 420px) {
               #search-results-container {padding: 1rem;}

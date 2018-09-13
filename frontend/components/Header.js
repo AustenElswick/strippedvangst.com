@@ -27,6 +27,7 @@ class Header extends Component {
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
+          {this.props.metaData}
           <meta
             name="google-site-verification"
             content="swuB_8vC_PGR7xVTb5CIy5uRi8_4OER6LWXpptRdp04"
