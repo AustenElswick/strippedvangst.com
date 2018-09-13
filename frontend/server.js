@@ -131,6 +131,28 @@ app
       res.status(200).send("success");
     });
 
+    const sitemapOptions = {
+      root: __dirname + '/static/',
+      headers: {
+        'Content-type': 'text/xml;charset=UTF-8'
+      }
+    }
+
+    server.get('/sitemap.xml', (req, res) => {
+      res.status(200).sendFile('sitemap.xml', sitemapOptions)
+    })
+
+    const robotsOptions = {
+      root: __dirname + '/static/',
+      headers: {
+        'Content-Type': 'text/plain;charset=UTF-8',
+      }
+    };
+    server.get('/robots.txt', (req, res) => (
+      res.status(200).sendFile('robots.txt', robotsOptions)
+    ));
+
+
     server.get("/", (req, res) => {
       res.redirect(302, "/vangst-main-page");
     });
