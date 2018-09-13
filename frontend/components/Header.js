@@ -29,7 +29,7 @@ class Header extends Component {
           <meta charSet="utf-8" />
           <meta
             name="google-site-verification"
-            content="9BhI-hpsNwP0y9WxS_E0yo1ztIl7iz3lAItuWPSAeAQ"
+            content="swuB_8vC_PGR7xVTb5CIy5uRi8_4OER6LWXpptRdp04"
           />
           <title>Vangst | The Cannabis Industry's Top Staffing Agency</title>
         </Head>
