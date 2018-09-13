@@ -111,10 +111,15 @@ app
         if (err) {
           console.log(err);
         }
-        const email = fields.email[0];
-        const subject = fields.subject[0];
+        const companyName = fields.companyName[0];
         const firstName = fields.firstName[0];
         const lastName = fields.lastName[0];
+        const email = fields.email[0];
+        const location = fields.location[0];
+        const position = fields.position[0];
+        const phoneNumber = fields.phoneNumber[0];
+        const marketingSource = fields.marketingSource[0];
+        const subject = fields.subject[0];
         const content = fields.content[0];
         const msg = {
           to: [
@@ -123,8 +128,8 @@ app
           ],
           from: email,
           subject: subject,
-          text: `${firstName} ${lastName} is reaching out with this message: "${content}"`,
-          html: `<p>${firstName} ${lastName} is reaching out with this message: "${content}"</p>`
+          text: `Company: ${companyName} First Name: ${firstName} Last Name: ${lastName} Email: ${email} Phone:${content} Location: ${location} Position: ${position} How did you hear about us: ${marketingSource} Message: ${content}`,
+          html: `<strong>Company: </strong> ${companyName}<br/> <strong>First Name: </strong>${firstName}<br/> <strong>Last Name: </strong>Last ${lastName}<br/> <strong>Email: </strong>${email}<br/> <strong>Phone: </strong>${phoneNumber}<br/> <strong>Location: </strong>${location}<br/> <strong>Position: </strong>${position}<br/> <strong>How did you hear about us: </strong> ${marketingSource}<br/> <strong>Message: </strong>${content}<br/>`
         };
         sgMail.send(msg);
       });
