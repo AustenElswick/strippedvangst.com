@@ -22,7 +22,7 @@ class FeaturedJobs extends Component {
               facility. This includes extracting cannabis, post-extraction
               processing, product development, packaging, and distribution.
             </p>
-            <Link href="/direct-hire">
+            <Link href="/cannabis-jobseeker">
               <a className="view-link">View ></a>
             </Link>
           </div>
@@ -36,7 +36,7 @@ class FeaturedJobs extends Component {
               someone who has extensive cannabis growing experience as well as
               grow management experience.
             </p>
-            <Link href="/direct-hire">
+            <Link href="/cannabis-jobseeker">
               <a className="view-link">View ></a>
             </Link>
           </div>
@@ -49,11 +49,11 @@ class FeaturedJobs extends Component {
               creating and implementing SOPs, training staff, onboarding a POS
               system, as well as working closely with the executive team.
             </p>
-            <Link href="/direct-hire">
+            <Link href="/cannabis-jobseeker">
               <a className="view-link">View ></a>
             </Link>
           </div>
-          <Link href="/direct-hire">
+          <Link href="/cannabis-jobseeker">
             <a>
               <div id="featured-button-container">
                 <div className="black-line-h" />
