@@ -1,41 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Stats extends Component {
   render() {
     return (
       <section id="career-fair-section">
         <div className="container candidate-page-content">
-          <div className='all-columns-hero'>
-            <div className='single-column'>
-              <div className="small-h-line"></div>
-              <div className="d-flex flex-row justify-content-center align-items-center">
+          <div className="all-columns-hero">
+            <div className="single-column">
+              <div className="small-h-line" />
+              <div className="d-flex flex-row">
                 <div className="job-report-number">2K</div>
                 <div className="job-number-symbol">+</div>
               </div>
               <p className="text-center">JOB SEEKERS</p>
             </div>
-            <div className="large-v-line-white"></div>
-            <div className='single-column'>
-              <div className="small-h-line"></div>
-              <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="large-v-line-white" />
+            <div className="single-column">
+              <div className="small-h-line" />
+              <div className="d-flex flex-row">
                 <div className="job-report-number">45</div>
                 <div className="job-number-symbol">+</div>
               </div>
-              <p className="text-center">RECRUITING<br /> COMPANIES</p>
+              <p className="text-center">
+                RECRUITING
+                <br /> COMPANIES
+              </p>
             </div>
-            <div className="large-v-line-white"></div>
-            <div className='single-column'>
-              <div className="small-h-line"></div>
-              <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="large-v-line-white" />
+            <div className="single-column">
+              <div className="small-h-line" />
+              <div className="d-flex flex-row">
                 <div className="job-report-number">600</div>
                 <div className="job-number-symbol">+</div>
               </div>
               <p className="text-center">INTERVIEWS</p>
             </div>
-            <div className="large-v-line-white"></div>
-            <div className='single-column'>
-              <div className="small-h-line"></div>
-              <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="large-v-line-white" />
+            <div className="single-column">
+              <div className="small-h-line" />
+              <div className="d-flex flex-row">
                 <div className="job-report-number">500</div>
                 <div className="job-number-symbol">+</div>
               </div>
@@ -66,6 +69,8 @@ class Stats extends Component {
             flex-direction: column;
             justify-content: flex-start;
             flex-wrap: wrap:
+            align-content: flex-start;
+            align-items: flex-start;
           }
           
           .all-columns-hero {

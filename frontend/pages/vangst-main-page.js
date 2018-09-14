@@ -12,20 +12,23 @@ import News from "../components/vangst-main-page.js/News";
 import VangstTalent from "../components/vangst-main-page.js/VangstTalent";
 import Header from "../components/Header";
 
-const metaTag = {
-  url: "https://vangst.com/vangst-main-page",
-  title: "Vangst | The Cannabis Industry's Top Staffing Agency",
-  description:
-    "Vangst is the cannabis industry's top staffing agency. Contact us for all of your marijuana staffing needs for the mmj staffing business.",
-  keywords:
-    "mmj, staffing agencies near me, cannabis job, staffing agency, cannabis staffing"
-};
+const url = "https://vangst.com/vangst-main-page";
+const title = "Vangst | The Cannabis Industry's Top Staffing Agency";
+const description =
+  "Vangst is the cannabis industry's top staffing agency. Contact us for all of your marijuana staffing needs for the mmj staffing business.";
+const keywords =
+  "mmj, staffing agencies near me, cannabis job, staffing agency, cannabis staffing";
 
 class VangstMainPage extends Component {
   render() {
     return (
       <Layout>
-        <Header metaTag={metaTag} />
+        <Header
+          url={url}
+          title={title}
+          description={description}
+          keywords={keywords}
+        />
         <Menu />
         <Hero />
         <VangstIsDope />

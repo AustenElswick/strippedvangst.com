@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import Layout from "../components/Layout";
 import PageWrapper from "../components/PageWrapper";
 import Menu from "../components/Menu";
-import InternalList from "../components/vangst-internal-positions/InternalList";
+import List from "../components/cannabis-jobseeker/list";
 import Header from "../components/Header";
 
-const url = "https://www.vangst.com/vangst-internal-positions";
-const title = "Work For Vangst";
-const description =
-  "Apply here to work for the cannabis industry's top staffing agency.";
-const keywords = "cannabis jobs";
+const url = "https://vangst.com/cannabis-jobseeker";
+const title = "Vangst Job Seekers";
+const description = "Vangst Cannabis Staffing's direct hire positions.";
+const keywords =
+  "mmj, marijuana horticulture, dispensary jobs, Weed Jobs, cannabis job";
 
-class WorkForVangst extends Component {
+class DirectHire extends Component {
   render() {
     return (
       <Layout>
@@ -22,10 +22,10 @@ class WorkForVangst extends Component {
           keywords={keywords}
         />
         <Menu />
-        <InternalList />
+        <List />
       </Layout>
     );
   }
 }
 
-export default PageWrapper(WorkForVangst);
+export default PageWrapper(DirectHire);
