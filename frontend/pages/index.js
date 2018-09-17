@@ -12,7 +12,7 @@ import News from "../components/vangst-main-page.js/News";
 import VangstTalent from "../components/vangst-main-page.js/VangstTalent";
 import Header from "../components/Header";
 
-const url = "https://vangst.com/vangst-main-page";
+const url = "https://vangst.com/";
 const title = "Vangst | The Cannabis Industry's Top Staffing Agency";
 const description =
   "Vangst is the cannabis industry's top staffing agency. Contact us for all of your marijuana staffing needs for the mmj staffing business.";
