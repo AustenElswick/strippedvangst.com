@@ -157,10 +157,6 @@ app
       res.status(200).sendFile("robots.txt", robotsOptions);
     });
 
-    server.get("/", (req, res) => {
-      res.redirect(302, "/vangst-main-page");
-    });
-
     server.get("/vangst-talent-career-fair-info-page", (req, res) => {
       res.redirect(301, "/vangst-talent-careerfair");
     });
