@@ -54,15 +54,15 @@ class Header extends Component {
           <meta name="description" content={this.props.description} />
           <meta name="keywords" content={this.props.keywords} />
 
-          <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
           <meta name="robots" content="index, follow" />
           <meta name="language" content="English" />
 
           {/* Schema.org markup for Google+ */}
-          <meta itemprop="name" content={this.props.title} />
-          <meta itemprop="description" content={this.props.description} />
+          <meta itemProp="name" content={this.props.title} />
+          <meta itemProp="description" content={this.props.description} />
           <meta
-            itemprop="image"
+            itemProp="image"
             content="https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
           />
 

@@ -38,7 +38,7 @@ class Menu extends Component {
   render() {
     return (
       <Navbar className="nav-menu" color="transparent" light expand="lg">
-        <NavbarBrand href="/vangst-main-page">
+        <NavbarBrand href="/">
           <div className="brand-container">
             <img
               className="vangst-logo-graphic d-lg-none"
