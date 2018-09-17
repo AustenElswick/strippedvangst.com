@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import moment from "moment";
 import axios from "axios";
-import ApplyModal from "../direct-hire/applyModal";
+import ApplyModal from "../cannabis-jobseeker/applyModal";
 import {
   UncontrolledCollapse,
   Collapse,

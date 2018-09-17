@@ -30,7 +30,7 @@ class Header extends Component {
       "@type": "Organization",
       url: "https://vangst.com",
       logo:
-        "https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+        "https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
     };
 
     const JsonLd = ({ data }) => (
@@ -48,7 +48,7 @@ class Header extends Component {
           <link
             rel="icon"
             type="image/png"
-            href="https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+            href="/static/images/logos/logo-graphic.png"
           />
           <title>{this.props.title}</title>
           <meta name="description" content={this.props.description} />
@@ -63,7 +63,7 @@ class Header extends Component {
           <meta itemprop="description" content={this.props.description} />
           <meta
             itemprop="image"
-            content="https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+            content="https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
           />
 
           {/* Twitter Card data */}
@@ -73,12 +73,12 @@ class Header extends Component {
           <meta name="twitter:creator" content="@vangsttalent" />
           <meta
             name="twitter:image"
-            content="https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+            content="https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
           />
           <meta name="twitter:description" content={this.props.description} />
           <meta
             name="twitter:image"
-            content="https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+            content="https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
           />
 
           {/* Open Graph data */}
@@ -88,7 +88,7 @@ class Header extends Component {
           <meta property="og:url" content={this.props.url} />
           <meta
             property="og:image"
-            content="https://static1.squarespace.com/static/54ed5044e4b035a09db13486/t/5758f8cbe707eb6fde1f128e/1465448663815/Jeffers_Vangst_Logo"
+            content="https://s3-us-west-2.amazonaws.com/vangstimages/Vangst_Logo_trimmed.png"
           />
           <meta property="og:description" content={this.props.description} />
           <meta
@@ -113,7 +113,7 @@ class Header extends Component {
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         </Head>

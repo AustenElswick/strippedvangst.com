@@ -153,24 +153,20 @@ app
         "Content-Type": "text/plain;charset=UTF-8"
       }
     };
-    server.get("/robots.txt", (req, res) =>
-      res.status(200).sendFile("robots.txt", robotsOptions)
-    );
-
-    server.get("/", (req, res) => {
-      res.redirect(302, "/vangst-main-page");
+    server.get("/robots.txt", (req, res) => {
+      res.status(200).sendFile("robots.txt", robotsOptions);
     });
 
     server.get("/vangst-talent-career-fair-info-page", (req, res) => {
-      res.redirect(302, "/vangst-talent-careerfair");
+      res.redirect(301, "/vangst-talent-careerfair");
     });
 
     server.get("/vangst-talent-career-fair-info-page", (req, res) => {
-      res.redirect(302, "/vangst-talent-careerfair");
+      res.redirect(301, "/vangst-talent-careerfair");
     });
 
     server.get("/vangst-press", (req, res) => {
-      res.redirect(302, "https://blog.vangst.com/category/vangst-news/");
+      res.redirect(301, "https://blog.vangst.com/category/vangst-news/");
     });
 
     server.get("/post/:slug", (req, res) => {

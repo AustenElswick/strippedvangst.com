@@ -16,7 +16,8 @@ class ApplyModal extends React.Component {
       jobUrl: "test",
       recruiter_email: "",
       success_message: "",
-      crelateURL: "https://app.crelate.com/go#stage/_Jobs/DefaultView/"
+      crelateURL: "https://app.crelate.com/go#stage/_Jobs/DefaultView/",
+      maxFileSize: 10485760 //10MB
     };
     console.log("*************", this.props);
     this.toggle = this.toggle.bind(this);
@@ -36,8 +37,10 @@ class ApplyModal extends React.Component {
 
   attachmentChange = e => {
     const file = e.target.files[0];
-    if (file) {
-      this.setState({ attachment: file });
+    if (file && file.size < this.state.maxFileSize) {
+      this.setState({ attachment: file, success_message: "" });
+    } else if (file && file.size > this.state.maxFileSize) {
+      this.setState({ success_message: "File may not be larger than 10 MB" });
     }
   };
 
@@ -52,7 +55,6 @@ class ApplyModal extends React.Component {
     ) {
       this.setState({ success_message: "Sending..." });
       const formData = new FormData();
-      console.log(this.props);
       formData.append("file", this.state.attachment);
       formData.append("email", this.state.sendFrom);
       formData.append("firstName", this.state.firstName);
@@ -70,9 +72,17 @@ class ApplyModal extends React.Component {
       fetch("/sendgrid", {
         method: "POST",
         body: formData
-      }).catch(err => console.log(err));
-      this.setState({ success_message: "Application submitted" });
-      setTimeout(this.toggle, 3000);
+      })
+        .then(res => {
+          if (res) {
+            this.setState({
+              success_message: "Application has been submitted"
+            });
+            setTimeout(this.toggle, 3000);
+          }
+        })
+        .catch(err => console.log(err));
+      this.setState({ success_message: "Application is being submitted" });
     } else {
       this.setState({ success_message: "Please fill out all fields." });
     }
@@ -150,7 +160,11 @@ class ApplyModal extends React.Component {
                 required
               />
               <div>{this.state.success_message}</div>
-              <Button id="submit-button-modal" onClick={this.sendEmail}>
+              <Button
+                id="submit-button-modal"
+                disabled={!this.state.attachment}
+                onClick={this.sendEmail}
+              >
                 Submit
               </Button>
             </div>
