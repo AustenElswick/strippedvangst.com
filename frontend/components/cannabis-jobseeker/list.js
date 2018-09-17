@@ -85,7 +85,6 @@ class List extends Component {
           </div>
           <div id="search-results-container">
             {this.state.jobs.map(job => {
-              console.log("JOB", job);
               return (
                 <div key={job.job_id} className="job-post-container">
                   <div>

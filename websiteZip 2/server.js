@@ -42,7 +42,6 @@ app
         if (err) {
           console.log(err);
         }
-        console.log(fields.recruiter_email);
         const path = files.file[0].path;
         const name = files.file[0].originalFilename;
         const buffer = fs.readFileSync(path);
