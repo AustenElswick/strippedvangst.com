@@ -68,7 +68,7 @@ app
         if (crelate.match(/(?:^|\W)null(?:$|\W)/)) {
           crelate = "No Crelate URL was provided.";
         }
-        const msg = {
+        const recruiterMsg = {
           to: [{ email: recruiterEmail }],
           from: email,
           subject: `${subject} - ${jobTitle} - ${city}, ${state}`,
@@ -83,7 +83,15 @@ app
             }
           ]
         };
-        await sgMail.send(msg);
+        const confirmationMsg = {
+          to: [{ email: email }],
+          from: 'info@vangst.com',
+          subject: 'Thank you for your intrest.',
+          text: `Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!`,
+          html: `<p><strong>Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!</strong></p>`
+        };
+        await sgMail.send(recruiterMsg);
+        await sgMail.send(confirmationMsg);
       });
       res.status(200).send("success");
     });
@@ -99,14 +107,22 @@ app
         const lastName = fields.lastName[0];
         const content = fields.content[0];
         const state = fields.state[0];
-        const msg = {
+        const contactMsg = {
           to: "info@vangst.com",
           from: email,
           subject: subject,
           text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
           html: `<p>${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"</p>`
         };
-        sgMail.send(msg);
+        const confirmationMsg = {
+          to: [{ email: email }],
+          from: 'info@vangst.com',
+          subject: 'We have received your inquiry.',
+          text: `Your message and questions have been received and you should get a response shortly.`,
+          html: `<p><strong>Your message and questions have been received and you should get a response shortly.</strong></p>`
+        };
+        await sgMail.send(contactMsg);
+        await sgMail.send(confirmationMsg);
       });
       res.status(200).send("success");
     });
@@ -137,9 +153,47 @@ app
           text: `Company: ${companyName} First Name: ${firstName} Last Name: ${lastName} Email: ${email} Phone:${content} Location: ${location} Position: ${position} How did you hear about us: ${marketingSource} Message: ${content}`,
           html: `<strong>Company: </strong> ${companyName}<br/> <strong>First Name: </strong>${firstName}<br/> <strong>Last Name: </strong>Last ${lastName}<br/> <strong>Email: </strong>${email}<br/> <strong>Phone: </strong>${phoneNumber}<br/> <strong>Location: </strong>${location}<br/> <strong>Position: </strong>${position}<br/> <strong>How did you hear about us: </strong> ${marketingSource}<br/> <strong>Message: </strong>${content}<br/>`
         };
-        sgMail.send(msg);
+        const confirmationMsg = {
+          to: [{ email: email }],
+          from: 'sales@vangst.com',
+          subject: 'Thank you',
+          text: `A member of our sales team will reach out to you shortly.`,
+          html: `<p><strong>A memeber of our sales team will reach out to you shortly.</strong></p>`
+        };
+        await sgMail.send(msg);
+        await sgMail.send(confirmationMsg);
       });
       res.status(200).send("success");
+    });
+
+    server.post('/create-crelate', (req, res) => {
+      const external_job_id = req.body.external_job_id
+      const email = req.body.EmailAddress_Personal
+      const firstName = req.body.FirstName
+      const lastName = req.body.LastName
+      axios({
+        method: 'POST',
+        url: 'https://app.crelate.com/api/pub/v1/contacts?api_key=7daf0aa69c9846b8bc1ef59e87744cd3',
+        headers: { 'content-type': 'application/json' },
+        data: {
+          EmailAddress_Personal: email,
+          EmailAddress_Personal_IsPrimary: true,
+          FirstName: firstName,
+          LastName: lastName
+        }
+      })
+        .then(res => {
+          const jobSeekerId = res.data.Id || res.data.DuplicateId
+          if (external_job_id) {
+            axios({
+              method: 'POST',
+              url: `https://app.crelate.com/api/pub/v1/contacts/${jobSeekerId}/jobs/${external_job_id}?api_key=7daf0aa69c9846b8bc1ef59e87744cd3`,
+              headers: { 'content-type': 'application/json' },
+              data: {}
+            })
+          }
+        })
+      res.status(200).send('success')
     });
 
     const sitemapOptions = {
