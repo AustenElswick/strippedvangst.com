@@ -9,6 +9,11 @@ const axios = require("axios");
 const sgMail = require("@sendgrid/mail");
 const multiparty = require("multiparty");
 const fs = require("fs");
+const handle = app.getRequestHandler()
+const { parse } = require('url')
+const pathMatch = require('path-match')
+const route = pathMatch()
+const match = route('/page/:id')
 sgMail.setApiKey(
   "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"
 );
@@ -196,6 +201,21 @@ app
       res.status(200).send('success')
     });
 
+    const jobOptions = {
+      root: __dirname + "/components/cannabis-jobseeker/"
+    }
+
+    server.post('/job/:id', (req, res) => { 
+      context = req.body.context
+      const { pathname, query } = parse(req.url, true)
+      const params = match(pathname)
+      if (params === false) {
+        handle(req, res)
+        return
+      }
+      res.render(context, '/job', Object.assign(params, query))
+    })
+
     const sitemapOptions = {
       root: __dirname + "/static/",
       headers: {
@@ -216,6 +236,10 @@ app
     server.get("/robots.txt", (req, res) => {
       res.status(200).sendFile("robots.txt", robotsOptions);
     });
+
+    server.get("/newpositions", (req, res) => {
+      res.redirect(302, "https://app.hellosign.com/s/6f26f092")
+    })
 
     server.get("/vangst-talent-career-fair-info-page", (req, res) => {
       res.redirect(301, "/vangst-talent-careerfair");
