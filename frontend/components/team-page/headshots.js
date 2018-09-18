@@ -1,160 +1,420 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Headshots extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      employees: [
+        {
+          first_name: "Karson",
+          last_name: "Humiston",
+          position: "Founder, CEO",
+          img: "/static/images/team-page/headshots/karson-humiston.jpg"
+        },
+        {
+          first_name: "Davyd",
+          last_name: "Smith",
+          position: "CTO",
+          img: "/static/images/team-page/headshots/davyd-smith.jpg"
+        },
+        {
+          first_name: "Dena",
+          last_name: "Gellmann",
+          position: "Director of Recruiting",
+          img: "/static/images/team-page/headshots/dena-gellmann.jpg"
+        },
+        {
+          first_name: "Jordan",
+          last_name: "Smith",
+          position: "Director of Operations",
+          img: "/static/images/team-page/headshots/jordan-smith.jpg"
+        },
+        {
+          first_name: "Kyle",
+          last_name: "Arfsten",
+          position: "Director of Growth",
+          img: "/static/images/team-page/headshots/kyle-arfsten.jpg"
+        },
+        {
+          first_name: "Amanda",
+          last_name: "Guerrero",
+          position: "Business Developement Manager",
+          img: "/static/images/team-page/headshots/amanda-guerrero.jpg"
+        },
+        {
+          first_name: "Mike",
+          last_name: "Olson",
+          position: "Software Developer",
+          img: "/static/images/team-page/headshots/mike-olson.jpg"
+        },
+        {
+          first_name: "Andrew",
+          last_name: "Freeman",
+          position: "Sr. Recruiter",
+          img: "/static/images/team-page/headshots/andrew-freeman.jpg"
+        },
+        {
+          first_name: "Kendall",
+          last_name: "Kelleher",
+          position: "Internal Recruiting",
+          img: "/static/images/team-page/headshots/kendall-kelleher.jpg"
+        },
+        {
+          first_name: "Mohammed",
+          last_name: "Imran",
+          position: "Developer",
+          img: ""
+        },
+        {
+          first_name: "Max",
+          last_name: "Ireland",
+          position: "Sr. Recruiter Manager",
+          img: "/static/images/team-page/headshots/max-ireland.jpg"
+        },
+        {
+          first_name: "Kelsea",
+          last_name: "Appelbaum",
+          position: "Sr. Recruiter Manager",
+          img: "/static/images/team-page/headshots/kelsea-appelbaum.jpg"
+        },
+        {
+          first_name: "Jonte",
+          last_name: "Major",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/jonte-major.jpg"
+        },
+        {
+          first_name: "Samson",
+          last_name: "O'Neil",
+          position: "Business Development Manager",
+          img: "/static/images/team-page/headshots/samson-oneil.jpg"
+        },
+        {
+          first_name: "Jenny",
+          last_name: "Surratt",
+          position: "Staff Accountant",
+          img: "/static/images/team-page/headshots/jenny-surratt.jpg"
+        },
+        {
+          first_name: "Jacob",
+          last_name: "Krushall",
+          position: "Senior Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Patrick",
+          last_name: "Bailey",
+          position: "Architect Lead",
+          img: "/static/images/team-page/headshots/patrick-bailey.jpg"
+        },
+        {
+          first_name: "Zach",
+          last_name: "Schulz",
+          position: "Chief Architect",
+          img: "/static/images/team-page/headshots/zach-schulz.jpg"
+        },
+        {
+          first_name: "Yusef",
+          last_name: "Marra",
+          position: "Sr. Developer",
+          img: "/static/images/team-page/headshots/yusef-marra.jpg"
+        },
+        {
+          first_name: "Tim",
+          last_name: "Alexander",
+          position: "Data Analyst",
+          img: "/static/images/team-page/headshots/tim-alexander.jpg"
+        },
+        {
+          first_name: "Justin",
+          last_name: "Adams",
+          position: "Director of GIGS",
+          img: "/static/images/team-page/headshots/justin-adams.jpg"
+        },
+        {
+          first_name: "McLean",
+          last_name: "Sale",
+          position: "Business Development Manager",
+          img: "/static/images/team-page/headshots/mclean-sale.jpg"
+        },
+        {
+          first_name: "Allison",
+          last_name: "Ault",
+          position: "UI / UX Designer",
+          img: "/static/images/team-page/headshots/allison-ault.jpg"
+        },
+        {
+          first_name: "Mark",
+          last_name: "Jones",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/mark-jones.jpg"
+        },
+        {
+          first_name: "Cat",
+          last_name: "DeMuro",
+          position: "Content Manager",
+          img: "/static/images/team-page/headshots/cat-demuro.jpg"
+        },
+        {
+          first_name: "Molly",
+          last_name: "Bosco",
+          position: "Recruiting and Office Coordinator",
+          img: "/static/images/team-page/headshots/molly-bosco.jpg"
+        },
+        {
+          first_name: "Alex",
+          last_name: "Lang",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/alex-lang.jpg"
+        },
+        {
+          first_name: "Justinian",
+          last_name: "Mason",
+          position: "Sr. Recruiter",
+          img: "/static/images/team-page/headshots/justinian-mason.jpg"
+        },
+        {
+          first_name: "Kevin",
+          last_name: "Tunnell",
+          position: "Business Development Manager",
+          img: "/static/images/team-page/headshots/kevin-tunnell.jpg"
+        },
+        {
+          first_name: "Maxwell",
+          last_name: "Snyder",
+          position: "Sr. Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Ty",
+          last_name: "Hyten",
+          position: "Application Developer",
+          img: "/static/images/team-page/headshots/ty-hyten.jpg"
+        },
+        {
+          first_name: "Hannah",
+          last_name: "Holmgren",
+          position: "Office Administrator",
+          img: "/static/images/team-page/headshots/hannah-holmgren.jpg"
+        },
+        {
+          first_name: "Tyson",
+          last_name: "Weigel",
+          position: "Staff Accountant",
+          img: "/static/images/team-page/headshots/tyson-weigel.jpg"
+        },
+        {
+          first_name: "Austen",
+          last_name: "Elswick",
+          position: "Customer Support Associate",
+          img: "/static/images/team-page/headshots/austen-elswick.jpg"
+        },
+        {
+          first_name: "Dan",
+          last_name: "Barzottini",
+          position: "Business Development Manager",
+          img: ""
+        },
+        {
+          first_name: "Valerie",
+          last_name: "Crisp",
+          position: "Business Development Manager",
+          img: ""
+        },
+        {
+          first_name: "Ryan",
+          last_name: "Rapaport",
+          position: "Business Development Manager",
+          img: ""
+        },
+        {
+          first_name: "Max",
+          last_name: "Martinez",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/max-martinez.jpg"
+        },
+        {
+          first_name: "Chris",
+          last_name: "Morgan",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Stacey",
+          last_name: "Scheliga",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/stacey-scheliga.jpg"
+        },
+        {
+          first_name: "Kelsey",
+          last_name: "Barton",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Neal",
+          last_name: "Beshears",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/neal-beshears.jpg"
+        },
+        {
+          first_name: "Robyn",
+          last_name: "Curtis",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Jessica",
+          last_name: "Thibodeaux",
+          position: "Customer Service Associate",
+          img: "/static/images/team-page/headshots/jessica-thibodeaux.jpg"
+        },
+        {
+          first_name: "Corey",
+          last_name: "Van Oordt",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Chas",
+          last_name: "Fricke",
+          position: "Software Developer",
+          img: ""
+        },
+        {
+          first_name: "Cody",
+          last_name: "Powell",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Julie",
+          last_name: "Shinners",
+          position: "Business Development Manager",
+          img: ""
+        },
+        {
+          first_name: "Emily",
+          last_name: "Bryan",
+          position: "Client Success Manager",
+          img: ""
+        },
+        {
+          first_name: "Jessica",
+          last_name: "Barrett",
+          position: "People Ops Manager",
+          img: ""
+        },
+        {
+          first_name: "Romy",
+          last_name: "Altdorffer",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Brandon",
+          last_name: "Henderson",
+          position: "Event Manager",
+          img: ""
+        },
+        {
+          first_name: "Hayley",
+          last_name: "Johnston",
+          position: "Recruiter",
+          img: ""
+        },
+        {
+          first_name: "Sarah",
+          last_name: "Levin",
+          position: "Customer Success Specialist",
+          img: ""
+        }
+      ]
+    };
+  }
+
   render() {
     return (
       <section id="headshot-section">
         <div id="headshot-content">
           <div>
-            <h2 id="headshots-title" className="text-center">Meet our team.</h2>
+            <h2 id="headshots-title" className="text-center">
+              Meet our team.
+            </h2>
           </div>
           <div id="intro-columns">
             <div id="intro-column-1">
-              <p className="intro-column-text">We believe that having an exceptional internal team allows us to best serve our clients. That’s why we pride ourselves on hiring the most talented internal staff for every aspect of our business. Our constant growth is a testament to our devotion to being ahead of the game in the rapidly growing cannabis space.</p>
+              <p className="intro-column-text">
+                We believe that having an exceptional internal team allows us to
+                best serve our clients. That’s why we pride ourselves on hiring
+                the most talented internal staff for every aspect of our
+                business. Our constant growth is a testament to our devotion to
+                being ahead of the game in the rapidly growing cannabis space.
+              </p>
             </div>
             <div id="intro-column-2">
-              <p className="intro-column-text">We vow to use our vast resources and expertise to connect you with the best talent and opportunities in the industry. You can always count on open communication and continuous support from every member of our team.</p>
+              <p className="intro-column-text">
+                We vow to use our vast resources and expertise to connect you
+                with the best talent and opportunities in the industry. You can
+                always count on open communication and continuous support from
+                every member of our team.
+              </p>
             </div>
           </div>
           <div id="headshot-container">
-
-            <div id="karson-humiston" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Karson<br/>Humiston</div>
-                <div className="headshot-position">Founder, CEO</div>
-              </div>
-            </div>
-            <div id="davyd-smith" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Davyd<br/>Smith</div>
-                <div className="headshot-position">CTO</div>
-              </div>
-            </div>
-            <div id="dena-gellmann" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Dena<br/>Gellmann</div>
-                <div className="headshot-position">Director of Recruiting</div>
-              </div>
-            </div>
-            <div id="jordan-smith"className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Jordan<br/>Smith</div>
-                <div className="headshot-position">Brand Director</div>
-              </div>
-            </div>
-            <div id="kyle-arfsten" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Kyle<br/>Arfsten</div>
-                <div className="headshot-position">Director of Growth</div>
-              </div>
-            </div>
-            <div id="amanda-guerrero" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Amanda<br/>Guerrero</div>
-                <div className="headshot-position">Business Development Manager</div>
-              </div>
-            </div>
-            <div id="mike-olson" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Mike<br/>Olson</div>
-                <div className="headshot-position">Front End Developer</div>
-              </div>
-            </div>
-            <div id="andrew-freeman" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Andrew<br/>Freeman</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            <div id="kendall-kelleher" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Kendall<br/>Kelleher</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            {/* <div id="mohammed-imran" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Mohammed<br/>Imran</div>
-                <div className="headshot-position">Developer</div>
-              </div>
-            </div> */}
-            <div id="max-ireland" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Max<br/>Ireland</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            <div id="kelsea-appelbaum" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Kelsea<br/>Appelbaum</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            <div id="jonte-major" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Jonte<br/>Major</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            <div id="samson-oneil" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Samson<br/>O'Neil</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div>
-            <div id="jenny-surratt" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Jenny<br/>Surratt</div>
-                <div className="headshot-position">Accountant</div>
-              </div>
-            </div>
-            {/* <div id="jacob-krushall" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Jacob<br/>Krushall</div>
-                <div className="headshot-position">Recruiter</div>
-              </div>
-            </div> */}
-            <div id="patrick-bailey" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Patrick<br/>Bailey</div>
-                <div className="headshot-position">Architect Lead</div>
-              </div>
-            </div>
-            <div id="zach-schulz" className="headshot-card">
-              <div className="headshot-label">
-                <div className="headshot-name">Zach<br/>Schulz</div>
-                <div className="headshot-position">Chief Architect</div>
-              </div>
-            </div>
-
+            {this.state.employees.map(employee => {
+              var headshot = employee.img;
+              if (headshot === "") {
+                headshot =
+                  "/static/images/team-page/headshots/anon-headshot.jpg";
+              }
+              return (
+                <div className="test-card-container">
+                  <img className="test-headshot" src={headshot} />
+                  <div className="headshot-label-2">
+                    <div className="headshot-name">{employee.first_name}</div>
+                    <div className="headshot-name">{employee.last_name}</div>
+                    <div className="headshot-position">{employee.position}</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         <style>
           {`
-            #karson-humiston {background-image: url('/static/images/team-page/headshots/karson-humiston.jpg');}
-            #davyd-smith {background-image: url('/static/images/team-page/headshots/davyd-smith.jpg');}
-            #dena-gellmann {background-image: url('/static/images/team-page/headshots/dena-gellmann.jpg');}
-            #jordan-smith {background-image: url('/static/images/team-page/headshots/jordan-smith.jpg');}
-            #kyle-arfsten {background-image: url('/static/images/team-page/headshots/kyle-arfsten.jpg');}
-            #amanda-guerrero {background-image: url('/static/images/team-page/headshots/amanda-guerrero.jpg');}
-            #mike-olson {background-image: url('/static/images/team-page/headshots/mike-olson.jpg');}
-            #andrew-freeman {background-image: url('/static/images/team-page/headshots/andrew-freeman.jpg');}
-            #kendall-kelleher {background-image: url('/static/images/team-page/headshots/kendall-kelleher.jpg');}
-            // #mohammed-imran {background-image: url('/static/images/team-page/headshots/mohammed-imran.jpg');}
-            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
-            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
-            #kelsea-appelbaum {background-image: url('/static/images/team-page/headshots/kelsea-appelbaum.jpg');}
-            #jonte-major {background-image: url('/static/images/team-page/headshots/jonte-major.jpg');}
-            #samson-oneil {background-image: url('/static/images/team-page/headshots/samson-oneil.jpg');}
-            #jenny-surratt {background-image: url('/static/images/team-page/headshots/jenny-surratt.jpg');}
-            // #jacob-krushall {background-image: url('/static/images/team-page/headshots/jacob-krushall.jpg');}
-            #patrick-bailey {background-image: url('/static/images/team-page/headshots/patrick-bailey.jpg');}
-            #zach-schulz {background-image: url('/static/images/team-page/headshots/zach-schulz.jpg');}
+            .test-headshot { height: 375px; width: 250px; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(100%); border-radius: 15px 15px 0 0; }
+            
+            .test-headshot:hover { -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(0%)}
 
+            .test-card-container {position: relative; margin: 25px 5px 0 5px;}
+            .headshot-label-2 {position: absolute; bottom: 0px; left: 0px; padding: 1rem; width: 250px;}
+            .headshot-label-2 {
+              background-image: linear-gradient(to bottom, rgba(240, 86, 31, 0) 0, rgb(240, 86, 31, 0.9) 100%);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
 
+            .headshot-name {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 2.2rem;
+              line-height: 30px;
+              font-weight: 500;
+            }
 
-        
-
+            .headshot-position {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 1.2rem;
+              font-weight: 600;
+              padding-top: 8px;
+              padding-bottom: 5px;
+              line-height: 20px;
+            }
 
             #headshot-section {
               min-height: 100vh;
@@ -163,6 +423,8 @@ class Headshots extends Component {
               display: flex;
               flex-direction: column;
               justify-content: center;
+              align-content: center;
+              align-items: center;
             }
 
             #headshots-title {
@@ -193,48 +455,42 @@ class Headshots extends Component {
               flex-direction: row;
               justify-content: center;
               flex-wrap: wrap;
+              padding: 3rem;
             }
+            
+            
 
-            .headshot-card {
-              width: 150px;
-              height: 200px;
-              margin: 5px;
-              background-color: lightgray;
-              border-radius: 5px 5px 0 0; 
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
-              background-position: top center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
 
-            .headshot-label {
-              width: 100%;
-              height: auto;
-              padding: 10px;
-              background-image: linear-gradient(to bottom, rgba(240, 86, 31, 0) 0, #f0561f 100%);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
 
-            .headshot-name {
-              font-family: Brandon Grotesque Bold;
-              color: white;
-              font-size: 1.5rem;
-              line-height: 20px;
-              font-weight: 600;
-            }
+            #karson-humiston {background-image: url('/static/images/team-page/headshots/karson-humiston.jpg');}
+            #davyd-smith {background-image: url('/static/images/team-page/headshots/davyd-smith.jpg');}
+            #dena-gellmann {background-image: url('/static/images/team-page/headshots/dena-gellmann.jpg');}
+            #jordan-smith {background-image: url('/static/images/team-page/headshots/jordan-smith.jpg');}
+            #kyle-arfsten {background-image: url('/static/images/team-page/headshots/kyle-arfsten.jpg');}
+            #amanda-guerrero {background-image: url('/static/images/team-page/headshots/amanda-guerrero.jpg');}
+            #mike-olson {background-image: url('/static/images/team-page/headshots/mike-olson.jpg');}
+            #andrew-freeman {background-image: url('/static/images/team-page/headshots/andrew-freeman.jpg');}
+            #kendall-kelleher {background-image: url('/static/images/team-page/headshots/kendall-kelleher.jpg');}
+            // #mohammed-imran {background-image: url('/static/images/team-page/headshots/mohammed-imran.jpg');}
+            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
+            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
+            #kelsea-appelbaum {background-image: url('/static/images/team-page/headshots/kelsea-appelbaum.jpg');}
+            #jonte-major {background-image: url('/static/images/team-page/headshots/jonte-major.jpg');}
+            #samson-oneil {background-image: url('/static/images/team-page/headshots/samson-oneil.jpg');}
+            #jenny-surratt {background-image: url('/static/images/team-page/headshots/jenny-surratt.jpg');}
+            // #jacob-krushall {background-image: url('/static/images/team-page/headshots/jacob-krushall.jpg');}
+            #patrick-bailey {background-image: url('/static/images/team-page/headshots/patrick-bailey.jpg');}
+            #zach-schulz {background-image: url('/static/images/team-page/headshots/zach-schulz.jpg');}
 
-            .headshot-position {
-              font-family: Brandon Grotesque Bold;
-              color: white;
-              font-size: 1rem;
-              font-weight: 700;
-              padding-top: 3px;
-              line-height: 15px;
-            }
+
+        
+
+
+
+
+          
+
+            
             
             @media (max-width: 420px) {
               #headshot-section {
@@ -255,9 +511,6 @@ class Headshots extends Component {
               }
 
             }
-
-          
-          
           `}
         </style>
       </section>
