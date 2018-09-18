@@ -83,10 +83,26 @@ class ApplyModal extends React.Component {
         })
         .catch(err => console.log(err));
       this.setState({ success_message: "Application is being submitted" });
+      this.getCrelateUserId()
     } else {
       this.setState({ success_message: "Please fill out all fields." });
     }
   };
+
+  getCrelateUserId = () => {
+    fetch('create-crelate', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        EmailAddress_Personal: this.state.sendFrom,
+        FirstName: this.state.firstName,
+        LastName: this.state.lastName,
+        external_job_id: this.props.job.external_job_id
+      })
+    })
+      .then(res => res.json())
+      .then(res => console.log(res))
+  }
 
   toggle() {
     this.setState({
