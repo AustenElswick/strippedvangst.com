@@ -36,6 +36,12 @@ app
         .then(json => res.send(json.data));
     });
 
+    server.get("/all-jobs", (req, res) => {
+      axios
+        .get("https://vangsters.com/api/v1/companies/job-postings")
+        .then(json => res.send(json.data));
+    });
+
     server.post("/sendgrid", (req, res) => {
       const formData = new multiparty.Form();
       formData.parse(req, async (err, fields, files) => {
