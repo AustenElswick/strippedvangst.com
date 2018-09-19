@@ -63,7 +63,7 @@ class Headshots extends Component {
           first_name: "Mohammed",
           last_name: "Imran",
           position: "Developer",
-          img: ""
+          img: "/static/images/team-page/headshots/mohammed-imran.jpg"
         },
         {
           first_name: "Max",
@@ -383,48 +383,10 @@ class Headshots extends Component {
         </div>
         <style>
           {`
-            .test-headshot { height: 375px; width: 250px; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-              filter: grayscale(100%); border-radius: 15px 15px 0 0; }
-            
-            .test-headshot:hover { -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-              filter: grayscale(0%)}
-
-            .test-card-container {position: relative; margin: 25px 5px 0 5px;}
-            .headshot-label-2 {position: absolute; bottom: 0px; left: 0px; padding: 1rem; width: 250px;}
-            .headshot-label-2 {
-              background-image: linear-gradient(to bottom, rgba(240, 86, 31, 0) 0, rgb(240, 86, 31, 0.9) 100%);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-
-            .headshot-name {
-              font-family: Brandon Grotesque Bold;
-              color: white;
-              font-size: 2.2rem;
-              line-height: 30px;
-              font-weight: 500;
-            }
-
-            .headshot-position {
-              font-family: Brandon Grotesque Bold;
-              color: white;
-              font-size: 1.2rem;
-              font-weight: 600;
-              padding-top: 8px;
-              padding-bottom: 5px;
-              line-height: 20px;
-            }
-
             #headshot-section {
               min-height: 100vh;
               min-width: 100vw;
               padding: 3rem;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-content: center;
-              align-items: center;
             }
 
             #headshots-title {
@@ -455,32 +417,55 @@ class Headshots extends Component {
               flex-direction: row;
               justify-content: center;
               flex-wrap: wrap;
-              padding: 3rem;
             }
-            
-            
+            .test-headshot { height: 375px; width: 250px; border-radius: 15px 15px 0 0; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(100%);}
+
+            .test-headshot:hover { -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+              filter: grayscale(0%)}
+
+            .test-card-container {position: relative; margin: 25px 5px 0 5px;}
+            .headshot-label-2 {position: absolute; bottom: 0px; left: 0px; padding: 1rem; width: 250px;}
+            .headshot-label-2 {
+              background: linear-gradient(
+                to top,
+                rgb(240, 86, 31),
+                rgba(255, 0, 0, 0)
+              )
+            }
+
+            .headshot-name {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 2.2rem;
+              line-height: 38px;
+              font-weight: 500;
+            }
+
+            .headshot-position {
+              font-family: Brandon Grotesque Bold;
+              color: white;
+              font-size: 1.2rem;
+              font-weight: 600;
+              padding-top: 8px;
+              padding-bottom: 5px;
+              line-height: 20px;
+            }
+
+            @media (max-width: 1279px) {
+              .test-headshot { height: 375px; width: 250px; -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(0%); border-radius: 15px 15px 0 0; }
+
+              #intro-columns {display: flex; flex-direction: column;}
+              #intro-column-1 {width: 100%; padding: 0; margin-top: 1rem;}
+              #intro-column-2 {width: 100%; padding: 1.5rem 0 0 0;}
+              #headshots-title {padding: 0;}
+              .intro-column-text {margin-bottom: 0;}
+              #headshots-section {padding: 1rem; }
+            }
 
 
 
-            #karson-humiston {background-image: url('/static/images/team-page/headshots/karson-humiston.jpg');}
-            #davyd-smith {background-image: url('/static/images/team-page/headshots/davyd-smith.jpg');}
-            #dena-gellmann {background-image: url('/static/images/team-page/headshots/dena-gellmann.jpg');}
-            #jordan-smith {background-image: url('/static/images/team-page/headshots/jordan-smith.jpg');}
-            #kyle-arfsten {background-image: url('/static/images/team-page/headshots/kyle-arfsten.jpg');}
-            #amanda-guerrero {background-image: url('/static/images/team-page/headshots/amanda-guerrero.jpg');}
-            #mike-olson {background-image: url('/static/images/team-page/headshots/mike-olson.jpg');}
-            #andrew-freeman {background-image: url('/static/images/team-page/headshots/andrew-freeman.jpg');}
-            #kendall-kelleher {background-image: url('/static/images/team-page/headshots/kendall-kelleher.jpg');}
-            // #mohammed-imran {background-image: url('/static/images/team-page/headshots/mohammed-imran.jpg');}
-            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
-            #max-ireland {background-image: url('/static/images/team-page/headshots/max-ireland.jpg');}
-            #kelsea-appelbaum {background-image: url('/static/images/team-page/headshots/kelsea-appelbaum.jpg');}
-            #jonte-major {background-image: url('/static/images/team-page/headshots/jonte-major.jpg');}
-            #samson-oneil {background-image: url('/static/images/team-page/headshots/samson-oneil.jpg');}
-            #jenny-surratt {background-image: url('/static/images/team-page/headshots/jenny-surratt.jpg');}
-            // #jacob-krushall {background-image: url('/static/images/team-page/headshots/jacob-krushall.jpg');}
-            #patrick-bailey {background-image: url('/static/images/team-page/headshots/patrick-bailey.jpg');}
-            #zach-schulz {background-image: url('/static/images/team-page/headshots/zach-schulz.jpg');}
 
 
         
@@ -490,27 +475,6 @@ class Headshots extends Component {
 
           
 
-            
-            
-            @media (max-width: 420px) {
-              #headshot-section {
-                padding: 2rem;
-              }
-
-              #headshots-title {
-                padding: 0;
-              }
-
-              #intro-column-2 {
-                display: none;
-              }
-
-              #intro-column-1 {
-                width: 100%;
-                padding: 0.5rem;
-              }
-
-            }
           `}
         </style>
       </section>
