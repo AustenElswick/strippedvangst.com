@@ -120,6 +120,14 @@ class Menu extends Component {
                   <DropdownItem className="nav-link">
                     <NavLink
                       className="nav-link dropdown-link"
+                      href="/vangst-press"
+                    >
+                      PRESS
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem className="nav-link">
+                    <NavLink
+                      className="nav-link dropdown-link"
                       href="/vangst-internal-positions"
                     >
                       WORK FOR VANGST
