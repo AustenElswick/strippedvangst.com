@@ -85,8 +85,8 @@ app
         };
         const confirmationMsg = {
           to: [{ email: email }],
-          from: 'info@vangst.com',
-          subject: 'Thank you for your intrest.',
+          from: "info@vangst.com",
+          subject: "Thank you for your intrest.",
           text: `Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!`,
           html: `<p><strong>Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!</strong></p>`
         };
@@ -116,8 +116,8 @@ app
         };
         const confirmationMsg = {
           to: [{ email: email }],
-          from: 'info@vangst.com',
-          subject: 'We have received your inquiry.',
+          from: "info@vangst.com",
+          subject: "We have received your inquiry.",
           text: `Your message and questions have been received and you should get a response shortly.`,
           html: `<p><strong>Your message and questions have been received and you should get a response shortly.</strong></p>`
         };
@@ -155,8 +155,8 @@ app
         };
         const confirmationMsg = {
           to: [{ email: email }],
-          from: 'sales@vangst.com',
-          subject: 'Thank you',
+          from: "sales@vangst.com",
+          subject: "Thank you",
           text: `A member of our sales team will reach out to you shortly.`,
           html: `<p><strong>A memeber of our sales team will reach out to you shortly.</strong></p>`
         };
@@ -166,34 +166,34 @@ app
       res.status(200).send("success");
     });
 
-    server.post('/create-crelate', (req, res) => {
-      const external_job_id = req.body.external_job_id
-      const email = req.body.EmailAddress_Personal
-      const firstName = req.body.FirstName
-      const lastName = req.body.LastName
+    server.post("/create-crelate", (req, res) => {
+      const external_job_id = req.body.external_job_id;
+      const email = req.body.EmailAddress_Personal;
+      const firstName = req.body.FirstName;
+      const lastName = req.body.LastName;
       axios({
-        method: 'POST',
-        url: 'https://app.crelate.com/api/pub/v1/contacts?api_key=7daf0aa69c9846b8bc1ef59e87744cd3',
-        headers: { 'content-type': 'application/json' },
+        method: "POST",
+        url:
+          "https://app.crelate.com/api/pub/v1/contacts?api_key=7daf0aa69c9846b8bc1ef59e87744cd3",
+        headers: { "content-type": "application/json" },
         data: {
           EmailAddress_Personal: email,
           EmailAddress_Personal_IsPrimary: true,
           FirstName: firstName,
           LastName: lastName
         }
-      })
-        .then(res => {
-          const jobSeekerId = res.data.Id || res.data.DuplicateId
-          if (external_job_id) {
-            axios({
-              method: 'POST',
-              url: `https://app.crelate.com/api/pub/v1/contacts/${jobSeekerId}/jobs/${external_job_id}?api_key=7daf0aa69c9846b8bc1ef59e87744cd3`,
-              headers: { 'content-type': 'application/json' },
-              data: {}
-            })
-          }
-        })
-      res.status(200).send('success')
+      }).then(res => {
+        const jobSeekerId = res.data.Id || res.data.DuplicateId;
+        if (external_job_id) {
+          axios({
+            method: "POST",
+            url: `https://app.crelate.com/api/pub/v1/contacts/${jobSeekerId}/jobs/${external_job_id}?api_key=7daf0aa69c9846b8bc1ef59e87744cd3`,
+            headers: { "content-type": "application/json" },
+            data: {}
+          });
+        }
+      });
+      res.status(200).send("success");
     });
 
     const sitemapOptions = {
@@ -218,8 +218,8 @@ app
     });
 
     server.get("/newpositions", (req, res) => {
-      res.redirect(302, "https://app.hellosign.com/s/6f26f092")
-    })
+      res.redirect(302, "https://app.hellosign.com/s/6f26f092");
+    });
 
     server.get("/vangst-talent-career-fair-info-page", (req, res) => {
       res.redirect(301, "/vangst-talent-careerfair");

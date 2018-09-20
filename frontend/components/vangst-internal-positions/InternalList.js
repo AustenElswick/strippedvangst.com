@@ -231,8 +231,7 @@ class InternalList extends Component {
               height: auto;
             }
 
-
-            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; padding: 0 5px 0 5px; margin:15px 0 5px 0;}
+            .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
 
@@ -243,7 +242,7 @@ class InternalList extends Component {
             }
             #search-results-container {padding: 0 4rem 2rem 4rem;}
 
-            #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;}
+            #apply-button-container {display: flex; flex-direction: column; justify-content: center; align-items: flex-start; align-content: center;}
 
             #job-info-collapse {padding: 5px 0 5px 0; margin: 0;}
 
