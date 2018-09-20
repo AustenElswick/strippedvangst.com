@@ -229,10 +229,6 @@ app
       res.redirect(301, "/vangst-talent-careerfair");
     });
 
-    server.get("/vangst-press", (req, res) => {
-      res.redirect(301, "https://blog.vangst.com/category/vangst-news/");
-    });
-
     server.get("/post/:slug", (req, res) => {
       const actualPage = "/post";
       const queryParams = { slug: req.params.slug, apiRoute: "post" };
