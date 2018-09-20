@@ -34,6 +34,7 @@
         "moment": "^2.22.2",
         "multiparty": "^4.2.1",
         "next": "^6.1.1",
+        "path-match": "^1.2.4",
         "popper.js": "^1.14.4",
         "react": "^16.4.2",
         "react-dom": "^16.4.2",

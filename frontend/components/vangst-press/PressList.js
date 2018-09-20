@@ -8,9 +8,9 @@ class PressList extends Component {
         {
           title: "Entrepreneur's 100 Brilliant Companies of 2018",
           description_1:
-            "What makes a company brilliant? There’s no single answer, so we started with a question: “What in the past year made us say, That’s brilliant!?”",
+            "What makes a company brilliant? There's no single answer, so we started with a question: 'What in the past year made us say, That's brilliant!?'",
           description_2:
-            "To compile this, the 2018 edition of our 100 Brilliant Company list, we explored boundary-pushing entrepreneurship -- from Kevin Hart challenging comedy’s pecking order to big risks, fresh employee perks and meaningful social missions.",
+            "To compile this, the 2018 edition of our 100 Brilliant Company list, we explored boundary-pushing entrepreneurship -- from Kevin Hart challenging comedy's pecking order to big risks, fresh employee perks and meaningful social missions.",
           description_3:
             "This year we broke down our 100 Brilliant Companies into various categories, including marketing, leaders, services and more.",
           link: "https://www.entrepreneur.com/article/313579",
@@ -21,9 +21,9 @@ class PressList extends Component {
           title:
             "This 24-Year-Old Built A LinkedIn For Weed Jobs, No Experience Required",
           description_1:
-            "Vangst sources job openings in cannabis companies–many of which require no prior industry experience–that established job boards won’t post.",
+            "Vangst sources job openings in cannabis companies–many of which require no prior industry experience–that established job boards won't post.",
           description_2:
-            "Karson Humiston started a student travel company while she was still an undergraduate at St. Lawrence University in upstate New York. But before she graduated, she’d already decided to do something bigger.",
+            "Karson Humiston started a student travel company while she was still an undergraduate at St. Lawrence University in upstate New York. But before she graduated, she'd already decided to do something bigger.",
           description_3: "",
           link:
             "https://www.fastcompany.com/40471045/this-24-year-old-built-a-linkedin-for-weed-jobs-no-experience-required",
@@ -43,7 +43,7 @@ class PressList extends Component {
         {
           title: "Why This Founder Waited To Fundraise And How It Paid Off",
           description_1:
-            "Karson Humiston’s future as a serial entrepreneur traces back to her elementary school days growing up in East Aurora, New York, a small town outside Buffalo. That’s where she started her very first venture on the local golf course when she struck up a deal with the club’s pro to allow her to retrieve lost golf balls and resell them for ten cents each on the fourth hole every Monday.",
+            "Karson Humiston's future as a serial entrepreneur traces back to her elementary school days growing up in East Aurora, New York, a small town outside Buffalo. That's where she started her very first venture on the local golf course when she struck up a deal with the club's pro to allow her to retrieve lost golf balls and resell them for ten cents each on the fourth hole every Monday.",
           description_2: "",
           description_3: "",
           link:

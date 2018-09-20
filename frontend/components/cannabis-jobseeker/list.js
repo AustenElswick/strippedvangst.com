@@ -9,6 +9,7 @@ import {
   CardBody,
   Card
 } from "reactstrap";
+import Router from 'next/router';
 
 class List extends Component {
   constructor(props) {
@@ -56,12 +57,21 @@ class List extends Component {
 
   getFilteredJobs(e) {
     const filteredJobs = this.state.store.filter(
-      item =>
+      item => {
+        if(
         item.state.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.city.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        item.job_title.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        item.business_name.toLowerCase().includes(e.target.value.toLowerCase())
-    );
+        item.job_title.toLowerCase().includes(e.target.value.toLowerCase())
+        ) {
+          return {
+            match: true,
+            item
+          }
+        }
+      });
+      if(filteredJobs.match){
+        filteredJobs += filteredJobs
+      }
     this.setState({
       jobs: filteredJobs
     });
@@ -71,17 +81,41 @@ class List extends Component {
     this.setState({ job: job });
   }
 
+  jobPage = (job) => {
+    Router.push({
+      pathname: '/job-details',
+      query: {id: job.job_id}
+    })
+  }
+
   render() {
     if (!this.state.isLoading) {
       return (
         <section id="direct-hire-list-section">
           <div id="search-bar-container">
+          </div>
+          <div className='searchBar-flex'>
             <input
               className="searchBar"
               type="text"
-              placeholder="Search jobs"
+              placeholder="Search state"
               onChange={e => this.getFilteredJobs(e)}
             />
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search city"
+              onChange={e => this.getFilteredJobs(e)}
+            />
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search job title"
+              onChange={e => this.getFilteredJobs(e)}
+            />
+          </div>
+          <div className='search-results'>
+            <p>Total matched jobs: {this.state.jobs.length}</p>
           </div>
           <div id="search-results-container">
             {this.state.jobs.map(job => {
@@ -98,11 +132,12 @@ class List extends Component {
                       id="more-info-button"
                       className="more-info-button"
                       id={`id-${job.job_id}`}
+                      onClick={() => this.jobPage(job)}
                     >
                       More Info >
                     </Button>
                   </div>
-                  <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
+                  {/* <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
                     <Card>
                       <CardBody>
                         <button
@@ -125,7 +160,7 @@ class List extends Component {
                           {/* <div>
                         <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
                       </div> */}
-                        </div>
+                        {/* </div>
                         <hr />
                         <div dangerouslySetInnerHTML={this.setInnerHtml(job)} />
                         <hr />
@@ -137,7 +172,7 @@ class List extends Component {
                         </div>
                       </CardBody>
                     </Card>
-                  </UncontrolledCollapse>
+                  </UncontrolledCollapse> */}
                 </div>
               );
             })}
@@ -169,6 +204,7 @@ class List extends Component {
             .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
+            .searchBar-flex {display: flex; justify-content: center;}
 
             .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
             #search-bar-container {
