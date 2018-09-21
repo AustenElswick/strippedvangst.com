@@ -9,7 +9,7 @@ import {
   CardBody,
   Card
 } from "reactstrap";
-import Router from 'next/router';
+import Router from "next/router";
 
 class List extends Component {
   constructor(props) {
@@ -56,22 +56,21 @@ class List extends Component {
   };
 
   getFilteredJobs(e) {
-    const filteredJobs = this.state.store.filter(
-      item => {
-        if(
+    const filteredJobs = this.state.store.filter(item => {
+      if (
         item.state.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.city.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.job_title.toLowerCase().includes(e.target.value.toLowerCase())
-        ) {
-          return {
-            match: true,
-            item
-          }
-        }
-      });
-      if(filteredJobs.match){
-        filteredJobs += filteredJobs
+      ) {
+        return {
+          match: true,
+          item
+        };
       }
+    });
+    if (filteredJobs.match) {
+      filteredJobs += filteredJobs;
+    }
     this.setState({
       jobs: filteredJobs
     });
@@ -81,41 +80,40 @@ class List extends Component {
     this.setState({ job: job });
   }
 
-  jobPage = (job) => {
+  jobPage = job => {
     Router.push({
-      pathname: '/job-details',
-      query: {id: job.job_id}
-    })
-  }
+      pathname: "/job-details",
+      query: { id: job.job_id }
+    });
+  };
 
   render() {
     if (!this.state.isLoading) {
       return (
         <section id="direct-hire-list-section">
-          <div id="search-bar-container">
+          <div id="search-bar-container" />
+          <div className="searchBar-flex">
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search State"
+              onChange={e => this.getFilteredJobs(e)}
+            />
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search City"
+              onChange={e => this.getFilteredJobs(e)}
+            />
+            <input
+              className="searchBar"
+              type="text"
+              placeholder="Search Job Title"
+              onChange={e => this.getFilteredJobs(e)}
+            />
           </div>
-          <div className='searchBar-flex'>
-            <input
-              className="searchBar"
-              type="text"
-              placeholder="Search state"
-              onChange={e => this.getFilteredJobs(e)}
-            />
-            <input
-              className="searchBar"
-              type="text"
-              placeholder="Search city"
-              onChange={e => this.getFilteredJobs(e)}
-            />
-            <input
-              className="searchBar"
-              type="text"
-              placeholder="Search job title"
-              onChange={e => this.getFilteredJobs(e)}
-            />
-          </div>
-          <div className='search-results'>
-            <p>Total matched jobs: {this.state.jobs.length}</p>
+          <div id="results-found">
+            <p>{this.state.jobs.length} Results Found</p>
           </div>
           <div id="search-results-container">
             {this.state.jobs.map(job => {
@@ -160,7 +158,7 @@ class List extends Component {
                           {/* <div>
                         <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
                       </div> */}
-                        {/* </div>
+                  {/* </div>
                         <hr />
                         <div dangerouslySetInnerHTML={this.setInnerHtml(job)} />
                         <hr />
@@ -178,6 +176,11 @@ class List extends Component {
             })}
           </div>
           <style>{`
+
+            .searchBar-flex {margin: 2rem 2rem 0.5rem 2rem; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: center; align-items: center; max-width: 100vw;}
+            .searchBar {border: solid 1px #dadada; padding: 5px; margin: 0.25rem;}
+            #results-found {margin-left: 4.5rem;}
+
             h2 {font-size: 1.2rem;}
             h3 {font-size: 1.2rem;}
             p {font-weight: 400; letter-spacing: 1.25px; line-height: 1rem; font-family: Brandon Grotesque Regular;}
@@ -192,35 +195,37 @@ class List extends Component {
           
             .job-post-title {letter-spacing: 2px; margin-bottom: -5px; font-weight: 600;}
             
-            .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0; margin-bottom: 0;}
+            .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0; margin: 5px 0 0 0;}
             .job-post-date {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding-left: 5rem;;}
 
             .job-post-container {padding: 0.5rem; border-bottom: solid 1px #f5f5f5;}
             
             #direct-hire-list-section {
               width: 100vw;
-              height: auto;
+              min-height: 100vh;
             }
             .more-info-button { font-size: 11px; border: 0; background-color: #f0561f; color: white; margin:5px 0 5px 0; !important;}
             .more-info-button:hover {text-decoration:none; color:#ffffff; }
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
             .searchBar-flex {display: flex; justify-content: center;}
 
-            .searchBar {border: solid 1px #dadada; padding: 5px; width: 350px;}
+            
             #search-bar-container {
               display: flex; flex-direction: row; justify-content: center;
               background-image: url('/static/images/employer-page/sec_01/orange-background.jpg');
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
-              padding: 0.5rem;
+              height: 5rem;
             }
-            #search-results-container {padding: 4rem;}
+            #search-results-container {padding: 0 4rem 4rem 4rem;}
 
             #job-info-collapse {padding: 5px 0 5px 0; margin: 0;}
 
             @media (max-width: 420px) {
               #search-results-container {padding: 1rem;}
+              #results-found {margin-left: 1.5rem;}
+              .searchBar-flex {margin: 1rem;}
               h4 {font-size: 0.8rem; }
               h3 {font-size: 1rem;}
               h2 {font-size: 1rem;}

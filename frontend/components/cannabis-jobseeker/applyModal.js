@@ -83,16 +83,16 @@ class ApplyModal extends React.Component {
         })
         .catch(err => console.log(err));
       this.setState({ success_message: "Application is being submitted" });
-      this.getCrelateUserId()
+      this.getCrelateUserId();
     } else {
       this.setState({ success_message: "Please fill out all fields." });
     }
   };
 
   getCrelateUserId = () => {
-    fetch('create-crelate', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
+    fetch("create-crelate", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify({
         EmailAddress_Personal: this.state.sendFrom,
         FirstName: this.state.firstName,
@@ -101,8 +101,8 @@ class ApplyModal extends React.Component {
       })
     })
       .then(res => res.json())
-      .then(res => console.log(res))
-  }
+      .then(res => console.log(res));
+  };
 
   toggle() {
     this.setState({
@@ -187,6 +187,7 @@ class ApplyModal extends React.Component {
           </ModalBody>
         </Modal>
         <style>{`
+       
           #modal-header {background-color: #ffffff;}
 
           #modal-body {background-color: #f0561f; height: 500px; padding: 0; margin: 0;
