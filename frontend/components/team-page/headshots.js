@@ -99,7 +99,7 @@ class Headshots extends Component {
           first_name: "Jacob",
           last_name: "Krushall",
           position: "Senior Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/jacob-krushall.jpg"
         },
         {
           first_name: "Patrick",
@@ -213,19 +213,19 @@ class Headshots extends Component {
           first_name: "Dan",
           last_name: "Barzottini",
           position: "Business Development Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/dan-barzottini.jpg"
         },
         {
           first_name: "Valerie",
           last_name: "Crisp",
           position: "Business Development Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/valerie-crisp.jpg"
         },
         {
           first_name: "Ryan",
           last_name: "Rapaport",
           position: "Business Development Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/ryan-rapaport.jpg"
         },
         {
           first_name: "Max",
@@ -237,7 +237,7 @@ class Headshots extends Component {
           first_name: "Chris",
           last_name: "Morgan",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/chris-morgan.jpg"
         },
         {
           first_name: "Stacey",
@@ -249,7 +249,7 @@ class Headshots extends Component {
           first_name: "Kelsey",
           last_name: "Barton",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/kelsey-barton.jpg"
         },
         {
           first_name: "Neal",
@@ -273,55 +273,61 @@ class Headshots extends Component {
           first_name: "Corey",
           last_name: "Van Oordt",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/corey-vanoordt.jpg"
         },
         {
           first_name: "Chas",
           last_name: "Fricke",
           position: "Software Developer",
-          img: ""
+          img: "/static/images/team-page/headshots/chas-fricke.jpg"
         },
         {
           first_name: "Cody",
           last_name: "Powell",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/cody-powell.jpg"
         },
         {
           first_name: "Julie",
           last_name: "Shinners",
           position: "Business Development Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/julie-shinners.jpg"
         },
         {
           first_name: "Emily",
           last_name: "Bryan",
           position: "Client Success Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/emily-bryan.jpg"
         },
         {
           first_name: "Jessica",
           last_name: "Barrett",
           position: "People Ops Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/jessica-barrett.jpg"
         },
         {
           first_name: "Romy",
           last_name: "Altdorffer",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/romy-altdorffer.jpg"
         },
         {
           first_name: "Brandon",
           last_name: "Henderson",
           position: "Event Manager",
-          img: ""
+          img: "/static/images/team-page/headshots/brandon-henderson.jpg"
         },
         {
           first_name: "Hayley",
           last_name: "Johnston",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/hayley-johnston.jpg"
+        },
+        {
+          first_name: "Jonathan",
+          last_name: "Burnett",
+          position: "Recruiter",
+          img: "/static/images/team-page/headshots/jonathan-burnett.jpg"
         },
         {
           first_name: "Sarah",
