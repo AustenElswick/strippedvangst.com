@@ -19,6 +19,18 @@ class PressList extends Component {
         },
         {
           title:
+            "Jobs In Legal Cannabis Are On The Rise And Salaries Are Getting High",
+          description_1:
+            "Cannabis jobs are on the rise and salaries are increasing, according to a new report by employment agency Vangst. Those figures are set to grow further as capital continues to flow into the industry and the work force gains experience.",
+          description_2: "",
+          description_3: "",
+          link:
+            "https://www.forbes.com/sites/julieweed/2018/09/24/jobs-in-legal-cannabis-are-on-the-rise-and-salaries-are-getting-high/#164c42f9e3db",
+          img:
+            "https://d7fjqd68w6dn5.cloudfront.net/press_images/forbes-logo.jpg"
+        },
+        {
+          title:
             "This 24-Year-Old Built A LinkedIn For Weed Jobs, No Experience Required",
           description_1:
             "Vangst sources job openings in cannabis companies–many of which require no prior industry experience–that established job boards won't post.",
