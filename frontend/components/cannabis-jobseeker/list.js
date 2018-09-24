@@ -58,10 +58,6 @@ class List extends Component {
     return { __html: job.job_description };
   };
 
-  componentDidUpdate (prevProps, prevState) {
-    console.log('hi');
-  }
-
   setFilteredJobs(event) {
     const {
       name,
@@ -76,9 +72,7 @@ class List extends Component {
       }
       const validKeys = Object.keys(query).filter(key => query[key])
       const filteredJobs = this.state.store.filter(job => {
-        return validKeys.every(key => {
-          return job[key].toLowerCase().includes(this.state[key])
-        })
+        return validKeys.every(key => job[key].toLowerCase().includes(this.state[key]))
       })
       this.setState({ jobs: filteredJobs })
     })
