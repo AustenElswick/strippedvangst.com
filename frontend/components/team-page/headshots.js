@@ -183,7 +183,7 @@ class Headshots extends Component {
           first_name: "Maxwell",
           last_name: "Snyder",
           position: "Sr. Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/max-snyder.jpg"
         },
         {
           first_name: "Ty",
@@ -261,7 +261,7 @@ class Headshots extends Component {
           first_name: "Robyn",
           last_name: "Curtis",
           position: "Recruiter",
-          img: ""
+          img: "/static/images/team-page/headshots/robyn-curtis.jpg"
         },
         {
           first_name: "Jessica",
