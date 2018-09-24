@@ -68,13 +68,13 @@ class Headshots extends Component {
         {
           first_name: "Max",
           last_name: "Ireland",
-          position: "Sr. Recruiter Manager",
+          position: "Sr. Recruiter",
           img: "/static/images/team-page/headshots/max-ireland.jpg"
         },
         {
           first_name: "Kelsea",
           last_name: "Appelbaum",
-          position: "Sr. Recruiter Manager",
+          position: "Sr. Recruiter",
           img: "/static/images/team-page/headshots/kelsea-appelbaum.jpg"
         },
         {
@@ -206,7 +206,7 @@ class Headshots extends Component {
         {
           first_name: "Austen",
           last_name: "Elswick",
-          position: "Customer Support Associate",
+          position: "Software Developer",
           img: "/static/images/team-page/headshots/austen-elswick.jpg"
         },
         {
