@@ -15,6 +15,9 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      state: undefined,
+      city: undefined,
+      job_title: undefined,
       jobs: [],
       store: [],
       isLoading: true,
@@ -55,25 +58,30 @@ class List extends Component {
     return { __html: job.job_description };
   };
 
-  getFilteredJobs(e) {
-    const filteredJobs = this.state.store.filter(item => {
-      if (
-        item.state.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        item.city.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        item.job_title.toLowerCase().includes(e.target.value.toLowerCase())
-      ) {
-        return {
-          match: true,
-          item
-        };
+  componentDidUpdate (prevProps, prevState) {
+    console.log('hi');
+  }
+
+  setFilteredJobs(event) {
+    const {
+      name,
+      value
+    } = event.target;
+
+    this.setState({ [name]: value.toLowerCase() }, () => {
+      const query = {
+        city: this.state.city,
+        state: this.state.state,
+        job_title: this.state.job_title
       }
-    });
-    if (filteredJobs.match) {
-      filteredJobs += filteredJobs;
-    }
-    this.setState({
-      jobs: filteredJobs
-    });
+      const validKeys = Object.keys(query).filter(key => query[key])
+      const filteredJobs = this.state.store.filter(job => {
+        return validKeys.every(key => {
+          return job[key].toLowerCase().includes(this.state[key])
+        })
+      })
+      this.setState({ jobs: filteredJobs })
+    })
   }
 
   clickMe(job) {
@@ -94,22 +102,25 @@ class List extends Component {
           <div id="search-bar-container" />
           <div className="searchBar-flex">
             <input
+              name="state"
               className="searchBar"
               type="text"
               placeholder="Search State"
-              onChange={e => this.getFilteredJobs(e)}
+              onChange={e => this.setFilteredJobs(e)}
             />
             <input
+              name="city"
               className="searchBar"
               type="text"
               placeholder="Search City"
-              onChange={e => this.getFilteredJobs(e)}
+              onChange={e => this.setFilteredJobs(e)}
             />
             <input
+              name="job_title"
               className="searchBar"
               type="text"
               placeholder="Search Job Title"
-              onChange={e => this.getFilteredJobs(e)}
+              onChange={e => this.setFilteredJobs(e)}
             />
           </div>
           <div id="results-found">
@@ -189,17 +200,17 @@ class List extends Component {
             span {line-height: 1rem;}
 
             .apply-button {background-color: #f0561f; font-family: Brandon Grotesque Regular; padding: 3px 10px 3px 10px}
-            .apply-button:focus {background-color: #f0561f; } 
+            .apply-button:focus {background-color: #f0561f; }
 
             .list-card-header {display: flex; flex-direction: row;}
-          
+
             .job-post-title {letter-spacing: 2px; margin-bottom: -5px; font-weight: 600;}
-            
+
             .job-post-location {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding:0; margin: 5px 0 0 0;}
             .job-post-date {font-size: 1rem; font-family: Brandon Grotesque Regular Italic; padding-left: 5rem;;}
 
             .job-post-container {padding: 0.5rem; border-bottom: solid 1px #f5f5f5;}
-            
+
             #direct-hire-list-section {
               width: 100vw;
               min-height: 100vh;
@@ -209,7 +220,7 @@ class List extends Component {
             .more-info-button:focus {text-decoration:none; color:#ffffff; outline:none; }
             .searchBar-flex {display: flex; justify-content: center;}
 
-            
+
             #search-bar-container {
               display: flex; flex-direction: row; justify-content: center;
               background-image: url('/static/images/employer-page/sec_01/orange-background.jpg');
@@ -234,8 +245,8 @@ class List extends Component {
               .list-card-header {padding-top: 15px;}
               .job-post-date {padding-left: 2.5rem;}
             }
-            
-            
+
+
           `}</style>
         </section>
       );
