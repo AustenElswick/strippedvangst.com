@@ -1,3 +1,0 @@
-user-agent: *
-Disallow: /vangst-mailer-jobs
-Sitemap: http://vangst.com/sitemap.xml
