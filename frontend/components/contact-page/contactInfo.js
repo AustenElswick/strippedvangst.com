@@ -202,9 +202,9 @@ class ContactInfo extends Component {
             <a
               id="contact-us-link"
               className="contact-us-link"
-              href="mailto:info@vangst.com"
+              href="mailto:customersuccess@vangst.com"
             >
-              INFO@VANGST.COM
+              CUSTOMERSUCCESS@VANGST.COM
             </a>
             <a
               id="contact-us-link"

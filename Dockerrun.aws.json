@@ -1,0 +1,72 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "wp_headless",
+      "host": {
+        "sourcePath": "/var/app/current/wp_headless"
+      }
+    },
+    {
+      "name": "frontend",
+      "host": {
+        "sourcePath": "/var/app/current/frontend/frontend"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "wp_headless",
+      "image": "austenelswick/vangstbackend:1.0",
+      "essential": true,
+      "memory": 128,
+      "environment": [
+        {
+          "name": "DEBIAN_FRONTEND",
+          "value": "noninteractive"
+        }
+      ],
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "wp_headless",
+          "containerPath": "/var/www/html",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "name": "frontend",
+      "image": "austenelswick/vangstfrontend:1.3",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 3000
+        }
+      ],
+      "links": [
+        "wp_headless:wp_headless"
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "wp_headless",
+          "containerPath": "/var/www/html/wp_headless",
+          "readOnly": true
+        },
+        {
+          "sourceVolume": "frontend",
+          "containerPath": "/var/www/html/frontend",
+          "readOnly": true
+        }
+      ]
+    }
+  ]
+}

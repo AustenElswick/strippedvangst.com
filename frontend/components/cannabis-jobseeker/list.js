@@ -9,7 +9,9 @@ import {
   CardBody,
   Card
 } from "reactstrap";
-import Router from "next/router";
+import Router, { withRouter } from "next/router";
+
+const PAGE_LENGTH = 10;
 
 class List extends Component {
   constructor(props) {
@@ -89,7 +91,24 @@ class List extends Component {
     });
   };
 
+  nextPage = () => {
+    const page = parseInt(this.props.router.query.page || '0')
+    Router.push({
+      pathname: "/cannabis-jobseeker",
+      query: { page: page + 1}
+    })
+  }
+
+  prevPage = () => {
+    const page = parseInt(this.props.router.query.page || '0')
+    Router.push({
+      pathname: "/cannabis-jobseeker",
+      query: { page: page - 1 }
+    })
+  }
+
   render() {
+    const page = parseInt(this.props.router.query.page || '0')
     if (!this.state.isLoading) {
       return (
         <section id="direct-hire-list-section">
@@ -118,10 +137,10 @@ class List extends Component {
             />
           </div>
           <div id="results-found">
-            <p>{this.state.jobs.length} Results Found</p>
+            <p>{page * PAGE_LENGTH + 1} through {(page + 1) * PAGE_LENGTH} of {this.state.jobs.length} Results Found</p>
           </div>
           <div id="search-results-container">
-            {this.state.jobs.map(job => {
+            {this.state.jobs.slice(page * PAGE_LENGTH, (page + 1) * PAGE_LENGTH).map(job => {
               return (
                 <div key={job.job_id} className="job-post-container">
                   <div>
@@ -140,45 +159,11 @@ class List extends Component {
                       More Info >
                     </Button>
                   </div>
-                  {/* <UncontrolledCollapse toggler={`#id-${job.job_id}`}>
-                    <Card>
-                      <CardBody>
-                        <button
-                          type="button"
-                          class="close"
-                          id={`id-${job.job_id}`}
-                          aria-label="Close"
-                        >
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div className="list-card-header">
-                          <div>
-                            <h3 className="job-post-title">Job Description</h3>
-                            <div>
-                              <p id="job-info-collapse">
-                                {job.job_title} - {job.city}, {job.state}
-                              </p>
-                            </div>
-                          </div>
-                          {/* <div>
-                        <h4 className="job-post-date">Posted: {moment(job.activation_date * 1000).endOf('day').fromNow()}</h4>
-                      </div> */}
-                  {/* </div>
-                        <hr />
-                        <div dangerouslySetInnerHTML={this.setInnerHtml(job)} />
-                        <hr />
-                        <div id="apply-button-container">
-                          <ApplyModal
-                            onClick={this.clickMe.bind(this, job)}
-                            job={job}
-                          />
-                        </div>
-                      </CardBody>
-                    </Card>
-                  </UncontrolledCollapse> */}
                 </div>
               );
             })}
+            <input type='button' value='Previous Page' onClick={this.prevPage} />
+            <input type='button' value='Next Page' onClick={this.nextPage} />
           </div>
           <style>{`
 
@@ -262,4 +247,4 @@ class List extends Component {
   }
 }
 
-export default List;
+export default withRouter(List);

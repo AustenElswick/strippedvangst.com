@@ -1,4 +1,4 @@
-FROM node:7
+FROM node:latest
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -10,7 +10,7 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
-RUN npm run build
+RUN npm run next:build
 
 EXPOSE 3000
 CMD [ "npm", "start" ]

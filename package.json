@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "build": "scripts/buildZip.sh",
     "preinstall": "chmod +x install.sh && chmod +x mysql_config.sh && ./install.sh",
     "postinstall": "robo wordpress:setup",
     "start": "wp server",

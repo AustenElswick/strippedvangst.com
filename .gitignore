@@ -4,3 +4,7 @@ yarn-error.log
 wordpress/wp-content/languages/
 data
 websiteZip.zip
+frontend/components/**/*
+frontend/pages/**/*
+frontend/pages/*
+frontend/static/**/*

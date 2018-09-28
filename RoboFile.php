@@ -30,84 +30,84 @@ class RoboFile extends \Robo\Tasks {
             'docker' => false,
         ]
     ) {
-        $confirm = $this->io()->confirm( 'This will replace your current ' .
-        'WordPress install. Are you sure you want to do this?', false );
+    //     $confirm = $this->io()->confirm( 'This will replace your current ' .
+    //     'WordPress install. Are you sure you want to do this?', false );
 
-        if ( ! $confirm ) {
-            return 1;
-        }
+    //     if ( ! $confirm ) {
+    //         return 1;
+    //     }
 
-        $uname = php_uname();
-        $is_darwin = ( strpos( $uname, 'Darwin' ) === 0 );
-        $config_db_answer = $this->ask(
-            "Do you have an existing database you'd like to use and configure yourself? (y/n): "
-        );
-        $db_ip = '';
-        $db_pass = '';
-        if ( 'y' === $config_db_answer ) {
-            $db_ip = $this->ask( 'Database IP address (press Enter for default value [0.0.0.0]): ' );
-            $db_pass = $this->ask( 'Database root password (press Enter for default value [root]): ' );
-            if ( $is_darwin ) {
-                $this->_exec( 'mysql.server start' );
-            } else {
-                $this->_exec( 'sudo service mysql start' );
-            }
-        } else {
-            if ( $is_darwin ) {
-                $this->_exec( 'brew install mysql' );
-                $this->_exec( 'mysql.server start' );
-                $this->_exec( './mysql_config.sh' );
-            } else {
-                if ( !$opts['docker'] ) {
-                    $this->_exec(
-                        "echo 'mysql-server mysql-server/root_password_again password root' | ".
-                        'sudo debconf-set-selections'
-                    );
-                    $this->_exec(
-                        "echo 'mysql-server mysql-server/root_password_again password root' | ".
-                        'sudo debconf-set-selections'
-                    );
-                    $this->_exec( 'sudo apt-get -y install mysql-server' );
-                    $this->_exec( 'sudo usermod -d /var/lib/mysql/ mysql' );
-                    $this->_exec( 'sudo service mysql start' );
-                }
-            }
-        }
+    //     $uname = php_uname();
+    //     $is_darwin = ( strpos( $uname, 'Darwin' ) === 0 );
+    //     $config_db_answer = $this->ask(
+    //         "Do you have an existing database you'd like to use and configure yourself? (y/n): "
+    //     );
+    //     $db_ip = '';
+    //     $db_pass = '';
+    //     if ( 'y' === $config_db_answer ) {
+    //         $db_ip = $this->ask( 'Database IP address (press Enter for default value [0.0.0.0]): ' );
+    //         $db_pass = $this->ask( 'Database root password (press Enter for default value [root]): ' );
+    //         if ( $is_darwin ) {
+    //             $this->_exec( 'mysql.server start' );
+    //         } else {
+    //             $this->_exec( 'sudo service mysql start' );
+    //         }
+    //     } else {
+    //         if ( $is_darwin ) {
+    //             $this->_exec( 'brew install mysql' );
+    //             $this->_exec( 'mysql.server start' );
+    //             $this->_exec( './mysql_config.sh' );
+    //         } else {
+    //         if ( !$opts['docker'] ) {
+    //             $this->_exec(
+    //                 "echo 'mysql-server mysql-server/root_password_again password root' | ".
+    //                 'sudo debconf-set-selections'
+    //             );
+    //             $this->_exec(
+    //                 "echo 'mysql-server mysql-server/root_password_again password root' | ".
+    //                 'sudo debconf-set-selections'
+    //             );
+    //             $this->_exec( 'sudo apt-get -y install mysql-server' );
+    //             $this->_exec( 'sudo usermod -d /var/lib/mysql/ mysql' );
+    //             $this->_exec( 'sudo service mysql start' );
+    //         }
+    //     }
+    // }
 
-        if ( !$db_pass || strlen( $db_pass ) === 0 ) {
-            $db_pass = 'root';
-        }
+        // if ( !$db_pass || strlen( $db_pass ) === 0 ) {
+        //     $db_pass = 'root';
+        // }
 
-        if ( !$db_ip || strlen( $db_ip ) === 0 ) {
-            if ( !$opts['docker'] ) {
-                $db_ip = '0.0.0.0';
-            } else {
-                $db_ip = 'localhost';
-            }
-        }
+        // if ( !$db_ip || strlen( $db_ip ) === 0 ) {
+        //     if ( !$opts['docker'] ) {
+        //         $db_ip = '0.0.0.0';
+        //     } else {
+        //         $db_ip = 'localhost';
+        //     }
+        // }
 
-        $this->_exec(
-            'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . " -e 'create user if not exists "
-            . $opts['wp-db-name'] . '@localhost identified with mysql_native_password by "'
-            . $opts['wp-db-name'] . "\"'"
-        );
-        $this->_exec(
-            'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip
-            . " -e 'create database if not exists " . $opts['wp-db-name'] . "'"
-        );
-        $this->_exec(
-            'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . ' -e "grant all privileges on ' . $opts['wp-db-name']
-            . '.* to ' . $opts['wp-db-name'] . '@localhost"'
-        );
+        // $this->_exec(
+        //     'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . " -e 'create user if not exists "
+        //     . $opts['wp-db-name'] . '@localhost identified with mysql_native_password by "'
+        //     . $opts['wp-db-name'] . "\"'"
+        // );
+        // $this->_exec(
+        //     'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip
+        //     . " -e 'create database if not exists " . $opts['wp-db-name'] . "'"
+        // );
+        // $this->_exec(
+        //     'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . ' -e "grant all privileges on ' . $opts['wp-db-name']
+        //     . '.* to ' . $opts['wp-db-name'] . '@localhost"'
+        // );
 
-        $this->_exec( 'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . " -e 'flush privileges'" );
+        // $this->_exec( 'mysql -uvangstadmin -p' . $db_pass . ' -h ' . $db_ip . " -e 'flush privileges'" );
 
-        $this->wp( 'core download --version=4.9.7 --locale=en_US --force' );
-        $this->_exec( 'rm wordpress/wp-config.php > /dev/null 2>&1 || true' );
-        $this->wp(
-            'core config --dbname=' . $opts['wp-db-name'] . ' --dbuser=' . $opts['wp-db-name'] . ' --dbpass='
-            . $opts['wp-db-name'] . ' --dbhost=' . $db_ip
-        );
+        // $this->wp( 'core download --version=4.9.7 --locale=en_US --force' );
+        // $this->_exec( 'rm wordpress/wp-config.php > /dev/null 2>&1 || true' );
+        // $this->wp(
+        //     'core config --dbname=' . $opts['wp-db-name'] . ' --dbuser=' . $opts['wp-db-name'] . ' --dbpass='
+        //     . $opts['wp-db-name'] . ' --dbhost=' . $db_ip
+        // );
         // $this->wp( 'db drop --yes' );
         // $this->wp( 'db create' );
 
@@ -174,18 +174,6 @@ class RoboFile extends \Robo\Tasks {
 
         // Update the default 'Uncategorized' category name to make it more menu-friendly
         $this->wp( 'term update category 1 --name="Sample Category"' );
-
-        // Set up example menu
-        $this->wp( 'menu create "Header Menu"' );
-        $this->wp( 'menu item add-post header-menu 1' );
-        $this->wp( 'menu item add-post header-menu 2' );
-        $this->wp( 'menu item add-term header-menu category 1' );
-        $this->wp(
-            'menu item add-custom header-menu '
-            .'"Read about the Starter Kit on Medium" https://trackchanges.postlight.com/'
-            .'introducing-postlights-wordpress-react-starter-kit-a61e2633c48c'
-        );
-        $this->wp( 'menu location assign header-menu header-menu' );
 
         $this->io()->success(
             'Great. You can now log into WordPress at: http://localhost:8080/wp-admin ('

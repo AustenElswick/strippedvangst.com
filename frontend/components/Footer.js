@@ -42,8 +42,8 @@ const Footer = () => (
             <li className="nav-link text-white">DENVER, CO</li>
             <li className="nav-link text-white">SANTA MONICA, CA</li>
             <li className="nav-link text-white">
-              <a id="email-link" href="mailto:info@vangst.com">
-                INFO@VANGST.COM
+              <a id="email-link" href="mailto:customersuccess@vangst.com">
+                CUSTOMERSUCCESS@VANGST.COM
               </a>
             </li>
             <li className="nav-link text-white">

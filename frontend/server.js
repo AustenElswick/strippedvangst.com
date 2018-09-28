@@ -85,7 +85,7 @@ app
         };
         const confirmationMsg = {
           to: [{ email: email }],
-          from: "info@vangst.com",
+          from: "customersuccess@vangst.com",
           subject: "Thank you for your intrest.",
           text: `Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!`,
           html: `<p><strong>Thank you ${firstName} ${lastName} for your intrest in the ${jobTitle} position. A recruiter will get back with you soon!</strong></p>`
@@ -108,7 +108,7 @@ app
         const content = fields.content[0];
         const state = fields.state[0];
         const contactMsg = {
-          to: "info@vangst.com",
+          to: "customersuccess@vangst.com",
           from: email,
           subject: subject,
           text: `${firstName} ${lastName} from ${state} is reaching out with this message: "${content}"`,
@@ -116,7 +116,7 @@ app
         };
         const confirmationMsg = {
           to: [{ email: email }],
-          from: "info@vangst.com",
+          from: "customersuccess@vangst.com",
           subject: "We have received your inquiry.",
           text: `Your message and questions have been received and you should get a response shortly.`,
           html: `<p><strong>Your message and questions have been received and you should get a response shortly.</strong></p>`

@@ -8,7 +8,7 @@ RUN apt-get install -yq curl php gnupg wget sudo lsb-release debconf-utils
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY install.sh /usr/src/app/install.sh
+COPY . /usr/src/app
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo 'deb https://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list
