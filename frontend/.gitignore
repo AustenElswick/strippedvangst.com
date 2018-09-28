@@ -1,6 +1,10 @@
 .next
 node_modules
 .idea
+static
+components
+pages
+
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

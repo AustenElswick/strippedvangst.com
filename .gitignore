@@ -2,9 +2,6 @@ node_modules
 npm-debug.log
 yarn-error.log
 wordpress/wp-content/languages/
+wordpress/wp-config.php
 data
 websiteZip.zip
-frontend/components/**/*
-frontend/pages/**/*
-frontend/pages/*
-frontend/static/**/*

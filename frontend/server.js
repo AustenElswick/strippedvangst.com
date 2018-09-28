@@ -10,7 +10,7 @@ const sgMail = require("@sendgrid/mail");
 const multiparty = require("multiparty");
 const fs = require("fs");
 sgMail.setApiKey(
-  "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"
+  "placeholder"
 );
 
 app
